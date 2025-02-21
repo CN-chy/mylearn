@@ -1,0 +1,1449 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>win32汇编与反汇编 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="逆向实战练习部分.html" />
+    
+    
+    <link rel="prev" href="汇编基础知识和计算机组织.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../python测试笔记/web自动化.html">
+            
+                <a href="../python测试笔记/web自动化.html">
+            
+                    
+                    web自动化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../python测试笔记/接口测试.html">
+            
+                <a href="../python测试笔记/接口测试.html">
+            
+                    
+                    接口测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../python测试笔记/性能测试.html">
+            
+                <a href="../python测试笔记/性能测试.html">
+            
+                    
+                    性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../python测试笔记/移动测试.html">
+            
+                <a href="../python测试笔记/移动测试.html">
+            
+                    
+                    移动测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../python人工智能/深度学习.html">
+            
+                <a href="../python人工智能/深度学习.html">
+            
+                    
+                    深度学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../虚拟化与云平台/Docker.html">
+            
+                <a href="../虚拟化与云平台/Docker.html">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../虚拟化与云平台/Jenkins.html">
+            
+                <a href="../虚拟化与云平台/Jenkins.html">
+            
+                    
+                    Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../虚拟化与云平台/Kubernetes.html">
+            
+                <a href="../虚拟化与云平台/Kubernetes.html">
+            
+                    
+                    Kubernetes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../虚拟化与云平台/shell.html">
+            
+                <a href="../虚拟化与云平台/shell.html">
+            
+                    
+                    shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="逆向工程得概念介绍和准备工具.html">
+            
+                <a href="逆向工程得概念介绍和准备工具.html">
+            
+                    
+                    逆向工程得概念介绍和准备工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="汇编基础知识和计算机组织.html">
+            
+                <a href="汇编基础知识和计算机组织.html">
+            
+                    
+                    汇编基础知识和计算机组织
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.13" data-path="win32汇编与反汇编.html">
+            
+                <a href="win32汇编与反汇编.html">
+            
+                    
+                    win32汇编与反汇编
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="逆向实战练习部分.html">
+            
+                <a href="逆向实战练习部分.html">
+            
+                    
+                    逆向实战练习部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="x64dbg.html">
+            
+                <a href="x64dbg.html">
+            
+                    
+                    x64dbg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="驱动.html">
+            
+                <a href="驱动.html">
+            
+                    
+                    驱动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="驱动r3.html">
+            
+                <a href="驱动r3.html">
+            
+                    
+                    驱动r3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="pyside6.html">
+            
+                <a href="pyside6.html">
+            
+                    
+                    pyside6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="定制自己的ce过游戏检测.html">
+            
+                <a href="定制自己的ce过游戏检测.html">
+            
+                    
+                    定制自己的ce过游戏检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >win32汇编与反汇编</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x73AF;&#x5883; vs2010 + WIN7 64</p>
+<h1 id="ollydbg&#x7B80;&#x4ECB;">OllyDbg&#x7B80;&#x4ECB;</h1>
+<pre><code>&#x662F;&#x6C47;&#x7F16;&#x7EA7;&#x7684;&#x8C03;&#x8BD5;&#x5668;&#xFF0C;VS&#x662F;&#x6E90;&#x7801;&#x7EA7;&#x7684;
+&#x53CD;&#x6C47;&#x7F16;&#x7A97;&#x53E3;&#xFF1A; &#x663E;&#x793A;&#x88AB;&#x8C03;&#x8BD5;&#x7A0B;&#x5E8F;&#x7684;&#x53CD;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#xFF08;&#x5730;&#x5740;&#x680F;&#x3001;HEX&#x6570;&#x636E;&#x680F;&#x3001;&#x6C47;&#x7F16;&#x6307;&#x4EE4;&#x680F;&#x3001;&#x6CE8;&#x91CA;&#x680F;&#xFF09;
+&#x5BC4;&#x5B58;&#x5668;&#x7A97;&#x53E3;&#xFF1A; &#x663E;&#x793A;&#x5F53;&#x524D;&#x6240;&#x9009;&#x7EBF;&#x7A0B;&#x7684;CPU&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x5185;&#x5BB9;
+&#x4FE1;&#x606F;&#x7A97;&#x53E3;&#xFF1A; &#x663E;&#x793A;&#x53CD;&#x6C47;&#x7F16;&#x7A97;&#x53E3;&#x4E2D;&#x9009;&#x4E2D;&#x7684;&#x7B2C;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x7684;&#x53C2;&#x6570;&#x53CA;&#x4E00;&#x4E9B;&#x8DF3;&#x8F6C;&#x76EE;&#x7684;&#x5730;&#x4E4B;&#x3001;&#x5B57;&#x7B26;&#x4E32;&#x7B49;
+&#x6570;&#x636E;&#x7A97;&#x53E3;&#xFF1A; &#x663E;&#x793A;&#x5185;&#x5B58;&#x6216;&#x6587;&#x4EF6;&#x7684;&#x5185;&#x5BB9;
+&#x5806;&#x6808;&#x7A97;&#x53E3;&#xFF1A; &#x663E;&#x793A;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x7684;&#x5806;&#x6808;
+</code></pre><h2 id="ollydbg&#x8C03;&#x5F0F;&#x65B9;&#x5F0F;">OllyDbg&#x8C03;&#x5F0F;&#x65B9;&#x5F0F;</h2>
+<p>&#x65B9;&#x5F0F;1&#xFF1A;&#x7528;OD&#x8C03;&#x8BD5;&#x5668;&#x76F4;&#x63A5;&#x6253;&#x5F00;
+&#x65B9;&#x5F0F;2&#xFF1A; &#x9644;&#x52A0;&#x5230;&#x5DF2;&#x7ECF;&#x6253;&#x5F00;&#x8FDB;&#x7A0B;</p>
+<h2 id="ollydbg&#x5B9A;&#x4F4D;&#x5730;&#x5740;">OllyDbg&#x5B9A;&#x4F4D;&#x5730;&#x5740;</h2>
+<p>Ctrl + G &#x8F93;&#x5165;WIN32 API&#x51FD;&#x6570;&#x540D;&#xFF08;&#x5982;&#xFF1A;MessageBoxW&#xFF0C;MessageBoxA)</p>
+<h2 id="ollydbg&#x65AD;&#x70B9;">OllyDbg&#x65AD;&#x70B9;</h2>
+<p>&#x65B9;&#x5F0F;1&#xFF1A; &#x76F4;&#x63A5;&#x5728;&#x9009;&#x4E2D;&#x7684;&#x884C;&#x4E0A;&#x6309;&#x4E0B;F2
+&#x65B9;&#x5F0F;2&#xFF1A;  bp &#x6307;&#x4EE4;&#x5730;&#x5740;&#xFF08;&#x5982;&#x679C;&#x5730;&#x5740;&#x662F;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#x7684;&#x4E2D;&#x95F4;&#xFF0C;&#x90A3;&#x4E48;&#x4F1A;&#x51FA;&#x9519;&#xFF09;   ;bp breakpoint
+&#x65B9;&#x5F0F;3&#xFF1A; &#x76F4;&#x63A5;&#x5728;&#x9009;&#x4E2D;&#x7684;&#x884C;&#x53CC;&#x51FB;
+&#x53EF;&#x901A;&#x8FC7;&#x67E5;&#x770B;-&gt;int3&#x65AD;&#x70B9; &#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x6253;&#x4E0A;&#x7684;&#x65AD;&#x70B9;</p>
+<h2 id="pdb&#x6587;&#x4EF6;">PDB&#x6587;&#x4EF6;</h2>
+<p>&#x5168;&#x79F0;&#x4E3A;&#x201C;&#x7A0B;&#x5E8F;&#x6570;&#x636E;&#x5E93;&#x201D;&#x6587;&#x4EF6;&#xFF0C;&#x5B58;&#x50A8;&#x4E86;&#x88AB;&#x7F16;&#x8BD1;&#x6587;&#x4EF6;&#x7684;&#x8C03;&#x5F0F;&#x4FE1;&#x606F;&#xFF0C;&#x5927;&#x591A;&#x6570;&#x573A;&#x666F;&#x662F;&#x8C03;&#x5F0F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;
+OllDbg&#x8C03;&#x8BD5;&#x5668;&#x53EF;&#x4EE5;&#x8BFB;&#x53D6;.pdb&#x6587;&#x4EF6;</p>
+<h2 id="&#x8C03;&#x8BD5;&#x4E2D;&#x6211;&#x4EEC;&#x7ECF;&#x5E38;&#x9700;&#x8981;&#x7528;&#x5230;&#x7684;&#x5FEB;&#x6377;&#x952E;&#xFF1A;">&#x8C03;&#x8BD5;&#x4E2D;&#x6211;&#x4EEC;&#x7ECF;&#x5E38;&#x9700;&#x8981;&#x7528;&#x5230;&#x7684;&#x5FEB;&#x6377;&#x952E;&#xFF1A;</h2>
+<p>F2&#xFF1A;&#x8BBE;&#x7F6E;&#x65AD;&#x70B9;
+F8&#xFF1A;&#x5355;&#x6B65;&#x6B65;&#x8FC7;
+F7&#xFF1A;&#x5355;&#x6B65;&#x6B65;&#x5165;
+F4&#xFF1A;&#x8FD0;&#x884C;&#x5230;&#x9009;&#x5B9A;&#x4F4D;&#x7F6E;
+F9&#xFF1A;&#x8FD0;&#x884C;
+CTRL + F9&#xFF1A;&#x6267;&#x884C;&#x5230;&#x8FD4;&#x56DE;
+ALT + F9&#xFF1A;&#x6267;&#x884C;&#x5230;&#x7528;&#x6237;&#x4EE3;&#x7801;</p>
+<p>&#x547D;&#x4EE4;&#x53F7; &#x8F93;&#x5165; dd &#x5730;&#x5740; &#x53EF;&#x4EE5;&#x5B9A;&#x4F4D;&#x5230;&#x8BE5;&#x5730;&#x5740;</p>
+<h2 id="c&#x4EE3;&#x7801;&#x5185;&#x5D4C;&#x6C47;&#x7F16;">C++&#x4EE3;&#x7801;&#x5185;&#x5D4C;&#x6C47;&#x7F16;</h2>
+<p>&#x5185;&#x5D4C;&#x6C47;&#x7F16;&#xFF1A;__asm mov aaa,0x778899</p>
+<h1 id="&#x51FD;&#x6570;&#x8C03;&#x7528;&#x7684;&#x53CD;&#x6C47;&#x7F16;&#x5F62;&#x5F0F;">&#x51FD;&#x6570;&#x8C03;&#x7528;&#x7684;&#x53CD;&#x6C47;&#x7F16;&#x5F62;&#x5F0F;</h1>
+<ol>
+<li>&#x51FD;&#x6570;&#x4E0E;CALL&#xFF08;OD&#x5206;&#x6790;&#x4EE3;&#x7801;&#x5C06;&#x51FD;&#x6570;&#xFF08;&#x5B50;&#x7A0B;&#x5E8F;&#xFF09;&#x5206;&#x5757;&#xFF09;
+C/C++&#x51FD;&#x6570;&#x8C03;&#x7528;&#x7FFB;&#x8BD1;&#x6210;&#x6C47;&#x7F16;&#x76F8;&#x5F53;&#x4E8E;call&#xFF08;&#x5B50;&#x7A0B;&#x5E8F;&#x8C03;&#x7528;&#xFF09;</li>
+<li>&#x5173;&#x95ED;C/C++&#x4F18;&#x5316;
+&#x9879;&#x76EE;&#x5C5E;&#x6027; -&gt; C/C++ -&gt; &#x4F18;&#x5316; -&gt; &#x7981;&#x7528; /Od</li>
+</ol>
+<p>1&#xFF09;int add(int a, int b) {
+    return a + b;
+}</p>
+<p>aaa = add(0x11,0x22)
+&#x4F18;&#x5316;&#x7684;&#xFF1A;
+&#x8981;&#x770B;&#x600E;&#x4E48;&#x4F18;&#x5316;&#x7684;&#xFF0C;&#x6709;&#x7684;&#x76F4;&#x63A5;&#x6CA1;&#x6709;&#x76F8;&#x5173;&#x8BED;&#x53E5;&#xFF0C;&#x6709;&#x7684;&#x662F;&#x76F4;&#x63A5;&#x5C06;a+b&#x7684;&#x503C;mov&#x7ED9;aaa</p>
+<p>&#x672A;&#x88AB;&#x4F18;&#x5316;&#x7684;:
+&#x5730;&#x5740;        &#x5341;&#x516D;&#x8FDB;&#x5236;&#x6570;&#x636E;            &#x6307;&#x4EE4;                                       &#x6CE8;&#x91CA;
+00351021   6A 22         PUSH 22                                  ; /b = 34.
+00351023   6A 11         PUSH 11                                  ; |a = 17.
+00351025   E8 D6FFFFFF   CALL add                                 ; \add</p>
+<p>add&#x51FD;&#x6570;&#xFF1A;
+&#x5730;&#x5740;        &#x5341;&#x516D;&#x8FDB;&#x5236;&#x6570;&#x636E;            &#x6307;&#x4EE4;                                       &#x6CE8;&#x91CA;
+00351000    55            PUSH EBP                                 ; INT test1.add(a,b)
+00351001    8BEC          MOV EBP,ESP
+00351003    8B45 08       MOV EAX,DWORD PTR SS:[ARG.1]
+00351006    0345 0C       ADD EAX,DWORD PTR SS:[ARG.2]
+00351009    5D            POP EBP
+0035100A    C3            RETN</p>
+<p>2&#xFF09;int add(int a, int b) {
+    return a + b;
+}</p>
+<p>aaa = add(aaa,0x22)</p>
+<p>&#x5730;&#x5740;        &#x5341;&#x516D;&#x8FDB;&#x5236;&#x6570;&#x636E;            &#x6307;&#x4EE4;                                       &#x6CE8;&#x91CA;
+007C1021  |.  6A 22         PUSH 22                                  ; /b = 34.
+007C1023  |.  A1 18307C00   MOV EAX,DWORD PTR DS:[aaa]               ; |
+007C1028  |.  50            PUSH EAX                                 ; |a =&gt; [7C3018] = 1
+007C1029  |.  E8 D2FFFFFF   CALL add                                 ; \add
+007C102E  |.  83C4 08       ADD ESP,8
+007C1031  |.  A3 18307C00   MOV DWORD PTR DS:[aaa],EAX</p>
+<h1 id="&#x52A0;&#x6CD5;&#x53CD;&#x6C47;&#x7F16;&#x5F62;&#x5F0F;">&#x52A0;&#x6CD5;&#x53CD;&#x6C47;&#x7F16;&#x5F62;&#x5F0F;</h1>
+<p>int i = 0;
+i = i + 100;
+i = i + 0x222;</p>
+<p>001E1091  |.  C745 FC 00000 MOV DWORD PTR SS:[LOCAL.1],0
+001E1098  |.  8B45 FC       MOV EAX,DWORD PTR SS:[LOCAL.1]
+001E109B  |.  83C0 64       ADD EAX,64
+001E109E  |.  8945 FC       MOV DWORD PTR SS:[LOCAL.1],EAX
+001E10A1  |.  8B4D FC       MOV ECX,DWORD PTR SS:[LOCAL.1]
+001E10A4  |.  81C1 22020000 ADD ECX,222
+001E10AA  |.  894D FC       MOV DWORD PTR SS:[LOCAL.1],ECX</p>
+<h1 id="&#x8FDB;&#x5236;&#x4E0E;&#x5185;&#x5B58;&#x5355;&#x5143;&#x957F;&#x5EA6;&#x4FEE;&#x9970;">&#x8FDB;&#x5236;&#x4E0E;&#x5185;&#x5B58;&#x5355;&#x5143;&#x957F;&#x5EA6;&#x4FEE;&#x9970;</h1>
+<ol>
+<li><p>&#x5341;&#x516D;&#x8FDB;&#x5236;
+&#x5341;&#x516D;&#x8FDB;&#x5236;&#x540C;&#x6211;&#x4EEC;&#x65E5;&#x5E38;&#x7684;&#x5341;&#x8FDB;&#x5236;&#x8868;&#x793A;&#x6CD5;&#x4E0D;&#x4E00;&#x6837;&#x3002;&#x5B83;&#x7531;0-9&#xFF0C;A-F&#x7EC4;&#x6210;&#x3002;
+9 +1 = 10  ; //&#x5341;&#x8FDB;&#x5236;
+F +1 = 10  ; //&#x5341;&#x516D;&#x8FDB;&#x5236;
+99 +1 = 100  ; //&#x5341;&#x8FDB;&#x5236;
+FF +1 = 100  ; //&#x5341;&#x516D;&#x8FDB;&#x5236;</p>
+</li>
+<li><p>&#x5B57;&#x8282;&#xFF0C; &#x5B57;&#xFF0C;&#x53CC;&#x5B57;
+&#x5B57;&#x8282;  &#xFF1A; Byte&#x7C7B;&#x578B;  &#xFF08;unsigned char&#xFF09; 0-255<br>&#x5B57;     &#xFF1A; WORD&#x7C7B;&#x578B;  (unsigned short) 0-65535
+&#x53CC;&#x5B57;  &#xFF1A; DWORD&#x7C7B;&#x578B; (unsigned int)  0-4294967295</p>
+</li>
+</ol>
+<p>&#x6D4B;&#x8BD5;&#xFF1A;
+int i = 0;
+int* p = &amp;i;
+__asm {
+    mov ebx, p
+    add [ebx], 0x443332211
+    add word ptr [ebx], 0x443332211
+    add dword ptr[ebx], 0x443332211
+}</p>
+<p>char c = 3;
+short s = 4;
+int d = 5;</p>
+<p>__asm {
+    add c, 0x87654321
+    add s, 0x87654321
+    add d, 0x87654321
+}</p>
+<p>008C109E  |.  C745 EC 00000 MOV DWORD PTR SS:[LOCAL.5],0
+008C10A5  |.  8D45 EC       LEA EAX,[LOCAL.5]
+008C10A8  |.  8945 E8       MOV DWORD PTR SS:[LOCAL.6],EAX
+008C10AB  |.  8B5D E8       MOV EBX,DWORD PTR SS:[LOCAL.6]
+008C10AE  |.  8003 11       ADD BYTE PTR DS:[EBX],11
+008C10B1  |.  66:8103 1122  ADD WORD PTR DS:[EBX],2211
+008C10B6  |.  8103 11223343 ADD DWORD PTR DS:[EBX],43332211
+008C10BC  |.  C645 FB 03    MOV BYTE PTR SS:[LOCAL.2+3],3
+008C10C0  |.  B9 04000000   MOV ECX,4
+008C10C5  |.  66:894D F4    MOV WORD PTR SS:[LOCAL.3],CX
+008C10C9  |.  C745 F0 05000 MOV DWORD PTR SS:[LOCAL.4],5
+008C10D0  |.  8045 FB 21    ADD BYTE PTR SS:[LOCAL.2+3],21
+008C10D4  |.  66:8145 F4 21 ADD WORD PTR SS:[LOCAL.3],4321
+008C10DA  |.  8145 F0 21436 ADD DWORD PTR SS:[LOCAL.4],87654321</p>
+<h1 id="32&#x4F4D;&#x901A;&#x7528;&#x5BC4;&#x5B58;&#x5668;">32&#x4F4D;&#x901A;&#x7528;&#x5BC4;&#x5B58;&#x5668;</h1>
+<p>EAX AX AH AL
+32   16 8    8
+&#x540C;&#x6837;&#x7684;&#x8FD8;&#x6709;
+EBX BX BH BL
+ECX CX CH CL
+EDX DX DH DL</p>
+<p>OD&#x547D;&#x4EE4;&#x884C;&#x67E5;&#x770B;&#x5185;&#x5B58;&#xFF1A; dd &#xFF08;data dword&#xFF09; dw&#xFF08;data word&#xFF09; db&#xFF08;data byte&#xFF09;
+OD&#x547D;&#x4EE4;&#x884C;&#x770B;&#x5BC4;&#x5B58;&#x5668;&#xFF1A; &#xFF1F; eax  /  ? ax  / ? al</p>
+<h1 id="movs-&#x548C;-movzx">MOVS &#x548C; MOVZX</h1>
+<p>MOVSX  &#x7B26;&#x53F7;&#x62D3;&#x5C55;&#x4F20;&#x9001;
+MOVZX  &#x96F6;&#x62D3;&#x5C55;&#x4F20;&#x9001;</p>
+<ol>
+<li>MOVSX &#x4E0E; MOVZX
+MOVSX &#x64CD;&#x4F5C;&#x6570;A&#xFF0C;&#x64CD;&#x4F5C;&#x6570;B
+MOVZX &#x64CD;&#x4F5C;&#x6570;A&#xFF0C;&#x64CD;&#x4F5C;&#x6570;B
+&#x76F8;&#x540C;&#x70B9;&#xFF1A;&#x64CD;&#x4F5C;&#x6570;B&#x6240;&#x5728;&#x7A7A;&#x95F4;&#x5FC5;&#x987B;&#x5C0F;&#x4E8E;&#x64CD;&#x4F5C;&#x6570;A
+&#x6CE8;&#x610F;&#xFF1A;
+1&#xFF09;&#x683C;&#x5F0F;&#x4E0E;MOV&#x57FA;&#x672C;&#x76F8;&#x540C;
+2&#xFF09;&#x80FD;&#x5B8C;&#x6210;&#x5C0F;&#x5B58;&#x50A8;&#x5355;&#x5143;&#x5411;&#x6253;&#x7684;&#x5B58;&#x50A8;&#x5355;&#x5143;&#x7684;&#x6570;&#x636E;&#x4F20;&#x9001;
+&#x6BD4;&#x5982; &#xFF1A; movsx eax,bx movzx ebx,ax  movsx eax, bx</li>
+</ol>
+<p>MOVSX&#xFF0C;MOVZX&#x4E0E;MOV&#x6307;&#x4EE4;&#x533A;&#x522B;&#xFF1A;
+1&#xFF09;MOVSX&#xFF0C;MOVZX&#x7684;&#x64CD;&#x4F5C;&#x6570;B&#x6240;&#x5360;&#x63A7;&#x4EF6;&#x5FC5;&#x987B;&#x5C0F;&#x4E8E;&#x64CD;&#x4F5C;&#x6570;A
+2&#xFF09;MOV&#x6307;&#x4EE4;&#x662F;&#x539F;&#x503C;&#x4F20;&#x9001;&#xFF0C;&#x4E0D;&#x4F1A;&#x6539;&#x52A8;&#x3002;&#x800C;MOVSX&#x548C;MOVZX&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x6539;&#x52A8;</p>
+<p>MOVSX&#x4E0E;MOVZX&#x533A;&#x522B;&#xFF1A;
+1&#xFF09;MOVSX&#x5C06;&#x7528;&#x64CD;&#x4F5C;&#x6570;B&#x7684;&#x7B26;&#x53F7;&#x4F4D;&#x62D3;&#x5C55;&#x586B;&#x5145;&#x64CD;&#x4F5C;&#x6570;A&#x7684;&#x4F59;&#x4E0B;&#x7A7A;&#x95F4;&#xFF1A;
+-&#x5982;&#x679C;&#x662F;&#x8D1F;&#x6570;&#x5219;&#x7B26;&#x53F7;&#x4F4D;&#x4E3A;1
+-&#x5982;&#x679C;&#x662F;&#x6B63;&#x6570;&#x5219;&#x7B26;&#x53F7;&#x4F4D;&#x4E3A;0&#xFF0C;&#x548C;MOVZX&#x529F;&#x80FD;&#x76F8;&#x540C;
+2&#xFF09;MOVZX&#x5C06;&#x7528;0&#x6765;&#x62D3;&#x5C55;&#x586B;&#x5145;&#x64CD;&#x4F5C;&#x6570;A&#x7684;&#x4F59;&#x4E0B;&#x7A7A;&#x95F4;
+&#x64CD;&#x4F5C;&#x6570;A  - - - -
+&#x64CD;&#x4F5C;&#x6570;B  00 - -</p>
+<p>MOVSX:
+char c = -0x33; //unsigned char 0-255 char -128-127
+int i = 0x78654321;
+//&#x5E26;&#x7B26;&#x53F7;&#x4F4D;&#x4F20;&#x9001;
+i = c;</p>
+<p>00D51093  |.  C645 FF 33    MOV BYTE PTR SS:[LOCAL.1+3],33
+00D51097  |.  C745 F8 21436 MOV DWORD PTR SS:[LOCAL.2],78654321
+00D5109E  |.  0FBE45 FF     MOVSX EAX,BYTE PTR SS:[LOCAL.1+3]
+00D510A2  |.  8945 F8       MOV DWORD PTR SS:[LOCAL.2],EAX</p>
+<p>MOVZX:
+char c = -0x33; //unsigned char 0-255 char -128-127
+int i = 0x78654321;
+//&#x5E26;&#x7B26;&#x53F7;&#x4F4D;&#x4F20;&#x9001;
+i = (unsigned char)c;</p>
+<p>00921093  |.  C645 FF CD    MOV BYTE PTR SS:[LOCAL.1+3],0CD
+00921097  |.  C745 F8 21436 MOV DWORD PTR SS:[LOCAL.2],78654321
+0092109E  |.  0FB645 FF     MOVZX EAX,BYTE PTR SS:[LOCAL.1+3]
+009210A2  |.  8945 F8       MOV DWORD PTR SS:[LOCAL.2],EAX</p>
+<h1 id="lea&#x6307;&#x4EE4;&#xFF08;load-effective-address&#xFF09;">LEA&#x6307;&#x4EE4;&#xFF08;Load effective address&#xFF09;</h1>
+<ol>
+<li>LEA&#x6307;&#x4EE4;&#x683C;&#x5F0F;
+&#x6709;&#x6548;&#x7684;&#x5730;&#x5740;&#x4F20;&#x9001;&#x6307;&#x4EE4;LEA
+&#x683C;&#x5F0F;&#xFF1A;LEA &#x64CD;&#x4F5C;&#x6570;A&#xFF0C;&#x64CD;&#x4F5C;&#x6570;B
+&#x529F;&#x80FD;&#xFF1A;&#x5C06;&#x64CD;&#x4F5C;&#x6570;B&#x7684;&#x6709;&#x6548;&#x5730;&#x5740;&#x4F20;&#x9001;&#x5230;&#x6307;&#x5B9A;&#x7684;&#x67D0;&#x4E2A;&#x5BC4;&#x5B58;&#x5668;&#xFF0C;&#x64CD;&#x4F5C;&#x6570;A&#x5FC5;&#x987B;&#x662F;&#x5BC4;&#x5B58;&#x5668;&#xFF08;32&#x4F4D;&#x7CFB;&#x7EDF;&#x4E0A;&#x5C31;&#x662F;32&#x4F4D;&#x5BC4;&#x5B58;&#x5668;&#xFF09;</li>
+</ol>
+<h1 id="od&#x4F7F;&#x7528;&#x5C0F;&#x7ED3;">OD&#x4F7F;&#x7528;&#x5C0F;&#x7ED3;</h1>
+<ol>
+<li><p>OD&#x8C03;&#x5F0F;
+&#x91CD;&#x65B0;&#x5F00;&#x59CB;&#xFF1A; Ctrl + F2
+&#x8F6C;&#x5230;&#x5730;&#x5740;&#xFF1A; Ctrl + G
+&#x65AD;&#x70B9;&#x5207;&#x6362;&#xFF1A; F2
+&#x65AD;&#x7535;&#x7A97;&#x53E3;&#xFF1A; Alt+B
+&#x8FD0;&#x884C;&#xFF1A;F9
+&#x6682;&#x505C;&#xFF1A;F12
+&#x5355;&#x6B65;&#x6B65;&#x8FC7;&#xFF1A; F8&#x9047;&#x5230;call&#x8DF3;&#x8FC7;
+&#x5355;&#x6B65;&#x6B65;&#x5165;&#xFF1A; F7&#x9047;&#x5230;call&#x8FDB;&#x5165;
+&#x8FD0;&#x884C;&#x5230;&#x9009;&#x5B9A;&#x4F4D;&#x7F6E;&#xFF1A; F4
+&#x53CD;&#x6C47;&#x7F16;&#x5230;&#x7A97;&#x53E3;&#x8DDF;&#x968F;&#xFF1A; &#x56DE;&#x8F66;&#x952E;enter
+&#x8DDF;&#x968F;&#xFF1A; &#x56DE;&#x8F66;&#x952E;Enter&#x8FDB;&#x5165;&#x67D0;&#x4E2A;&#x5730;&#x5740;</p>
+</li>
+<li><p>&#x53F3;&#x952E;&#x83DC;&#x5355; - goto
++&#x53F7;&#xFF1A; &#x8F6C;&#x5230;&#x4E0B;&#x4E00;&#x6B65;</p>
+</li>
+<li>&#x53F7;&#xFF1A; &#x8F6C;&#x5230;&#x4E0A;&#x4E00;&#x6B65;</li>
+<li><p>&#x53F7;&#xFF1A; &#x8F6C;&#x5230;&#x5F53;&#x524D;&#x6307;&#x4EE4;&#x5730;&#x5740;</p>
+</li>
+<li><p>&#x547D;&#x4EE4;&#x680F;&#x6307;&#x4EE4;
+bp &#x4E0B;&#x65AD;&#x70B9;
+bc &#x6E05;&#x9664;&#x65AD;&#x70B9;
+dd &#x4EE5;&#x53CC;&#x5B57;&#x65B9;&#x5F0F;&#x663E;&#x793A;&#x6570;&#x636E;
+dw &#x4EE5;&#x5B57;&#x65B9;&#x5F0F;&#x663E;&#x793A;&#x6570;&#x636E;
+db &#x4EE5;&#x5B57;&#x8282;&#x65B9;&#x5F0F;&#x663E;&#x793A;&#x6570;&#x636E;
+dc &#x4E00;&#x5B57;&#x7B26;&#x65B9;&#x5F0F;&#x663E;&#x793A;&#x6570;&#x636E;
+&#xFF1F; &#x8BA1;&#x7B97;&#x8868;&#x8FBE;&#x5F0F;&#x7684;&#x503C;</p>
+</li>
+<li><p>OD&#x4FEE;&#x6539;&#x6C47;&#x7F16;&#x6307;&#x4EE4;
+&#x9009;&#x4E2D;&#x6C47;&#x7F16;&#x6307;&#x4EE4;&#xFF0C;&#x6309;&#x4E0B;&#x7A7A;&#x683C;&#x540E;&#xFF0C;&#x76F4;&#x63A5;&#x8F93;&#x5165;&#x6C47;&#x7F16;&#x4EE3;&#x7801;</p>
+</li>
+</ol>
+<h1 id="&#x6C47;&#x7F16;&#x51CF;&#x6CD5;&#x6307;&#x4EE4;">&#x6C47;&#x7F16;&#x51CF;&#x6CD5;&#x6307;&#x4EE4;</h1>
+<ol>
+<li>sub&#xFF08;substract&#xFF09;&#x6307;&#x4EE4;
+&#x683C;&#x5F0F;&#xFF1A;sub &#x64CD;&#x4F5C;&#x6570;A&#xFF0C;&#x64CD;&#x4F5C;&#x6570;B   A = A - B
+&#x529F;&#x80FD;&#xFF1A; &#x4E24;&#x4E2A;&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x76F8;&#x51CF;&#xFF0C;&#x5373;&#x4ECE;A&#x4E2D;&#x51CF;&#x53BB;B&#xFF0C;&#x5176;&#x7ED3;&#x679C;&#x653E;&#x5728;A&#x4E2D;</li>
+</ol>
+<p>ZF&#x96F6;&#x6807;&#x5FD7;&#x4F4D;&#xFF1A;&#x82E5;&#x5F53;&#x524D;&#x7684;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x4E3A;&#x96F6;&#xFF0C;&#x5219;ZF&#x4E3A;1&#xFF0C;&#x5426;&#x5219;&#x4E3A;0.
+&#x6CE8;&#x610F;&#xFF1A; SUB&#x6307;&#x4EE4;&#x5F71;&#x54CD;ZF&#x6807;&#x5FD7;&#x4F4D;
+&#x64CD;&#x4F5C;&#x6570;&#x4E0D;&#x80FD;&#x90FD;&#x662F;&#x5B58;&#x50A8;&#x5668;</p>
+<p>int a = 0x109;
+int b = 8;
+a = a - b;</p>
+<p>00401093  |.  C745 FC 09010 MOV DWORD PTR SS:[LOCAL.1],109
+0040109A  |.  C745 F8 08000 MOV DWORD PTR SS:[LOCAL.2],8
+004010A1  |.  8B45 FC       MOV EAX,DWORD PTR SS:[LOCAL.1]
+004010A4  |.  2B45 F8       SUB EAX,DWORD PTR SS:[LOCAL.2]
+004010A7  |.  8945 FC       MOV DWORD PTR SS:[LOCAL.1],EAX</p>
+<h1 id="cmp&#x548C;&#x8F6C;&#x79FB;&#x6307;&#x4EE4;">CMP&#x548C;&#x8F6C;&#x79FB;&#x6307;&#x4EE4;</h1>
+<ol>
+<li><p>&#x6BD4;&#x8F83;&#x6307;&#x4EE4;CMP
+&#x683C;&#x5F0F;&#xFF1A;CMP &#x64CD;&#x4F5C;&#x6570;A&#xFF0C;&#x64CD;&#x4F5C;&#x6570;B // A-B
+&#x529F;&#x80FD;&#xFF1A;&#x4E24;&#x4E2A;&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x76F8;&#x51CF;&#xFF0C;&#x5373;&#x4ECE;A&#x4E2D;&#x51CF;&#x53BB;B&#xFF0C;&#x5176;&#x7ED3;&#x679C;&#x4F1A;&#x5F71;&#x54CD;&#x6807;&#x5FD7;&#x4F4D;&#xFF0C;&#x5BF9;&#x6807;&#x5FD7;&#x4F4D;&#x7684;&#x5F71;&#x54CD;&#x4E0E;SUB&#x6307;&#x4EE4;&#x76F8;&#x540C;&#x3002;CMP&#x6307;&#x4EE4;&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x914D;&#x5408;&#x6761;&#x4EF6;&#x8F6C;&#x79FB;&#x6307;&#x4EE4;&#x4F7F;&#x7528;&#xFF0C;&#x5982;&#xFF1A;JZ/JE &#x5F53;ZF=1&#x65F6;&#x8DF3;&#x8F6C;</p>
+</li>
+<li><p>&#x7B49;&#x4E8E;&#x6761;&#x4EF6;&#x8F6C;&#x79FB;&#x6307;&#x4EE4;JE/JZ
+&#x683C;&#x5F0F;&#xFF1A;JE/JZ &#x6807;&#x53F7;    //&#x7B49;&#x4E8E;&#x8DF3;&#x8F6C;
+&#x529F;&#x80FD;&#xFF1A;ZF=1&#xFF0C;&#x8DF3;&#x8F6C;&#x5230;&#x6307;&#x5B9A;&#x5730;&#x5740;&#x6267;&#x884C;
+&#x8BF4;&#x660E;&#xFF1A;
+1&#xFF09;JE&#x548C;JZ&#x7B49;&#x4EF7;&#xFF0C;&#x4ED6;&#x4EEC;&#x662F;&#x6839;&#x636E;&#x6807;&#x5FD7;&#x4F4D;ZF&#x8F6C;&#x79FB;&#x7684;&#x6307;&#x4EE4;
+2&#xFF09;JE&#x3001;JZ&#x5747;&#x4E3A;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#x7684;&#x4E24;&#x79CD;&#x52A9;&#x8BB0;&#x7B26;&#x8868;&#x793A;&#x65B9;&#x6CD5;
+&#x6D4B;&#x8BD5;&#xFF1A;
+int a = 4;
+if (a != 3) {
+ printf(&quot;do if a != 3&quot;);
+}
+printf(&quot;do if a = 3&quot;);</p>
+</li>
+</ol>
+<p>005A1091  |.  C745 FC 04000 MOV DWORD PTR SS:[LOCAL.1],4
+005A1098  |.  837D FC 03    CMP DWORD PTR SS:[LOCAL.1],3
+005A109C  |.  74 0D         JE SHORT 005A10AB
+005A109E  |.  68 0C215A00   PUSH OFFSET 005A210C                     /_Format = &quot;do if a != 3&quot;
+005A10A3  |.  E8 98FFFFFF   CALL printf                              \printf
+005A10A8  |.  83C4 04       ADD ESP,4
+005A10AB  |&gt;  68 1C215A00   PUSH OFFSET 005A211C                     /_Format = &quot;do if a = 3&quot;
+005A10B0  |.  E8 8BFFFFFF   CALL printf                              \printf</p>
+<ol>
+<li>&#x4E0D;&#x7B49;&#x4E8E;&#x6761;&#x4EF6;&#x8F6C;&#x79FB;&#x6307;&#x4EE4;JNE/JNZ
+&#x683C;&#x5F0F;&#xFF1A;JNE/JNZ &#x6807;&#x53F7;    //&#x4E0D;&#x7B49;&#x4E8E;&#x8DF3;&#x8F6C;
+&#x529F;&#x80FD;&#xFF1A;ZF=0&#xFF0C;&#x8DF3;&#x8F6C;&#x5230;&#x6307;&#x5B9A;&#x5730;&#x5740;&#x6267;&#x884C;</li>
+</ol>
+<p>int a = 4;
+if (a == 3) {
+    printf(&quot;do if a == 3&quot;);
+    return 0
+}
+printf(&quot;do if a != 3&quot;);
+&#x6216;
+int a = 4;
+__asm 
+{
+    mov eax,3
+    sub eax,a
+    jz end //ZF=1&#x8DF3;&#x8F6C;
+}
+printf(&quot;do if a != 3&quot;);
+return 0;
+end:
+    printf(&quot;do if a == 3&quot;);
+    return 0;</p>
+<p>00651091  |.  C745 FC 04000 MOV DWORD PTR SS:[LOCAL.1],4
+00651098  |.  837D FC 03    CMP DWORD PTR SS:[LOCAL.1],3
+0065109C  |.  75 0D         JNE SHORT 006510AB
+0065109E  |.  68 0C216500   PUSH OFFSET 0065210C                     /_Format = &quot;do if a == 3&quot;
+006510A3  |.  E8 98FFFFFF   CALL printf                              \printf
+006510A8  |.  83C4 04       ADD ESP,4
+006510AB  |&gt;  68 1C216500   PUSH OFFSET 0065211C                     /_Format = &quot;do if a != 3&quot;
+006510B0  |.  E8 8BFFFFFF   CALL printf                              \printf</p>
+<ol>
+<li><p>&#x65E0;&#x6761;&#x4EF6;&#x8DF3;&#x8F6C;&#x6307;&#x4EE4;jmp&#x548C;goto&#x6307;&#x4EE4;&#xFF08;c&#x8BED;&#x8A00;&#x4E2D;&#x7684;goto&#x6C47;&#x7F16;&#x540E;&#x5C31;&#x4E3A;jmp&#xFF09;
+1&#xFF09;GOTO&#x4E0E;JMP
+&#x65E0;&#x6761;&#x4EF6;&#x8DF3;&#x8F6C;&#x6307;&#x4EE4;
+&#x683C;&#x5F0F; JMP A
+2&#xFF09;&#x5176;&#x4E2D;A&#x4E3A;&#x8F6C;&#x79FB;&#x7684;&#x76EE;&#x7684;&#x5730;&#x5740;&#x3002;&#x7A0B;&#x5E8F;&#x8F6C;&#x79FB;&#x5230;&#x76EE;&#x7684;&#x5730;&#x5740;&#x6240;&#x6307;&#x5411;&#x7684;&#x6307;&#x4EE4;&#x7EE7;&#x7EED;&#x5F80;&#x4E0B;&#x6267;&#x884C;&#x3002;
+3&#xFF09;&#x672C;&#x7EC4;&#x6307;&#x4EE4;&#x5BF9;&#x6807;&#x5FD7;&#x4F4D;&#x65E0;&#x5F71;&#x54CD;</p>
+</li>
+<li><p>&#x6709;&#x7B26;&#x53F7; &#x5C0F;&#x4E8E;/&#x4E0D;&#x5927;&#x4E8E;&#x7B49;&#x4E8E; &#x8F6C;&#x79FB;&#x6307;&#x4EE4; JL/JNGE
+&#x683C;&#x5F0F;&#xFF1A;JL/JNGE  &#x6807;&#x53F7;&#x5730;&#x5740;
+&#x529F;&#x80FD;&#xFF1A;&#x5C0F;&#x4E8E;/&#x4E0D;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x65F6; &#x8F6C;&#x79FB;&#x5230;&#x6807;&#x53F7;&#x5730;&#x5740;
+JL    &#x6709;&#x7B26;&#x53F7;    &#x5C0F;&#x4E8E;    &#x5219;&#x8DF3;&#x8F6C;    &#xFF08;Jump if less&#xFF09;
+JNGE    &#x6709;&#x7B26;&#x53F7;    &#x4E0D;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;    &#x5219;&#x8DF3;&#x8F6C;&#xFF08;Jump if less&#xFF09;
+SF = 1&#xFF1B;    &#x7B26;&#x53F7;&#x6807;&#x5FD7;&#x4F4D;&#x4E3A;1 &#x5219;&#x8DF3;&#x8F6C;&#x5230;&#x6807;&#x53F7;&#x5730;&#x5740;&#x6267;&#x884C;&#xFF08;&#x7ED3;&#x679C;&#x4E3A;&#x8D1F;&#x6570;&#xFF09;</p>
+</li>
+</ol>
+<p>int a = 0x0A;
+int b = 0x20;
+if (a &gt;= b) {
+    printf(&quot;do a &gt;= b\n&quot;);
+}
+printf(&quot;do a &lt; b/n&quot;);</p>
+<ol>
+<li>&#x6709;&#x7B26;&#x53F7; &#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;/&#x4E0D;&#x5927;&#x4E8E; &#x8F6C;&#x79FB;&#x6307;&#x4EE4;JLE/JNG
+&#x683C;&#x5F0F;&#xFF1A; JLE/JNG &#x6807;&#x53F7;&#x5730;&#x5740;
+&#x529F;&#x80FD;&#xFF1A; &#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;/&#x4E0D;&#x5927;&#x4E8E; &#x65F6;&#x8F6C;&#x5230;&#x6807;&#x53F7;&#x5730;&#x5740;
+JNG   &#x6709;&#x7B26;&#x53F7;    &#x4E0D;&#x5927;&#x4E8E;    &#x5219;&#x8DF3;&#x8F6C;    &#xFF08;Jump if Not Greater&#xFF09;
+JLE   &#x6709;&#x7B26;&#x53F7;    &#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;    &#x5219;&#x8DF3;&#x8F6C;&#xFF08;Jump if Less or Equal&#xFF09;
+ZF = 1 || SF != OF &#xFF08;&#x6EA2;&#x51FA;&#x6807;&#x5FD7;&#x4F4D;&#xFF09;
+&#xFF08;SF=1 &amp;&amp; OF=0 &#x4E24;&#x4E2A;&#x6570;&#x76F8;&#x51CF; &#x7ED3;&#x679C;&#x4E3A;&#x8D1F;&#xFF0C;&#x4E14;&#x6CA1;&#x6709;&#x6EA2;&#x51FA;&#xFF09;
+&#xFF08;SF=0 &amp;&amp; OF=1 &#x4E24;&#x4E2A;&#x6570;&#x76F8;&#x51CF; &#x7ED3;&#x679C;&#x4E3A;&#x6B63;&#xFF0C;&#x4E14;&#x6709;&#x6EA2;&#x51FA;&#xFF09; &#x8D1F;-&#x6B63;</li>
+</ol>
+<p>int a = 0x0A;
+int b = 0x20;
+if (a &gt; b) {
+    printf(&quot;do a &gt;= b\n&quot;);
+}
+printf(&quot;do a &lt; b/n&quot;);</p>
+<ol>
+<li><p>&#x6709;&#x7B26;&#x53F7; &#x5927;&#x4E8E;/&#x4E0D;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E; &#x8F6C;&#x79FB;&#x6307;&#x4EE4;JG/JNLE
+&#x683C;&#x5F0F;&#xFF1A; JG/JNLE &#x6807;&#x53F7;&#x5730;&#x5740;
+&#x529F;&#x80FD;&#xFF1A; &#x5927;&#x4E8E;/&#x4E0D;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E; &#x65F6;&#x8F6C;&#x5230;&#x76EE;&#x6807;&#x5730;&#x5740;
+JG   &#x6709;&#x7B26;&#x53F7;    &#x5927;&#x4E8E;    &#x5219;&#x8DF3;&#x8F6C;    &#xFF08;Jump if  Greater&#xFF09;
+JNLE   &#x6709;&#x7B26;&#x53F7;    &#x4E0D;&#x5C0F;&#x4E8E;&#x7B49;&#x4E8E;    &#x5219;&#x8DF3;&#x8F6C;&#xFF08;Jump if Not Less or Equal&#xFF09;
+ZF = 0 &amp;&amp; SF = OF &#xFF08;&#x6EA2;&#x51FA;&#x6807;&#x5FD7;&#x4F4D;&#xFF09;
+&#xFF08;SF=1 &amp;&amp; OF=1 &#x4E24;&#x4E2A;&#x6570;&#x76F8;&#x51CF; &#x7ED3;&#x679C;&#x4E3A;&#x8D1F;&#xFF0C;&#x6709;&#x6EA2;&#x51FA;&#xFF09;
+&#xFF08;SF=0 &amp;&amp; OF=0 &#x4E24;&#x4E2A;&#x6570;&#x76F8;&#x51CF; &#x7ED3;&#x679C;&#x4E3A;&#x6B63;&#xFF0C;&#x6CA1;&#x6709;&#x6EA2;&#x51FA;&#xFF09;
+int a = 4;
+if (a &lt;=3 ) {
+ printf(&quot;do a &lt;= 3\n&quot;);
+}
+printf(&quot;a &gt; 3&quot;);</p>
+</li>
+<li><p>&#x7A0B;&#x5E8F;&#x72B6;&#x6001;&#x5B57;&#x5BC4;&#x5B58;&#x5668;
+1&#xFF09;CF&#x8FDB;&#x4F4D;&#x6807;&#x5FD7;&#x4F4D;
+&#x5F53;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x52A0;&#x6CD5;&#xFF08;&#x51CF;&#x6CD5;&#xFF09;&#x8FD0;&#x7B97;&#x65F6;&#xFF0C;&#x6700;&#x9AD8;&#x4F4D;&#x4EA7;&#x751F;&#x8FDB;&#x4F4D;&#xFF08;&#x6216;&#x501F;&#x4F4D;&#xFF09;&#x65F6;&#xFF0C;CF&#x4E3A;1&#xFF0C;&#x5426;&#x5219;&#x4E3A;0</p>
+</li>
+</ol>
+<p>2&#xFF09;ZF&#x96F6;&#x6807;&#x5FD7;&#x4F4D;
+&#x82E5;&#x5F53;&#x524D;&#x7684;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x4E3A;&#x96F6;&#xFF0C;&#x5219;ZF&#x4E3A;1&#xFF0C;&#x5426;&#x5219;&#x4E3A;0</p>
+<p>3&#xFF09;SF&#x7B26;&#x53F7;&#x6807;&#x5FD7;&#x4F4D;
+&#x8BE5;&#x6807;&#x5FD7;&#x4F4D;&#x4E8E;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x7684;&#x6700;&#x9AD8;&#x4F4D;&#x76F8;&#x540C;&#xFF0C;&#x5373;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x4E3A;&#x8D1F;&#xFF0C;&#x5219;SF&#x4E3A;1&#xFF0C;&#x5426;&#x5219;&#x4E3A;0</p>
+<p>4&#xFF09;OF&#x6EA2;&#x51FA;&#x6807;&#x5FD7;&#x4F4D;
+&#x82E5;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x8D85;&#x51FA;&#x673A;&#x5668;&#x80FD;&#x591F;&#x8868;&#x793A;&#x7684;&#x8303;&#x56F4;&#x79F0;&#x4E3A;&#x6EA2;&#x51FA;&#xFF0C;&#x6B64;&#x65F6;OF&#x4E3A;1&#xFF0C;&#x5426;&#x5219;&#x4E3A;0
+&#x4E09;&#x6761;&#x539F;&#x5219;&#xFF1A;
+&#x540C;&#x53F7;&#x76F8;&#x52A0;&#x548C;&#x5F02;&#x53F7;&#x76F8;&#x51CF;&#x624D;&#x4F1A;&#x53D1;&#x751F;&#x6EA2;&#x51FA;
+&#x540C;&#x53F7;&#x76F8;&#x52A0;&#x7ED3;&#x679C;&#x7684;&#x7B26;&#x53F7;&#x4E0E;&#x53C2;&#x4E0E;&#x8FD0;&#x7B97;&#x7684;&#x7B26;&#x53F7;&#x4E0D;&#x540C;&#x5C31;&#x6EA2;&#x51FA;
+&#x5F02;&#x53F7;&#x76F8;&#x51CF;&#x7ED3;&#x679C;&#x7684;&#x7B26;&#x53F7;&#x4F4D;&#x4E0E;&#x88AB;&#x51CF;&#x6570;&#x7684;&#x7B26;&#x53F7;&#x4F4D;&#x4E0D;&#x540C;&#x5C31;&#x4EA7;&#x751F;&#x6EA2;&#x51FA;</p>
+<p>5&#xFF09;PF&#x5947;&#x5076;&#x6807;&#x5FD7;
+&#x5F53;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x7684;&#x6700;&#x4F4E;16&#x4F4D;&#x4E2D;&#x542B;1&#x7684;&#x4E2A;&#x6570;&#x4E3A;&#x5076;&#x6570;&#x5219;PF=1&#xFF0C;&#x5426;&#x5219;PF=0</p>
+<p>6&#xFF09;AF&#x8F85;&#x52A9;&#x8FDB;&#x4F4D;&#x6807;&#x5FD7;
+&#x4E00;&#x4E2A;&#x52A0;&#x6CD5;&#xFF08;&#x51CF;&#x6CD5;&#xFF09;&#x8FD0;&#x7B97;&#x7ED3;&#x679C;&#x7684;&#x5E95;4&#x4F4D;&#x5411;&#x9AD8;4&#x4F4D;&#x6709;&#x8FDB;&#x4F4D;&#xFF08;&#x6216;&#x501F;&#x4F4D;&#xFF09;&#x65F6;&#x5219;AF=1&#xFF0C;&#x5426;&#x5219;AF=0</p>
+<p>7&#xFF09;TF&#x8DDF;&#x8E2A;&#x6807;&#x5FD7;
+&#x8BE5;&#x6807;&#x5FD7;&#x4F4D;&#x4E3A;&#x65B9;&#x4FBF;&#x7A0B;&#x5E8F;&#x8C03;&#x5F0F;&#x800C;&#x8BBE;&#x7F6E;&#x3002;&#x82E5;TF=1&#xFF0C;CPU&#x5904;&#x4E8E;&#x5355;&#x6B65;&#x5DE5;&#x4F5C;&#x65B9;&#x5F0F;&#xFF0C;&#x5373;&#x5728;&#x6BCF;&#x6761;&#x6307;&#x4EE4;&#x6267;&#x884C;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x7ED3;&#x675F;&#x4E2D;&#x65AD;&#x3002;</p>
+<p>8&#xFF09;IF&#x4E2D;&#x65AD;&#x6807;&#x5FD7;&#x4F4D;
+&#x8BE5;&#x6807;&#x5FD7;&#x4F4D;&#x7528;&#x6765;&#x63A7;&#x5236;CPU&#x662F;&#x5426;&#x54CD;&#x5E94;&#x53EF;&#x5C4F;&#x853D;&#x4E2D;&#x65AD;&#xFF0C;&#x82E5;IF=1&#x5219;&#x8FD0;&#x884C;&#x4E2D;&#x65AD;&#xFF0C;&#x5426;&#x5219;&#x7981;&#x6B62;&#x4E2D;&#x65AD;</p>
+<p>9&#xFF09;DF&#x65B9;&#x5411;&#x6807;&#x5FD7;
+&#x8BE5;&#x6807;&#x5FD7;&#x4F4D;&#x7528;&#x6765;&#x63A7;&#x5236;&#x4E32;&#x5904;&#x7406;&#x6307;&#x4EE4;&#x7684;&#x5904;&#x7406;&#x65B9;&#x5411;&#x3002;&#x82E5;DF=1&#x5219;&#x4E32;&#x5904;&#x7406;&#x8FC7;&#x7A0B;&#x4E2D;&#x81EA;&#x52A8;&#x9012;&#x51CF;&#xFF0C;&#x5426;&#x5219;&#x81EA;&#x52A8;&#x9012;&#x589E;&#x3002;</p>
+<ol>
+<li>&#x65E0;&#x7B26;&#x53F7;&#x5927;&#x4E8E;&#x8F6C;&#x79FB;&#x6307;&#x4EE4; JA / JNBE
+JA    &#x9AD8;&#x4E8E;<br>JNBE     &#x4E0D;&#x4F4E;&#x4E8E;&#x7B49;&#x4E8E;</li>
+</ol>
+<p>JA&#x4E0E;JG&#x533A;&#x522B;
+JG&#x662F;&#x5E26;&#x7B26;&#x53F7;&#x6570;&#x6BD4;&#x4EF7;
+JA&#x662F;&#x65E0;&#x7B26;&#x53F7;&#x6570;&#x6BD4;&#x8F83;
+CF=0 &amp;&amp; ZF = 0&#x5219;&#x8DF3;&#x8F6C;</p>
+<ol>
+<li>&#x65E0;&#x7B26;&#x53F7;&#x5927;&#x4E8E;&#x7B49;&#x4E8E;&#x8F6C;&#x79FB;&#x6307;&#x4EE4; JNB/JAE/JNC
+JNB    &#x4E0D;&#x4F4E;&#x4E8E;<br>JAE    &#x9AD8;&#x4E8E;&#x7B49;&#x4E8E;
+JNC    Jump Not carry &#x6CA1;&#x6709;&#x8FDB;&#x4F4D;&#x65F6;&#x8DF3;&#x8F6C;   CF</li>
+</ol>
+<p>unsigned int a = 5, b = 10;
+if( a2&lt;b2 ) 
+{
+    .....
+}</p>
+<ol>
+<li>&#x65E0;&#x7B26;&#x53F7;&#x5C0F;&#x4E8E;&#x8F6C;&#x79FB;&#x6307;&#x4EE4; JB/JNAE/JC
+JB    &#x4F4E;&#x4E8E;<br>JNAE    &#x4E0D;&#x9AD8;&#x4E8E;&#x7B49;&#x4E8E;
+JC    Jump  carry &#x8FDB;&#x4F4D;&#x65F6;&#x8DF3;&#x8F6C;   CF</li>
+</ol>
+<ol>
+<li>&#x65E0;&#x7B26;&#x53F7;&#x5927;&#x4E8E;&#x8F6C;&#x79FB;&#x6307;&#x4EE4; JBE /JNA
+JBE     &#x4F4E;&#x4E8E;&#x7B49;&#x4E8E; 
+JNA    &#x9AD8;&#x4E8E;</li>
+</ol>
+<h1 id="call-&#x6846;&#x67B6;">call &#x6846;&#x67B6;</h1>
+<p>EBP &#x5BC4;&#x5B58;&#x5668; &#x6808;&#x5E95;&#x6307;&#x9488;
+ESP &#x5BC4;&#x5B58;&#x5668; &#x6808;&#x9876;&#x6307;&#x9488;</p>
+<ol>
+<li><p>EBP&#x6808;&#x5E95;&#x6307;&#x9488;
+EPB&#x662F;&#x4E00;&#x4E2A;&#x7279;&#x6B8A;&#x7684;&#x5BC4;&#x5B58;&#x5668;&#xFF0C;&#x901A;&#x8FC7;EBP+&#x504F;&#x79FB;&#x91CF; &#x53EF;&#x4EE5;&#x8BBF;&#x95EE;CALL&#x91CC;&#x8FB9;&#x7684;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#xFF0C;&#x5B83;&#x7684;&#x4F4E;16&#x4F4D;&#x53EB;BP&#x3002; // EAX&#x548C;AX&#x7684;&#x5173;&#x7CFB;</p>
+</li>
+<li><p>ESP &#x6808;&#x9876;&#x6307;&#x9488;
+ESP&#x6808;&#x9876;&#x6307;&#x9488;&#x4E0E;EBP&#x6808;&#x5E95;&#x6307;&#x9488;&#x6784;&#x6210;&#x4E00;&#x6BB5;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;&#xFF0C;&#x4E00;&#x822C;&#x5C31;&#x662F;&#x672C;CALL&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x7684;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;&#x603B;&#x548C;&#x3002;
+ESP&#x6307;&#x9488;&#x914D;&#x5408;EBP&#x4F7F;&#x7528;&#x3002; //SP</p>
+</li>
+</ol>
+<p>main&#x51FD;&#x6570;&#x8C03;&#x7528;fun1
+1&#xFF09;&#x4FDD;&#x5B58;ebp&#x6808;&#x5E95;&#x6307;&#x9488;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5C06;&#x4ED6;&#x5165;&#x6808;&#x3002;
+2&#xFF09;&#x5C06;esp&#x8D4B;&#x503C;&#x7ED9;ebp 
+3&#xFF09;ebp&#x51FA;&#x6808;
+|            |     00000000
+|            |
+|            |
+|            |----|
+....fun1...|    |               ---&#x65B0;&#x7684;esp
+|            |----|                   &#x5C40;&#x90E8;&#x53D8;&#x91CF;
+|            |---|   esp         ---&#x65B0;&#x7684;ebp<br>....main...|   |<br>|            |---|    ebp
+|            | 
+|            |       ffffffff</p>
+<p>&#x5982;&#x679C;fun1&#x4E3A;&#x7A7A;&#x65F6;&#xFF1A;
+&#x5219;call fun1&#x7684;&#x5185;&#x5BB9;&#x4E3A;&#xFF1A;
+004D1080  /$  55            PUSH EBP<br>004D1081  |.  8BEC          MOV EBP,ESP
+004D1083  |.  5D            POP EBP
+004D1084  .  C3            RETN</p>
+<p>&#x603B;&#x7ED3;&#xFF1A;
+1&#xFF09;&#x6BCF;&#x4E2A;CALL&#x4F1A;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x72EC;&#x7ACB;&#x7684;&#x6808;&#x6BB5;&#x7A7A;&#x95F4;&#xFF0C;&#x4F9B;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x4F7F;&#x7528;
+2&#xFF09;CALL&#x6808;&#x5E73;&#x8861;&#x3002;&#x8FDB;&#x5165;CALL&#x524D;&#x4E0E;&#x5904;CALL&#x540E;&#xFF0C;EBP&#x548C;ESP&#x7684;&#x503C;&#x4E0D;&#x53D8;&#x3002;</p>
+<h1 id="push&#x3001;pop&#x548C;call&#x6808;&#x5E73;&#x8861;retn&#x6307;&#x4EE4;">PUSH&#x3001;POP&#x548C;CALL&#x6808;&#x5E73;&#x8861;RETN&#x6307;&#x4EE4;</h1>
+<ol>
+<li><p>PUSH &#x5165;&#x6808;&#x6307;&#x4EE4;&#xFF08;&#x538B;&#x6808;&#x6307;&#x4EE4;&#xFF09;&#xFF1A;
+&#x683C;&#x5F0F;&#xFF1A;PUSH &#x64CD;&#x4F5C;&#x6570;
+&#x76F8;&#x5F53;&#x4E8E;&#xFF1A;
+sub esp,4
+mov [esp],ebp
+&#x64CD;&#x4F5C;&#x6570;&#x53EF;&#x4EE5;&#x662F;&#x5BC4;&#x5B58;&#x5668;&#xFF0C;&#x6751;&#x6691;&#x671F;&#xFF0C;&#x6216;&#x8005;&#x7ACB;&#x5373;&#x6570;</p>
+</li>
+<li><p>POP&#x51FA;&#x6808;&#x6307;&#x4EE4; &#xFF08;&#x5F39;&#x6808;&#x6307;&#x4EE4;&#xFF09;
+&#x683C;&#x5F0F;&#xFF1A; POP &#x64CD;&#x4F5C;&#x6570;
+pop ebp &#x76F8;&#x5F53;&#x4E8E;&#xFF1A;
+mov ebp ,[esp]
+add esp,4
+&#x64CD;&#x4F5C;&#x6570;&#x662F;&#x5BC4;&#x5B58;&#x5668;&#xFF0C;&#x6216;&#x8005;&#x5B58;&#x50A8;&#x5668;&#xFF0C;&#x4E0D;&#x80FD;&#x662F;&#x7ACB;&#x5373;&#x6570;</p>
+</li>
+<li><p>&#x5206;&#x6790;
+1&#xFF09;&#x6D4B;&#x8BD5;PUSH&#x548C;POP&#x4E0E;ESP&#x6808;&#x9876;&#x6307;&#x9488;&#x5173;&#x7CFB;</p>
+</li>
+</ol>
+<p>2&#xFF09;CALL&#x548C;RET&#xFF08;RETN&#xFF09;&#x4E0E;ESP&#x7684;&#x5173;&#x7CFB;
+CALL&#x6267;&#x884C;&#x65F6;&#x4F1A;PUSH EIP
+RET&#x6267;&#x884C;&#x65F6;&#x4F1A;POP EIP
+3&#xFF09;&#x53C2;&#x6570;&#x548C;&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#x7684;&#x8868;&#x793A;
+[EBP - ??]  ;&#x672C;call&#x4E2D;&#x7684;&#x5C40;&#x90E8;&#x53D8;&#x91CF;
+[EBP + ??] ;&#x4E0A;&#x4E00;&#x4E2A;call&#x5C40;&#x90E8;&#x53D8;&#x91CF;&#xFF0C;&#x4F5C;&#x4E3A;&#x4F20;&#x5165;&#x53C2;&#x6570;</p>
+<h1 id="&#x8C03;&#x7528;&#x7EA6;&#x5B9A;">&#x8C03;&#x7528;&#x7EA6;&#x5B9A;</h1>
+<p>vs&#x4E2D; &#x914D;&#x7F6E;&#x5C5E;&#x6027; ---&gt; C/C++ ---&gt; &#x9AD8;&#x7EA7; ---&gt; &#x8C03;&#x7528;&#x7EA6;&#x5B9A;</p>
+<p>&#x6CE8;&#xFF1A; C&#x4E2D;&#x4E0D;&#x52A0;&#x8BF4;&#x660E;&#x7684;&#x9ED8;&#x8BA4;&#x51FD;&#x6570;&#x4E3A;<strong>cdecl&#x65B9;&#x5F0F;
+C++&#x4E5F;&#x4E00;&#x6837;&#xFF0C;&#x4F46;&#x662F;&#x9ED8;&#x8BA4;&#x7684;&#x8C03;&#x7528;&#x65B9;&#x5F0F;&#x53EF;&#x4EE5;&#x5728;IDE&#xFF08;&#x5F00;&#x53D1;&#x73AF;&#x5883;&#xFF09;&#x4E2D;&#x8BBE;&#x7F6E;
+&#x5E26;&#x6709;&#x53EF;&#x53D8;&#x53C2;&#x6570;&#x7684;&#x51FD;&#x6570;&#x5FC5;&#x987B;&#x4E14;&#x667A;&#x80FD;&#x4F7F;&#x7528;</strong>cdecl&#x65B9;&#x5F0F;,&#x5982;&#xFF1A;
+int printf(char <em> fmtstr, ...);
+int  scanf(char</em> fmtstr, ...);</p>
+<ol>
+<li>cdecl &#x8C03;&#x7528;&#x7EA6;&#x5B9A;&#xFF08;C Declaration&#xFF09;
+ <strong>cdecl &#x51FD;&#x6570;&#x53C2;&#x6570;&#x4ECE;&#x53F3;&#x5230;&#x5DE6;&#x4F9D;&#x6B21;&#x5165;&#x6808;&#xFF0C;&#x8FD9;&#x4E9B;&#x53C2;&#x6570;&#x7531;&#x8C03;&#x7528;&#x8005;&#x6E05;&#x9664;&#xFF0C;&#x79F0;&#x4E3A;&#x624B;&#x52A8;&#x6E05;&#x6808;&#xFF08;&#x9ED8;&#x8BA4;&#x7EA6;&#x5B9A;&#xFF09;
+ 1&#xFF09;&#x6E90;&#x4EE3;&#x7801;&#xFF1A;
+ int </strong>cdecl add1(int a, int b) {
+ return a + b;
+ }</li>
+</ol>
+<p>2&#xFF09;&#x751F;&#x6210;&#x7684;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#xFF1A;
+007D1080  /$  55            PUSH EBP                                 INT test1.add1(a,b)
+007D1081  |.  8BEC          MOV EBP,ESP
+007D1083  |.  8B45 08       MOV EAX,DWORD PTR SS:[ARG.1]
+007D1086  |.  0345 0C       ADD EAX,DWORD PTR SS:[ARG.2]
+007D1089  |.  5D            POP EBP
+007D108A  .  C3            RETN</p>
+<p>3&#xFF09;&#x8C03;&#x7528;&#x4EE3;&#x7801;&#xFF1A;
+007D10A8  |.  6A 04         PUSH 4                                   /b = 4
+007D10AA  |.  6A 03         PUSH 3                                   |a = 3
+007D10AC  |.  E8 CFFFFFFF   CALL add1                                \add1
+007D10B1  |.  83C4 08       ADD ESP,8</p>
+<ol>
+<li>stdcall &#x8C03;&#x7528;&#x7EA6;&#x5B9A;
+API&#x51FD;&#x6570;&#x8C03;&#x7528;&#x7EA6;&#x5B9A; <strong>stdcall
+</strong>stdcall&#x662F;standardcall&#x5F97;&#x7F29;&#x5199;&#xFF0C;&#x662F;C++&#x7684;&#x6807;&#x51C6;&#x8C03;&#x7528;&#x65B9;&#x5F0F;&#xFF1B;&#x6240;&#x6709;&#x53C2;&#x6570;&#x4ECE;&#x53F3;&#x5230;&#x5DE6;&#x4F9D;&#x6B21;&#x5165;&#x6808;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x8C03;&#x7528;&#x7C7B;&#x6210;&#x5458;&#x7684;&#x8BDD;&#xFF0C;&#x6700;&#x540E;&#x4E00;&#x4E2A;&#x5165;&#x6808;&#x7684;&#x662F;this&#x6307;&#x9488;&#x3002;
+&#x8FD9;&#x4E9B;&#x5806;&#x6808;&#x4E2D;&#x7684;&#x53C2;&#x6570;&#x7531;&#x88AB;&#x8C03;&#x7528;&#x7684;&#x51FD;&#x6570;&#x5728;&#x8FD4;&#x56DE;&#x540E;&#x6E05;&#x9664;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x6307;&#x4EE4;&#x65F6;retn X&#xFF0C;
+X&#x8868;&#x793A;&#x53C2;&#x6570;&#x5360;&#x7528;&#x7684;&#x5B57;&#x8282;&#x6570;&#xFF08;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x5927;&#x5C0F;&#xFF09;&#xFF0C;CPU&#x5728;ret&#x4E4B;&#x540E;&#x81EA;&#x52A8;&#x5F39;&#x51FA;X&#x4E2A;&#x5B57;&#x7684;&#x6808;&#x7A7A;&#x95F4;&#xFF0C;&#x79F0;&#x4E3A;&#x81EA;&#x52A8;&#x6E05;&#x6808;&#x3002;</li>
+</ol>
+<p>1&#xFF09;&#x6E90;&#x4EE3;&#x7801;&#xFF1A;
+int __stdcall add2(int a, int b) {
+    return a + b;
+}</p>
+<p>2&#xFF09;&#x751F;&#x6210;&#x7684;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#xFF1A;
+00C31090  /$  55            PUSH EBP                                 INT test1.add2(a,b)
+00C31091  |.  8BEC          MOV EBP,ESP
+00C31093  |.  8B45 08       MOV EAX,DWORD PTR SS:[ARG.1]
+00C31096  |.  0345 0C       ADD EAX,DWORD PTR SS:[ARG.2]
+00C31099  |.  5D            POP EBP
+00C3109A  .  C2 0800       RETN 8</p>
+<p>3&#xFF09;&#x8C03;&#x7528;&#x4EE3;&#x7801;&#xFF1A;
+00C310C7  |.  6A 04         PUSH 4                                   /b = 4
+00C310C9  |.  6A 03         PUSH 3                                   |a = 3
+00C310CB  |.  E8 C0FFFFFF   CALL add2                                \add2</p>
+<ol>
+<li>fastcall &#x8C03;&#x7528;&#x7EA6;&#x5B9A;
+<strong>fastcall&#x662F;&#x7F16;&#x8BD1;&#x5668;&#x6307;&#x5B9A;&#x7684;&#x5FEB;&#x901F;&#x8C03;&#x7528;&#x65B9;&#x5F0F;
+fastcall&#x901A;&#x5E38;&#x89C4;&#x5B9A;&#x5C06;&#x524D;&#x4E24;&#x4E2A;&#xFF08;&#x6216;&#x8005;&#x82E5;&#x5E72;&#x4E2A;&#xFF09;&#x53C2;&#x6570;&#x6709;&#x5BC4;&#x5B58;&#x5668;&#x4F20;&#x9012;&#xFF0C;&#x5176;&#x4F59;&#x53C2;&#x6570;&#x8FD8;&#x662F;&#x901A;&#x8FC7;&#x5806;&#x6808;&#x4F20;&#x9012;
+&#x4E0D;&#x540C;&#x7F16;&#x8BD1;&#x5668;&#x7F16;&#x8BD1;&#x7684;&#x7A0B;&#x5E8F;&#x89C4;&#x5B9A;&#x7684;&#x5BC4;&#x5B58;&#x5668;&#x4E0D;&#x540C;&#x3002;&#x8FD4;&#x56DE;&#x65B9;&#x5F0F;&#x548C;stdcall&#x76F8;&#x540C;&#x3002;
+1&#xFF09;&#x6E90;&#x4EE3;&#x7801;&#xFF1A;
+&#x53C2;&#x6570;&#x8F83;&#x5C11;&#x7684;&#x60C5;&#x51B5;&#xFF1A;
+int </strong>cdecl add1(int a, int b) {
+ return a + b;
+}</li>
+</ol>
+<p>&#x53C2;&#x6570;&#x8F83;&#x591A;&#x7684;&#x60C5;&#x51B5;&#xFF1A;
+int __fastcall add4(int a, int b, int c, int d) {
+    return a + b +c +d;
+}</p>
+<p>2&#xFF09;&#x751F;&#x6210;&#x7684;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#xFF1A;
+&#x53C2;&#x6570;&#x8F83;&#x5C11;&#x7684;&#x60C5;&#x51B5;&#xFF1A;
+00E010A0  /$  55            PUSH EBP                                 INT test1.add3(void)
+00E010A1  |.  8BEC          MOV EBP,ESP
+00E010A3  |.  83EC 08       SUB ESP,8
+00E010A6  |.  8955 F8       MOV DWORD PTR SS:[LOCAL.2],EDX
+00E010A9  |.  894D FC       MOV DWORD PTR SS:[LOCAL.1],ECX
+00E010AC  |.  8B45 FC       MOV EAX,DWORD PTR SS:[LOCAL.1]
+00E010AF  |.  0345 F8       ADD EAX,DWORD PTR SS:[LOCAL.2]
+00E010B2  |.  8BE5          MOV ESP,EBP
+00E010B4  |.  5D            POP EBP
+00E010B5  .  C3            RETN</p>
+<p>&#x53C2;&#x6570;&#x8F83;&#x591A;&#x7684;&#x60C5;&#x51B5;&#xFF1A;
+009A10C0  /$  55            PUSH EBP                                 INT test1.add4(c,d)
+009A10C1  |.  8BEC          MOV EBP,ESP
+009A10C3  |.  83EC 08       SUB ESP,8
+009A10C6  |.  8955 F8       MOV DWORD PTR SS:[LOCAL.2],EDX
+009A10C9  |.  894D FC       MOV DWORD PTR SS:[LOCAL.1],ECX
+009A10CC  |.  8B45 FC       MOV EAX,DWORD PTR SS:[LOCAL.1]
+009A10CF  |.  0345 F8       ADD EAX,DWORD PTR SS:[LOCAL.2]
+009A10D2  |.  0345 08       ADD EAX,DWORD PTR SS:[ARG.1]
+009A10D5  |.  0345 0C       ADD EAX,DWORD PTR SS:[ARG.2]
+009A10D8  |.  8BE5          MOV ESP,EBP
+009A10DA  |.  5D            POP EBP
+009A10DB  .  C2 0800       RETN 8</p>
+<p>3&#xFF09;&#x8C03;&#x7528;&#x4EE3;&#x7801;&#xFF1A;
+&#x53C2;&#x6570;&#x8F83;&#x5C11;&#x7684;&#x60C5;&#x51B5;&#xFF1A;
+00E010F3  |.  BA 04000000   MOV EDX,4
+00E010F8  |.  B9 03000000   MOV ECX,3
+00E010FD  |.  E8 9EFFFFFF   CALL add3                                [add3
+&#x53C2;&#x6570;&#x4F20;&#x9012;&#x6CA1;&#x6709;&#x7528;&#x5230;&#x6808;&#xFF0C;&#x6240;&#x4EE5;&#x4E0D;&#x540C;&#x5806;&#x6808;&#x5E73;&#x8861;</p>
+<p>&#x53C2;&#x6570;&#x8F83;&#x591A;&#x7684;&#x60C5;&#x51B5;&#xFF1A;
+009A1125  |.  6A 06         PUSH 6                                   /d = 6
+009A1127  |.  6A 05         PUSH 5                                   |c = 5
+009A1129  |.  BA 04000000   MOV EDX,4                                |
+009A112E  |.  B9 03000000   MOV ECX,3                                |
+009A1133  |.  E8 88FFFFFF   CALL add4                                \add4
+&#x4F46;&#x662F;&#x5982;&#x679C;&#x53C2;&#x6570;&#x6BD4;&#x8F83;&#x591A;&#x7684;&#x8BDD;&#xFF0C;&#x53C2;&#x6570;&#x4F20;&#x9012;&#x4F1A;&#x7528;&#x5230;&#x6808;&#xFF0C;&#x90A3;&#x5C31;&#x9700;&#x8981;&#x81EA;&#x5DF1;&#x5E73;&#x8861;&#x5806;&#x6808;&#xFF08;&#x610F;&#x601D;&#x662F;&#x901A;&#x8FC7;retn&#xFF09;&#x4E86;</p>
+<ol>
+<li>vectorcall
+__vectorcall &#x8C03;&#x7528;&#x7EA6;&#x5B9A;&#x6307;&#x5B9A;&#x5C3D;&#x53EF;&#x80FD;&#x5728;&#x5BC4;&#x5B58;&#x5668;&#x4E2D;&#x4F20;&#x9012;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x3002;
+&#x7ECF;&#x6D4B;&#x8BD5;&#x4E0E;fastcall&#x4E00;&#x6837;</li>
+</ol>
+<h1 id="&#x5E38;&#x89C1;c&#x8BED;&#x53E5;&#x53CD;&#x6C47;&#x7F16;&#x7EC3;&#x4E60;">&#x5E38;&#x89C1;C&#x8BED;&#x53E5;&#x53CD;&#x6C47;&#x7F16;&#x7EC3;&#x4E60;</h1>
+<ol>
+<li>if-else &#x7ED3;&#x6784;&#x53CD;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x5206;&#x6790;
+&#x56E0;&#x4E3A;if{&#x3002;&#x3002;&#x3002;}&#x8BED;&#x53E5;&#x5757;&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x88AB;&#x6267;&#x884C;&#x7684;&#x8BDD;&#xFF0C;else{&#x3002;&#x3002;&#x3002;}&#x8BED;&#x53E5;&#x5757;&#x7684;&#x4EE3;&#x7801;&#x4E0D;&#x4F1A;&#x88AB;&#x6267;&#x884C;
+&#x6240;&#x4EE5;if{&#x3002;&#x3002;&#x3002;}&#x4E2D;&#x7684;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;&#x9700;&#x8981;&#xFF08;jmp&#xFF09;&#x65E0;&#x6761;&#x4EF6;&#x8DF3;&#x8F6C;&#x5230;else{&#x3002;&#x3002;&#x3002;}&#x8BED;&#x53E5;&#x5757;&#x540E;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x6267;&#x884C;&#x3002;
+&#x6E90;&#x4EE3;&#x7801;:
+int a = 1, b = 2;
+if (a &gt; b)
+{
+ printf(&quot;a&gt;b\n&quot;);
+}
+else
+{
+ printf(&quot;a&lt;=b&quot;);
+}</li>
+</ol>
+<p>&#x6C47;&#x7F16;&#xFF1A;
+00F61093  |.  C745 FC 01000 MOV DWORD PTR SS:[LOCAL.1],1
+00F6109A  |.  C745 F8 02000 MOV DWORD PTR SS:[LOCAL.2],2
+00F610A1  |.  8B45 FC       MOV EAX,DWORD PTR SS:[LOCAL.1]
+00F610A4  |.  3B45 F8       CMP EAX,DWORD PTR SS:[LOCAL.2]
+00F610A7  |.  7E 0F         JLE SHORT 00F610B8
+00F610A9  |.  68 0C21F600   PUSH OFFSET 00F6210C                     /_Format = &quot;a&gt;b
+&quot;
+00F610AE  |.  E8 8DFFFFFF   CALL printf                              \printf
+00F610B3  |.  83C4 04       ADD ESP,4
+00F610B6  |.  EB 0D         JMP SHORT 00F610C5
+00F610B8  |&gt;  68 1421F600   PUSH OFFSET 00F62114                     /_Format = &quot;a&lt;=b&quot;
+00F610BD  |.  E8 7EFFFFFF   CALL printf                              \printf
+00F610C2  |.  83C4 04       ADD ESP,4
+00F610C5  |&gt;  33C0          XOR EAX,EAX</p>
+<ol>
+<li>switch-case&#x7ED3;&#x6784;&#x53CD;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x5206;&#x6790;
+1&#xFF09;&#x666E;&#x901A;&#x60C5;&#x51B5;
+&#x6E90;&#x4EE3;&#x7801;:
+int a = 3;
+switch (a)
+{
+case 1:
+ printf(&quot;111/n&quot;);
+ break;
+case 2:
+ printf(&quot;222/n&quot;);
+ break;
+case 10:
+ printf(&quot;333/n&quot;);
+ break;
+default:
+ printf(&quot;default/n&quot;);
+ break;
+}
+printf(&quot;end/n&quot;);</li>
+</ol>
+<p>&#x6C47;&#x7F16;&#xFF1A;
+00071093  |.  C745 F8 03000 MOV DWORD PTR SS:[LOCAL.2],3
+0007109A  |.  8B45 F8       MOV EAX,DWORD PTR SS:[LOCAL.2]
+0007109D  |.  8945 FC       MOV DWORD PTR SS:[LOCAL.1],EAX
+000710A0  |.  837D FC 01    CMP DWORD PTR SS:[LOCAL.1],1
+000710A4  |.  74 0E         JE SHORT 000710B4
+000710A6  |.  837D FC 02    CMP DWORD PTR SS:[LOCAL.1],2
+000710AA  |.  74 17         JE SHORT 000710C3
+000710AC  |.  837D FC 0A    CMP DWORD PTR SS:[LOCAL.1],0A
+000710B0  |.  74 20         JE SHORT 000710D2
+000710B2  |.  EB 2D         JMP SHORT 000710E1
+000710B4  |&gt;  68 0C210700   PUSH OFFSET 0007210C                     /_Format = &quot;111/n&quot;
+000710B9  |.  E8 82FFFFFF   CALL printf                              \printf
+000710BE  |.  83C4 04       ADD ESP,4
+000710C1  |.  EB 2B         JMP SHORT 000710EE
+000710C3  |&gt;  68 14210700   PUSH OFFSET 00072114                     /_Format = &quot;222/n&quot;
+000710C8  |.  E8 73FFFFFF   CALL printf                              \printf
+000710CD  |.  83C4 04       ADD ESP,4
+000710D0  |.  EB 1C         JMP SHORT 000710EE
+000710D2  |&gt;  68 1C210700   PUSH OFFSET 0007211C                     /_Format = &quot;333/n&quot;
+000710D7  |.  E8 64FFFFFF   CALL printf                              \printf
+000710DC  |.  83C4 04       ADD ESP,4
+000710DF  |.  EB 0D         JMP SHORT 000710EE
+000710E1  |&gt;  68 24210700   PUSH OFFSET 00072124                     /_Format = &quot;default/n&quot;
+000710E6  |.  E8 55FFFFFF   CALL printf                              \printf
+000710EB  |.  83C4 04       ADD ESP,4
+000710EE  |&gt;  68 30210700   PUSH OFFSET 00072130                     /_Format = &quot;end/n&quot;
+000710F3  |.  E8 48FFFFFF   CALL printf                              \printf
+000710F8  |.  83C4 04       ADD ESP,4</p>
+<p>2&#xFF09;&#x8DF3;&#x8F6C;&#x8868;
+&#x6E90;&#x4EE3;&#x7801;&#xFF1A;
+int a = 0x20;
+switch (a)
+{
+case 0x13:
+    printf(&quot;0x13/n&quot;);
+    break;
+case 0x15:
+    printf(&quot;0x15/n&quot;);
+    break;
+case 0x10:
+    printf(&quot;0x10/n&quot;);
+    break;
+case 0x20:
+    printf(&quot;0x20/n&quot;);
+    break;
+case 0x22:
+    printf(&quot;0x22/n&quot;);
+    break;
+default:
+    printf(&quot;default/n&quot;);
+    break;
+}
+printf(&quot;end/n&quot;);</p>
+<p>&#x6C47;&#x7F16;&#xFF1A;
+00F01093  |.  C745 F8 20000 MOV DWORD PTR SS:[LOCAL.2],20
+00F0109A  |.  8B45 F8       MOV EAX,DWORD PTR SS:[LOCAL.2]
+00F0109D  |.  8945 FC       MOV DWORD PTR SS:[LOCAL.1],EAX
+00F010A0  |.  8B4D FC       MOV ECX,DWORD PTR SS:[LOCAL.1]
+00F010A3  |.  83E9 10       SUB ECX,10
+00F010A6  |.  894D FC       MOV DWORD PTR SS:[LOCAL.1],ECX
+00F010A9  |.  837D FC 12    CMP DWORD PTR SS:[LOCAL.1],12
+00F010AD  |.  77 5C         JA SHORT 00F0110B
+00F010AF  |.  8B55 FC       MOV EDX,DWORD PTR SS:[LOCAL.1]
+00F010B2  |.  0FB682 4411F0 MOVZX EAX,BYTE PTR DS:[EDX+0F01144]      ASCII , switch (&#x4E8B;&#x4F8B; 0..5, 6 &#x9000;&#x51FA;)
+00F010B9  |.  FF2485 2C11F0 JMP NEAR DWORD PTR DS:[EAX*4+0F0112C]
+00F010C0  |&gt;  68 1021F000   PUSH OFFSET 00F02110                     /_Format = &quot;0x13/n&quot;, &#x4E8B;&#x4F8B; 1 of switch test1.0F010B2
+00F010C5  |.  E8 76FFFFFF   CALL printf                              \printf
+00F010CA  |.  83C4 04       ADD ESP,4
+00F010CD  |.  EB 49         JMP SHORT 00F01118
+00F010CF  |&gt;  68 1821F000   PUSH OFFSET 00F02118                     /_Format = &quot;0x15/n&quot;, &#x4E8B;&#x4F8B; 2 of switch test1.0F010B2
+00F010D4  |.  E8 67FFFFFF   CALL printf                              \printf
+00F010D9  |.  83C4 04       ADD ESP,4
+00F010DC  |.  EB 3A         JMP SHORT 00F01118
+00F010DE  |&gt;  68 2021F000   PUSH OFFSET 00F02120                     /_Format = &quot;0x10/n&quot;, &#x4E8B;&#x4F8B; 0 of switch test1.0F010B2
+00F010E3  |.  E8 58FFFFFF   CALL printf                              \printf
+00F010E8  |.  83C4 04       ADD ESP,4
+00F010EB  |.  EB 2B         JMP SHORT 00F01118
+00F010ED  |&gt;  68 2821F000   PUSH OFFSET 00F02128                     /_Format = &quot;0x20/n&quot;, &#x4E8B;&#x4F8B; 3 of switch test1.0F010B2
+00F010F2  |.  E8 49FFFFFF   CALL printf                              \printf
+00F010F7  |.  83C4 04       ADD ESP,4
+00F010FA  |.  EB 1C         JMP SHORT 00F01118
+00F010FC  |&gt;  68 3021F000   PUSH OFFSET 00F02130                     /_Format = &quot;0x22/n&quot;, &#x4E8B;&#x4F8B; 4 of switch test1.0F010B2
+00F01101  |.  E8 3AFFFFFF   CALL printf                              \printf
+00F01106  |.  83C4 04       ADD ESP,4
+00F01109  |.  EB 0D         JMP SHORT 00F01118
+00F0110B  |&gt;  68 3821F000   PUSH OFFSET 00F02138                     /_Format = &quot;default/n&quot;, &#x4E8B;&#x4F8B; 5 of switch test1.0F010B2
+00F01110  |.  E8 2BFFFFFF   CALL printf                              \printf
+00F01115  |.  83C4 04       ADD ESP,4
+00F01118  |&gt;  68 4421F000   PUSH OFFSET 00F02144                     /_Format = &quot;end/n&quot;
+00F0111D  |.  E8 1EFFFFFF   CALL printf                              \printf
+00F01122  |.  83C4 04       ADD ESP,4</p>
+<p>&#x6700;&#x91CD;&#x8981;&#x7684;&#x5730;&#x65B9;&#x662F;&#xFF1A;
+// &#x5C06;&#x8981;&#x5224;&#x65AD;&#x7684;&#x503C;&#x4E0E;&#x6700;&#x5C0F;&#x7684;&#x503C;&#x76F8;&#x51CF;&#xFF0C;&#x518D;&#x4E0E;&#x6700;&#x5927;&#x503C;&#x548C;&#x6700;&#x5C0F;&#x503C;&#x7684;&#x5DEE;&#x4F5C;&#x6BD4;&#x8F83;&#xFF0C;&#x5982;&#x679C;&#x90FD;&#x6BD4;&#x4ED6;&#x5927;&#x4E86;&#x76F4;&#x63A5;&#x8DF3;&#x8F6C;&#x5230;default&#x3002;
+00F010A3  |.  83E9 10       SUB ECX,10<br>00F010A6  |.  894D FC       MOV DWORD PTR SS:[LOCAL.1],ECX
+00F010A9  |.  837D FC 12    CMP DWORD PTR SS:[LOCAL.1],12
+00F010AD  |.  77 5C         JA SHORT 00F0110B
+00F010AF  |.  8B55 FC       MOV EDX,DWORD PTR SS:[LOCAL.1]</p>
+<p>//&#x627E;&#x5230;&#x8DF3;&#x8F6C;&#x8868;&#x7684;&#x503C;&#x653E;&#x5165;EAX&#xFF0C;[EAX<em>4+0F0112C]&#x8BA1;&#x7B97;&#x8FC7;&#x540E;&#x7684;&#x503C;&#x8981;&#x662F;&#x8981;&#x8DF3;&#x8F6C;&#x7684;case&#x8BED;&#x53E5;&#x3002;
+00F010B2  |.  0FB682 4411F0 MOVZX EAX,BYTE PTR DS:[EDX+0F01144]      ASCII , switch (&#x4E8B;&#x4F8B; 0..5, 6 &#x9000;&#x51FA;)
+00F010B9  |.  FF2485 2C11F0 JMP NEAR DWORD PTR DS:[EAX</em>4+0F0112C]</p>
+<p>&#x6240;&#x4EE5;&#x5728;&#x9006;&#x5411;&#x7684;&#x65F6;&#x5019;&#x5E94;&#x8BE5;&#x8FD9;&#x6837;&#x505A;&#xFF1A;
+1&#xFF09;&#x5148;&#x627E;&#x5230;&#x76EE;&#x6807;&#x503C;
+2&#xFF09;&#x901A;&#x8FC7;sub&#x627E;&#x5230;&#x6700;&#x5C0F;&#x503C;
+3&#xFF09;&#x901A;&#x8FC7;cmp&#x627E;&#x5230;&#x6700;&#x5927;&#x503C;
+4&#xFF09;&#x901A;&#x8FC7;JMP NEAR DWORD PTR DS:[EAX*4+0F0112C]&#x627E;&#x5230;0F0112C&#x9644;&#x8FD1;&#x7684;&#x503C;&#xFF0C;&#x7136;&#x540E;&#x56DE;&#x63A8;&#x3002;</p>
+<ol>
+<li><p>for&#x5FAA;&#x73AF;&#x7ED3;&#x6784;&#x53CD;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x5206;&#x6790;
+for (int i=1; 1&lt;=10; ++i)
+{
+ printf (&#x201C;%d&quot;,i);
+}
+(1)&#x7981;&#x7528;&#x4F18;&#x5316;&#x60C5;&#x51B5;&#x4E0B;&#x7684;for&#x5FAA;&#x73AF;&#x53CD;&#x6C47;&#x7F16;&#x4EE3;&#x7801;(0x43&#x5B57;&#x8282;)
+(2)&#x5927;&#x5C0F;&#x6700;&#x5C0F;&#x5316;&#x4F18;&#x5316;&#x60C5;&#x51B5;&#x4E0B;&#x7684;for&#x5FAA;&#x73AF;&#x53CD;&#x6C47;&#x7F16;&#x4EE3;&#x7801;(0x27&#x5B57;&#x8282;)
+(3)&#x6700;&#x5927;&#x5316;&#x901F;&#x5EA6;&#x4F18;&#x5316;&#x60C5;&#x51B5;&#x4E0B;&#x7684;for&#x5FAA;&#x73AF;&#x6C47;&#x7F16;&#x4EE3;&#x7801;
+(4)&#x5B8C;&#x5168;&#x4F18;&#x5316;</p>
+</li>
+<li><p>&#x81EA;&#x589E;++&#x548C;&#x81EA;&#x51CF;--&#x8BED;&#x53E5;
+(1)&#x52A0;1&#x6307;&#x4EE4;inc
+inc&#x64CD;&#x4F5C;&#x7B26;
+inc a
+&#x76F8;&#x5F53;&#x4E8E;adda,1    //i++    ++i
+&#x4F18;&#x70B9;&#x901F;&#x5EA6;&#x6BD4;add&#x6307;&#x4EE4;&#x5FEB;,&#x5360;&#x7528;&#x7A7A;&#x95F4;&#x5C0F;
+&#x8FD9;&#x6761;&#x6307;&#x4EE4;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x5F71;&#x54CD;AF&#x3001;OF&#x3001;PF&#x3001;SF&#x3001;ZF&#x6807;&#x5FD7;&#x4F4D;,&#x4F46;&#x4E0D;&#x5F71;&#x54CD;CF&#x8FDB;&#x4F4D;&#x6807;&#x5FD7;&#x4F4D;
+(2)&#x51CF;1&#x6307;&#x4EE4;dec
+dec&#x64CD;&#x4F5C;&#x7B26;
+dec a&#x76F8;&#x5F53;&#x4E8E;sub a,1    //i-- --i
+&#x4F18;&#x70B9;&#x901F;&#x5EA6;&#x6BD4;sub&#x6307;&#x4EE4;&#x5FEB;,&#x5360;&#x7528;&#x7A7A;&#x95F4;&#x5C0F;
+&#x8FD9;&#x6761;&#x6307;&#x4EE4;&#x6267;&#x884C;&#x7ED3;&#x679C;&#x5F71;&#x54CD;AF&#x3001;OF&#x3001;PF&#x3001;SF&#x3001;ZE&#x6807;&#x5FD7;&#x4F4D;,&#x4F46;&#x4E0D;&#x5F71;&#x54CD;CF&#x8FDB;&#x4F4D;&#x6807;&#x5FD7;&#x4F4D;
+(3)&#x7528;&#x6C47;&#x7F16;&#x7406;&#x89E3;&#x524D;++&#x3001;&#x524D;--&#x3001;&#x540E;++&#x3001;&#x540E;--&#x533A;&#x522B;</p>
+</li>
+<li><p>do- while&#x548C; while&#x5FAA;&#x73AF;&#x7ED3;&#x6784;&#x53CD;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x5206;&#x6790;
+(1)do- while&#x5FAA;&#x73AF;
+(2) while&#x5FAA;&#x73AF;</p>
+</li>
+</ol>
+<p>&#x5341;&#x4E94;&#x3001;&#x6D6E;&#x70B9;&#x6307;&#x4EE4;</p>
+<ol>
+<li>st0&#x81F3;st7
+80&#x4F4D;&#x7684;&#x4E24;&#x7528;&#x5BC4;&#x5B58;&#x5668;
+MMX FPU
+FPU: 8&#x4E2A;80&#x4F4D;&#x6D6E;&#x70B9;&#x5BC4;&#x5B58;&#x5668;&#xFF08;&#x6570;&#x636E;&#xFF09;&#xFF0C;16&#x4F4D;&#x72B6;&#x6001;&#x5BC4;&#x5B58;&#x5668;&#xFF0C;16&#x4F4D;&#x63A7;&#x5236;&#x5BC4;&#x5B58;&#x5668;&#xFF0C;16&#x4E3A;&#x6807;&#x8BC6;&#x5BC4;&#x5B58;&#x5668;&#x3002;
+  &#x4F7F;&#x7528;FPU&#x6307;&#x4EE4;&#x5BF9;&#x8FD9;&#x4E9B;&#x5BC4;&#x5B58;&#x5668;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x8FD9;&#x4E9B;&#x5BC4;&#x5B58;&#x5668;&#x6784;&#x6210;&#x4E00;&#x4E2A;&#x5FAA;&#x73AF;&#x6808;&#xFF0C;st7&#x6808;&#x5E95;&#xFF0C;st0&#x6808;&#x9876;&#xFF0C;
+  &#x5F53;&#x4E00;&#x4E2A;&#x503C;&#x88AB;&#x538B;&#x5165;&#x65F6;&#xFF0C;&#x88AB;&#x5B58;&#x5165;st0&#xFF0C;&#x539F;&#x6765;st0&#x4E2D;&#x7684;&#x503C;&#x88AB;&#x5B58;&#x5165;st7
+MMX: &#x5C06;8&#x4E2A;FPU&#x5BC4;&#x5B58;&#x5668;&#x91CD;&#x547D;&#x540D;&#x4E3A;8&#x4E2A;64&#x4F4D;MMX&#x5BC4;&#x5B58;&#x5668;&#xFF0C;&#x5373;mm0&#x5230;mm7&#x3002;[&#x53F7;&#x79F0;&#x591A;&#x5A92;&#x4F53;&#x5904;&#x7406;&#x6280;&#x672F;]
+  57&#x6761;MMX&#x6307;&#x4EE4;&#xFF0C;&#x52A0;&#x5FEB;&#x4E86;&#x6574;&#x5F62;&#x6D6E;&#x70B9;&#x8FD0;&#x7B97;&#xFF0C;&#x4F46;&#x662F;&#x5BF9;&#x4E8E;&#x590D;&#x6742;&#x6D6E;&#x70B9;&#x8FD0;&#x7B97;&#x65E0;&#x5E2E;&#x52A9;
+3.&#x6D6E;&#x70B9;&#x6307;&#x4EE4;
+1). FLD&#x7C7B;&#x4F3C;&#x4E8E;PUSH&#x6307;&#x4EE4;
+&#x5411;st0&#x4E2D;&#x653E;&#x5165;&#x6570;&#x636E;
+2). FSTP&#x7C7B;&#x4F3C;&#x4E8E;POP&#x6307;&#x4EE4;
+st0&#x4E2D;&#x7684;&#x6570;&#x636E;&#x53D6;&#x51FA;
+3). FADD&#x7C7B;&#x4F3C;&#x4E8E;ADD&#x6307;&#x4EE4;
+&#x683C;&#x5F0F;
+fadd memvar     //st0 = st0 + memvar
+4). FSUB&#x7C7B;&#x4F3C;&#x4E8E;SUB&#x6307;&#x4EE4;
+&#x683C;&#x5F0F;
+fsub memvar //st0 = st0 - memvar
+5). FMUL&#x4E58;&#x6CD5;&#x6307;&#x4EE4;
+&#x683C;&#x5F0F;
+fmul memvar //st0 = st0 * memva
+6). FDIV&#x9664;&#x6CD5;&#x6307;&#x4EE4;
+&#x683C;&#x5F0F;
+FDIV memvar //st0 = st0 / menvar
+7). FILD&#x6307;&#x4EE4;
+&#x6574;&#x6570;&#x5165;&#x6808;&#x6307;&#x4EE4;
+FILD memvar
+/ st0 = (double)memvar
+8) cvttsd2si    &#x6D6E;&#x70B9;&#x8F6C;&#x6574;&#x6570;&#x6307;&#x4EE4;
+cvttsd2si r32, st0/m32
+&#x8FD0;&#x7528;&#x622A;&#x65AD;&#x5904;&#x7406;&#x5C06;sto/m32&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x5355;&#x7CBE;&#x5EA6;&#x6D6E;&#x70B9;&#x503C;&#x8F6C;&#x6362;&#x6210;r32
+&#x4E2D;&#x7684;&#x4E00;&#x4E2A;&#x6709;&#x7B26;&#x53F7;&#x7684;&#x53CC;&#x5B57;&#x6574;&#x6570;</li>
+</ol>
+<p>&#x5341;&#x516D;&#x3001;&#x4F4D;&#x79FB;&#x6307;&#x4EE4;</p>
+<ol>
+<li><p>&#x903B;&#x8F91;&#x4F4D;&#x79FB;&#x6307;&#x4EE4;
+(1)SHR    &#x903B;&#x8F91;&#x53F3;&#x79FB;&#x6307;&#x4EE4;
+&#x53F3;&#x79FB;&#x4E00;&#x4F4D;&#x76F8;&#x5F53;&#x4E8E;&#x6574;&#x9664;2,&#x7528;0&#x6765;&#x8865;&#x4F4D;
+(2)SHL    &#x903B;&#x8F91;&#x5DE6;&#x79FB;&#x6307;&#x4EE4;
+&#x5DE6;&#x79FB;&#x4E00;&#x4F4D;&#x76F8;&#x5F53;&#x4E8E;&#x4E58;2,&#x7528;0&#x6765;&#x8865;&#x4F4D;(&#x6709;&#x53EF;&#x80FD;&#x4F1A;&#x6EA2;&#x51FA;)</p>
+</li>
+<li><p>&#x7B97;&#x672F;&#x4F4D;&#x79FB;&#x6307;&#x4EE4;
+(1) SAR    &#x7B97;&#x672F;&#x53F3;&#x79FB;&#x6307;&#x4EE4;
+SAR&#x4E0E;SHR&#x6307;&#x4EE4;
+ SAR&#x53F3;&#x79FB;&#x65F6;&#x4FDD;&#x7559;&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x7B26;&#x53F7;,&#x5373;&#x7528;&#x7B26;&#x53F7;&#x4F4D;&#x6765;&#x8865;&#x8DB3;
+ SHR&#x53F3;&#x79FB;&#x65F6;&#x603B;&#x662F;&#x7528;0&#x6765;&#x8865;&#x8DB3;
+(2)SAL    &#x7B97;&#x672F;&#x5DE6;&#x79FB;&#x6307;&#x4EE4;
+SAL&#x4E0E;SHL&#x529F;&#x80FD;&#x5B8C;&#x5168;&#x4E00;&#x6837;</p>
+</li>
+</ol>
+<p>&#x5341;&#x4E03;&#x3001;&#x903B;&#x8F91;&#x8FD0;&#x7B97;&#x7B26;
+1.&#x6216;&#x8FD0;&#x7B97;
+1)&#x903B;&#x8F91;&#x6216;(C&#x8BED;&#x8A00;&#x4E2D;&#x7684;||)
+&#x5047;&#x5047;&#x4E3A;&#x5047;
+if( a || b)
+{
+}
+&#x622A;&#x65AD;&#x539F;&#x7406;
+2)&#x6309;&#x4F4D;&#x6216;(C&#x8BED;&#x8A00;&#x4E2D;&#x7684;|)
+0&#xD7;33       00110011
+| 0x66    01100110
+= 0x77    01110111
+OR&#x6307;&#x4EE4;</p>
+<p>2.&#x4E0E;&#x8FD0;&#x7B97;
+1)&#x903B;&#x8F91;&#x4E0E;(C&#x8BED;&#x8A00;&#x4E2D;&#x7684;&amp;&amp;)
+&#x771F;&#x771F;&#x4E3A;&#x771F;
+if(a &amp;&amp; b)
+{
+}
+&#x622A;&#x65AD;&#x539F;&#x7406;
+2)&#x6309;&#x4F4D;&#x4E0E;(C&#x8BED;&#x8A00;&#x4E2D;&#x7684;&amp;)
+0&#xD7;33       00110011
+&amp; 0x66    01100110
+= 0x22    00100010
+AND&#x6307;&#x4EE4;</p>
+<ol>
+<li><p>&#x975E;&#x8FD0;&#x7B97;
+1) &#x903B;&#x8F91;&#x53D6;&#x53CD;(C&#x8BED;&#x8A00;&#x4E2D;&#x7684;!)
+&#x5047;&#x53D8;&#x771F;&#x771F;&#x53D8;&#x5047;
+SETE (SETZ)    &#x53D6;ZF&#x6807;&#x5FD7;&#x4F4D;&#x7684;&#x503C;&#x4FDD;&#x5B58;
+SETNE (SETNZ)    &#x5C06;ZF&#x6807;&#x5FD7;&#x4F4D;&#x7684;&#x503C;&#x53D6;&#x53CD;&#x540E;&#x4FDD;&#x5B58;
+2) &#x6309;&#x4F4D;&#x53D6;&#x53CD;(C&#x8BED;&#x8A00;&#x4E2D;&#x7684;~)
+~ 0x33    00110011
+= 0xcc    11001100
+NOT&#x6307;&#x4EE4;</p>
+</li>
+<li><p>&#x5F02;&#x6216;&#x8FD0;&#x7B97;
+1)&#x6309;&#x4F4D;&#x5F02;&#x6216;(C&#x8BED;&#x8A00;&#x4E2D;&#x7684;^)
+1^1=0;    0^0=0;    &#x76F8;&#x540C;&#x4E3A;0
+0^1=1;    1^0=1;    &#x4E0D;&#x540C;&#x4E3A;1
+1101^0110=1011</p>
+</li>
+</ol>
+<p>XOR&#x6307;&#x4EE4;
+xor eax,eax    &#x5C06;eax&#x7F6E;0
+&#x4E0D;&#x501F;&#x52A9;&#x7B2C;&#x4E09;&#x4E2A;&#x53D8;&#x91CF;,&#x5C06;&#x4E24;&#x4E2A;&#x6570;&#x505A;&#x4EA4;&#x6362;
+int a = 5, b=7;
+a = a + b;
+b = a - b;
+a = a - b;
+&#x6216;
+a = a ^ b;
+b = a ^ b;
+a = a ^ b;</p>
+<p>&#x5341;&#x516B;&#x3001;&#x5B57;&#x7B26;&#x64CD;&#x4F5C;&#x76F8;&#x5173;&#x6307;&#x4EE4;
+1.&#x5B57;&#x7B26;&#x4E32;&#x7684;&#x6BD4;&#x8F83;&#x51FD;&#x6570; strcmp&#x53CD;&#x6C47;&#x7F16;&#x5206;&#x6790;
+vs&#x8BBE;&#x7F6E;&#x9879;&#x76EE;-&gt;&#x5C5E;&#x6027;-&gt;C/C++-&gt;&#x4F18;&#x5316;-&gt;&#x542F;&#x52A8;&#x5185;&#x90E8;&#x51FD;&#x6570;-&gt;&quot;&#x5426;</p>
+<p>2.REPNE&#x548C; SCASB&#x6307;&#x4EE4;
+1) SCASB&#x6307;&#x4EE4;
+SCASB&#x7F16;&#x8BD1;&#x540E;: SCAS BTYP PTR ES:[EID]
+&#x76F8;&#x5F53;&#x4E8E;:
+cmp byte prt [edi], al
+&#x5BF9;&#x6807;&#x5FD7;&#x4F4D;&#x7684;&#x5F71;&#x54CD;&#x76F8;&#x5F53;&#x4E8E;sub&#x6307;&#x4EE4;,&#x540C;&#x65F6;&#x8FD8;&#x4F1A;&#x4FEE;&#x6539;&#x5BC4;&#x5B58;&#x5668;EDI&#x7684;&#x503C;:
+&#x5982;&#x679C;&#x6807;&#x5FD7;&#x4F4D;DF&#x4E3A;0,&#x5219; inc EDI;
+&#x5982;&#x679C;&#x6807;&#x5FD7;&#x4F4D;DF&#x4E3A;1,&#x5219; dec EDI;</p>
+<p>2) REPNE&#x6307;&#x4EE4;
+repnz scasb&#x7F16;&#x8BD1;&#x540E;: REPNE SCAS BTYP PTR ES:[EID]
+&#x5F53;ECX!=0&#x5E76;&#x4E14;ZF=0&#x65F6;,&#x91CD;&#x590D;&#x6267;&#x884C;&#x540E;&#x8FB9;&#x7684;&#x6307;&#x4EE4;( SCAS BTYP PTR ES:[EID]),
+&#x6BCF;&#x6267;&#x884C;&#x4E00;&#x6B21;ECX&#x7684;&#x503C;&#x51CF;1
+RENE&#x548C;REPNZ&#x662F;&#x540C;&#x4E00;&#x6761;&#x6307;&#x4EE4;&#x7684;&#x4E0D;&#x540C;&#x52A9;&#x8BB0;&#x7B26;</p>
+<p>3) SCASB&#x3001; SCASW&#x3001; SCASD&#x6307;&#x4EE4;
+SCASB     SCAS BTYP PTR [EDI] char  s1[0] byte 1
+SCASW      SCAS WORD PTR [EDI] short s1[0] word 2
+SCASD     SCAS DWORD PTR [EDI] int    s1[0] dword 4</p>
+<p>REPNE SCAS BTYP PTR[EDI]    &#x5F53;ECX!=0&#x5E76;&#x4E14;ZF=0&#x3001;DF=0&#x65F6;,&#x91CD;&#x590D;&#x6267;&#x884C;&#x540E;&#x9762;&#x7684;&#x6307;&#x4EE4;
+&#x6BCF;&#x6B21;&#x6267;&#x884C;&#x4E00;&#x6B21;EDI&#x7684;&#x503C;&#x52A0;1,ECX&#x7684;&#x503C;&#x51CF;1
+REPNE SCAS WORD PTR [EDI]   &#x5F53;ECX!=0&#x5E76;&#x4E14;ZF=0&#x3001;DF=0&#x65F6;,&#x91CD;&#x590D;&#x6267;&#x884C;&#x540E;&#x9762;&#x7684;&#x6307;&#x4EE4;
+&#x6BCF;&#x6B21;&#x6267;&#x884C;&#x4E00;&#x6B21;EDI&#x7684;&#x503C;&#x52A0;2,ECX&#x7684;&#x503C;&#x51CF;1
+REPNE SCAS DWORD PTR[EDI]    &#x5F53;ECX!=0&#x5E76;&#x4E14;ZF=0&#x3001;DF=0&#x65F6;,&#x91CD;&#x590D;&#x6267;&#x884C;&#x540E;&#x9762;&#x7684;&#x6307;&#x4EE4;
+&#x6BCF;&#x6B21;&#x6267;&#x884C;&#x4E00;&#x6B21;EDI&#x7684;&#x503C;&#x52A0;4,ECX&#x7684;&#x503C;&#x51CF;1
+(&#x8C03;&#x8BD5;&#x65F6;,&#x6309;F7&#x624D;&#x80FD;&#x5355;&#x6B65;&#x6267;&#x884C;)</p>
+<p>4) &#x5B9E;&#x4F8B;&#x8FD0;&#x7528;
+1.&#x8BA1;&#x7B97;&#x5B57;&#x7B26;&#x4E32;&#x957F;&#x5EA6;
+2.&#x5B9A;&#x4F4D;&#x7279;&#x5B9A;&#x5B57;&#x7B26;&#x4E32;&#x4F4D;&#x7F6E;(&#x7D22;&#x5F15;)
+3.&#x5728;&#x5185;&#x5B58;&#x4E2D;&#x5B9A;&#x4F4D;&#x4E00;&#x4E32;&#x7279;&#x5F81;&#x7801;</p>
+<p>&#x5C0F;&#x7ED3;:
+RENZ/ REPNE&#x4E0E; SCASB&#x6307;&#x4EE4;&#x7ED3;&#x5408;&#x4F7F;&#x7528;,&#x8868;&#x793A;&#x5F53;&#x4E32;&#x672A;&#x7ED3;&#x675F;(ECX!=0),&#x4E14;&#x5F53;
+&#x5BF9;&#x5E94;&#x4E32;&#x5143;&#x7D20;&#x4E0D;&#x76F8;&#x540C;(ZF=0)&#x65F6;,&#x7EE7;&#x7EED;&#x91CD;&#x590D;&#x6267;&#x884C;&#x4E32;&#x6BD4;&#x8F83;&#x6307;&#x4EE4;</p>
+<ol>
+<li>REPE/REPZ&#x548C; CMPSB&#x3001; CMPSW&#x3001; CMPSD&#x6307;&#x4EE4;
+1) CMPS
+cmps byte ptr [edi], byte ptr [esi]
+cmps word ptr [edi], byte ptr [esi]
+cmps dword ptr [edi], byte ptr [esi]
+&#x5BF9;&#x6807;&#x5FD7;&#x4F4D;&#x7684;&#x5F71;&#x54CD;&#x76F8;&#x5F53;&#x4E8E;sub&#x6307;&#x4EE4;,&#x540C;&#x65F6;&#x8FD8;&#x4F1A;&#x4FEE;&#x6539;&#x5BC4;&#x5B58;&#x5668;EDI&#x548C;ESI&#x7684;&#x503C;:
+&#x5982;&#x679C;&#x6807;&#x5FD7;DF&#x4E3A;0,&#x5219;edi&#x3001;esi&#x6309;&#x76F8;&#x5BF9;&#x4E8E;&#x5927;&#x5C0F;( byte word dword)&#x9012;&#x589E;
+&#x5982;&#x679C;&#x6807;&#x5FD7;DF&#x4E3A;1,&#x5219;edi&#x3001;esi&#x6309;&#x76F8;&#x5BF9;&#x4E8E;&#x5927;&#x5C0F;( byte word dword)&#x9012;&#x51CF;
+2)REPE/REPZ
+repe/ repz cmps&#x5F53;ecx!=0&#x5E76;&#x4E14;ZF=1&#x65F6;,&#x91CD;&#x590D;&#x6267;&#x884C;&#x540E;&#x9762;&#x7684;&#x6307;&#x4EE4;
+&#x6BCF;&#x6267;&#x884C;&#x4E00;&#x6B21;ecx&#x7684;&#x503C;&#x51CF;1
+3)&#x5B9E;&#x4F8B;&#x8FD0;&#x7528;
+&#x6BD4;&#x8F83;&#x4E32;&#x662F;&#x5426;&#x76F8;&#x7B49;</li>
+</ol>
+<p>4.&#x6C47;&#x7F16;&#x7F16;&#x5199;&#x5B57;&#x7B26;&#x4E32;&#x6BD4;&#x8F83;&#x51FD;&#x6570;
+1) asm_strcmp&#x51FD;&#x6570;
+__declspec( naked) &#x544A;&#x8BC9;&#x7F16;&#x8BD1;&#x5668;&#x7528;&#x7EAF;&#x6C47;&#x7F16;&#x65B9;&#x5F0F;&#x7F16;&#x8BD1;&#x51FD;&#x6570;,&#x4E0D;&#x81EA;&#x52A8;&#x6DFB;&#x52A0;&#x5BC4;&#x5B58;&#x5668;&#x4FDD;&#x62A4;&#x548C;&#x5806;&#x6808;&#x5E73;&#x8861;&#x4EE3;&#x7801;
+&#x5BC4;&#x5B58;&#x5668;&#x5165;&#x6808;&#x4FDD;&#x62A4;
+&#x7EF4;&#x6301;&#x5806;&#x6808;&#x5E73;&#x8861;
+asm_strcmpA/asm_strcmpW
+2)STD/CLD&#x6307;&#x4EE4;(DF&#x65B9;&#x5411;&#x6807;&#x5FD7;&#x4F4D;&#x76F8;&#x5173;)
+STD DF=1
+CLD DF=0</p>
+<p>&#x5341;&#x4E5D;&#x3001;&#x4E32;&#x5B58;&#x50A8;&#x548C;&#x4E32;&#x7684;&#x52A0;&#x8F7D;&#x6307;&#x4EE4;
+&#x4E32;&#x5B58;&#x50A8;&#x6307;&#x4EE4; STOSB&#x3001; STOSW&#x3001; STOSD
+stosb        stos byte ptr [edi]
+stosw        stos word ptr [edi]
+stosd        stos dword ptr [edi]
+&#x76F8;&#x5F53;&#x4E8E;:
+mov byte ptr [edi], al
+mov word ptr [edi],ax
+mov dword ptr [edi],eax</p>
+<p>rep stosb        rep stos byte ptr [edi]
+&#x7528;al&#x7684;&#x503C;&#x586B;&#x5145; byte ptr[edi],&#x6BCF;&#x6B21;ecx&#x503C;&#x51CF;1,edi&#x7684;&#x503C;&#x589E;&#x52A0;1
+rep stosw        rep stos word ptr [edi]
+&#x7528;ax&#x7684;&#x503C;&#x586B;&#x5145; byte ptr[edi],&#x6BCF;&#x6B21;ecx&#x503C;&#x51CF;1,edi&#x7684;&#x503C;&#x589E;&#x52A0;2
+rep stosd        rep stos dword ptr [edi]
+&#x7528;eax&#x7684;&#x503C;&#x586B;&#x5145; byte ptr[edi],&#x6BCF;&#x6B21;ecx&#x503C;&#x51CF;1,edi&#x7684;&#x503C;&#x589E;&#x52A0;4</p>
+<p>&#x5B9A;&#x4F4D;main&#x51FD;&#x6570;&#x4F4D;&#x7F6E;&#x7684;&#x6B65;&#x9AA4;:
+&#x7B2C;&#x4E00;&#x6B65;:&#x6253;&#x5F00;&#x7A0B;&#x5E8F;,&#x7A0B;&#x5E8F;&#x542F;&#x52A8;&#x540E;&#x505C;&#x5728;&#x8FD9;&#x91CC;,&#x76F4;&#x63A5;jmp&#x8DF3;&#x8F6C;</p>
+<p>&#x7B2C;&#x4E8C;&#x6B65;:jmp&#x8DF3;&#x8F6C;&#x8DDF;&#x968F;&#x4E4B;&#x540E;,&#x627E;&#x5230;ca11 dword ptr[&lt;&amp; MSVCR100.exit&gt;]&#x9000;&#x51FA;&#x7684;&#x4EE3;&#x7801;&#x7684;&#x4F4D;&#x7F6E;</p>
+<p>&#x7B2C;&#x4E09;&#x6B65;:ca11 dword ptr[&lt;&amp; MSVCR100.exit&gt;]&#x7684;&#x524D;&#x4E00;&#x4E2A;ca11&#x5C31;&#x662F;main&#x51FD;&#x6570;</p>
+<ol>
+<li>&#x4E32;&#x8F7D;&#x5165;&#x6307;&#x4EE4; LODSB&#x3001; LODSW&#x3001; LODSD
+lodsb    lods byte ptr [esi]
+lodsw    lods word ptr [esi]
+lodsd    lods dword ptr [esi]
+&#x76F8;&#x5F53;&#x4E8E;:
+mov al, byte ptr [esi]
+mov ax, word ptr [esi]
+mov eax, dword ptr [esi]</li>
+</ol>
+<p>rep lodsb    rep lods byte ptr [esi]
+&#x7528; byte ptr[esi]&#x7684;&#x503C;,&#x586B;&#x5145;al,&#x6BCF;&#x6B21;ecx&#x503C;&#x51CF;1,esi&#x7684;&#x503C;&#x589E;&#x52A0;1
+rep lodsw    rep lods word ptr [esi]
+&#x7528; word ptr[esi]&#x7684;&#x503C;,&#x586B;&#x5145;ax,&#x6BCF;&#x6B21;ecx&#x503C;&#x51CF;1,esi&#x7684;&#x503C;&#x589E;&#x52A0;2
+rep lodsd    rep lods dword ptr [esi]
+&#x7528; dword ptr[esi]&#x7684;&#x503C;,&#x586B;&#x5145;eax,&#x6BCF;&#x6B21;ec&#x3BA;&#x503C;&#x51CF;1,esi&#x7684;&#x503C;&#x589E;&#x52A0;4</p>
+<p>&#x5341;&#x3001;&#x5FAA;&#x73AF;&#x63A7;&#x5236;&#x6307;&#x4EE4;
+&#x683C;&#x5F0F;:    LOOP&#x6807;&#x53F7;
+loop start/end
+&#x529F;&#x80FD;:
+(1)ECX = ECX -1
+(2)EC&#x2169;!=0,&#x5219;&#x8F6C;&#x79FB;&#x81F3;&#x6807;&#x53F7;&#x5904;&#x5FAA;&#x73AF;&#x6267;&#x884C;
+(3)&#x76F4;&#x81F3;ECX=0,&#x7EE7;&#x7EED;&#x6267;&#x884C;&#x540E;&#x9762;&#x7684;&#x6307;&#x4EE4;
+&#x672C;&#x6307;&#x4EE4;&#x662F;&#x7528;ECX&#x5BC4;&#x5B58;&#x5668;&#x4F5C;&#x4E3A;&#x8BA1;&#x6570;&#x5668;,&#x6765;&#x63A7;&#x5236;&#x7A0B;&#x5E8F;&#x7684;&#x5FAA;&#x73AF;</p>
+<p>&#x4E8C;&#x5341;&#x4E00;&#x3001;&#x6761;&#x4EF6;&#x7F6E;&#x4F4D;&#x6307;&#x4EE4;
+1.(==&#x6BD4;&#x8F83;&#x65F6;)
+SETZ(SETE)
+&#x53D6;ZF&#x6807;&#x5FD7;&#x4F4D;&#x7684;&#x503C;&#x4FDD;&#x5B58;
+2.(!=&#x6BD4;&#x8F83;&#x65F6;)
+SETNZ*( SETNE)&#x5C06;ZF&#x6807;&#x5FD7;&#x4F4D;&#x503C;&#x53D6;&#x53CD;&#x540E;&#x4FDD;&#x5B58;
+3,SETG(&gt;&#x6BD4;&#x8F83;&#x65F6;)
+setg al
+&#x5F53;ZF==0&amp;&amp;SF==1&#x65F6;al=1
+4.SETL(&lt;&#x6BD4;&#x8F83;&#x65F6;)
+setl al
+&#x5F53;SF==1 || OF==1&#x65F6;al=1</p>
+<ol>
+<li>SETGE(&gt;=&#x6BD4;&#x8F83;&#x65F6;)
+SERGE&#x64CD;&#x4F5C;&#x6570;
+&#x64CD;&#x4F5C;&#x6570;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x7684;&#x5B58;&#x50A8;&#x5355;&#x5143;,&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x5BBD;&#x5EA6;&#x7684;&#x5BC4;&#x5B58;&#x5668;
+&#x4F5C;&#x7528;:&gt;=&#x65F6;,&#x8BBE;&#x5B9A;&#x64CD;&#x4F5C;&#x6570;&#x503C;1,&#x5426;&#x5219;&#x4E3A;0,&#x4E00;&#x822C;&#x4E0E;cmp&#x6307;&#x4EE4;&#x7EC4;&#x5408;&#x4F7F;&#x7528;
+&#x6807;&#x5FD7;&#x4F4D;:JGE&#x5BF9;&#x6807;&#x5FD7;&#x7684;&#x9700;&#x6C42;SF=OF&#x65F6;,&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x503C;&#x5C06;&#x4E3A;1</li>
+<li>SETGE(&lt;&#x6BD4;&#x8F83;&#x65F6;)
+SETLE&#x64CD;&#x4F5C;&#x6570;
+&#x64CD;&#x4F5C;&#x6570;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x7684;&#x5B58;&#x50A8;&#x5355;&#x5143;,&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x5B57;&#x8282;&#x5BBD;&#x5EA6;&#x7684;&#x5BC4;&#x5B58;&#x5668;
+&#x4F5C;&#x7528;:&lt;=&#x65F6;,&#x8BBE;&#x5B9A;&#x64CD;&#x4F5C;&#x6570;&#x503C;1,&#x5426;&#x5219;&#x4E3A;0,&#x4E00;&#x822C;&#x4E0E;cmp&#x6307;&#x4EE4;&#x7EC4;&#x5408;&#x4F7F;&#x7528;
+&#x6807;&#x5FD7;&#x4F4D;:JLE&#x5BF9;&#x6807;&#x5FD7;&#x7684;&#x9700;&#x6C42;ZF==1 || SF!=OF&#x65F6;,&#x64CD;&#x4F5C;&#x6570;&#x7684;&#x503C;&#x5C06;&#x4E3A;1</li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="汇编基础知识和计算机组织.html" class="navigation navigation-prev " aria-label="Previous page: 汇编基础知识和计算机组织">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="逆向实战练习部分.html" class="navigation navigation-next " aria-label="Next page: 逆向实战练习部分">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"win32汇编与反汇编","level":"1.13","depth":1,"next":{"title":"逆向实战练习部分","level":"1.14","depth":1,"path":"驱动学习结合python/逆向实战练习部分.md","ref":"驱动学习结合python/逆向实战练习部分.md","articles":[]},"previous":{"title":"汇编基础知识和计算机组织","level":"1.12","depth":1,"path":"驱动学习结合python/汇编基础知识和计算机组织.md","ref":"驱动学习结合python/汇编基础知识和计算机组织.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"驱动学习结合python/win32汇编与反汇编.md","mtime":"2024-07-28T11:47:02.237Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-02-21T16:48:54.649Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

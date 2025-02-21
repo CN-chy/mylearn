@@ -1,0 +1,993 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>移动测试 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../python人工智能/深度学习.html" />
+    
+    
+    <link rel="prev" href="性能测试.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="web自动化.html">
+            
+                <a href="web自动化.html">
+            
+                    
+                    web自动化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="接口测试.html">
+            
+                <a href="接口测试.html">
+            
+                    
+                    接口测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="性能测试.html">
+            
+                <a href="性能测试.html">
+            
+                    
+                    性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="移动测试.html">
+            
+                <a href="移动测试.html">
+            
+                    
+                    移动测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../python人工智能/深度学习.html">
+            
+                <a href="../python人工智能/深度学习.html">
+            
+                    
+                    深度学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../虚拟化与云平台/Docker.html">
+            
+                <a href="../虚拟化与云平台/Docker.html">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../虚拟化与云平台/Jenkins.html">
+            
+                <a href="../虚拟化与云平台/Jenkins.html">
+            
+                    
+                    Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../虚拟化与云平台/Kubernetes.html">
+            
+                <a href="../虚拟化与云平台/Kubernetes.html">
+            
+                    
+                    Kubernetes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../虚拟化与云平台/shell.html">
+            
+                <a href="../虚拟化与云平台/shell.html">
+            
+                    
+                    shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../驱动学习结合python/逆向工程得概念介绍和准备工具.html">
+            
+                <a href="../驱动学习结合python/逆向工程得概念介绍和准备工具.html">
+            
+                    
+                    逆向工程得概念介绍和准备工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../驱动学习结合python/汇编基础知识和计算机组织.html">
+            
+                <a href="../驱动学习结合python/汇编基础知识和计算机组织.html">
+            
+                    
+                    汇编基础知识和计算机组织
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../驱动学习结合python/win32汇编与反汇编.html">
+            
+                <a href="../驱动学习结合python/win32汇编与反汇编.html">
+            
+                    
+                    win32汇编与反汇编
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../驱动学习结合python/逆向实战练习部分.html">
+            
+                <a href="../驱动学习结合python/逆向实战练习部分.html">
+            
+                    
+                    逆向实战练习部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../驱动学习结合python/x64dbg.html">
+            
+                <a href="../驱动学习结合python/x64dbg.html">
+            
+                    
+                    x64dbg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../驱动学习结合python/驱动.html">
+            
+                <a href="../驱动学习结合python/驱动.html">
+            
+                    
+                    驱动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../驱动学习结合python/驱动r3.html">
+            
+                <a href="../驱动学习结合python/驱动r3.html">
+            
+                    
+                    驱动r3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../驱动学习结合python/pyside6.html">
+            
+                <a href="../驱动学习结合python/pyside6.html">
+            
+                    
+                    pyside6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../驱动学习结合python/定制自己的ce过游戏检测.html">
+            
+                <a href="../驱动学习结合python/定制自己的ce过游戏检测.html">
+            
+                    
+                    定制自己的ce过游戏检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >移动测试</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="unittest">unittest</h1>
+<p>&#x7EE7;&#x627F;TestCase&#xFF0C;&#x4EE5;test&#x5F00;&#x5934;&#x7684;&#x65B9;&#x6CD5;&#x5747;&#x4E3A;&#x4E00;&#x6761;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#xFF0C;&#x53EF;&#x4EE5;&#x6DFB;&#x52A0;setup&#x548C;teardown&#x65B9;&#x6CD5;</p>
+<h2 id="&#x8FD0;&#x884C;&#x65B9;&#x5F0F;">&#x8FD0;&#x884C;&#x65B9;&#x5F0F;</h2>
+<p>1&#x3001;unittest.main()&#x4F1A;&#x81EA;&#x52A8;&#x6267;&#x884C;&#x6BCF;&#x4E2A;&#x7EE7;&#x627F;unittest.TestCase&#x7C7B;&#x7684;test&#x5F00;&#x5934;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>2&#x3001;&#x521B;&#x5EFA;TestSuite&#xFF0C;&#x5E76;&#x6DFB;&#x52A0;&#x7528;&#x4F8B;&#xFF0C;&#x5229;&#x7528;TextTestRunner&#x7684;run&#x65B9;&#x6CD5;&#x6267;&#x884C;&#x6D4B;&#x8BD5;&#x5957;</p>
+<p>3&#x3001;&#x901A;&#x8FC7;unittest.defaultTestLoader.discover(&apos;./&apos;, pattern=&apos;*.py&apos;)&#x65B9;&#x6CD5;&#x67E5;&#x627E;&#x751F;&#x6210;&#x6D4B;&#x8BD5;&#x5957;&#xFF0C;&#x5229;&#x7528;TextTestRunner&#x7684;run&#x65B9;&#x6CD5;&#x6267;&#x884C;&#x6D4B;&#x8BD5;&#x5957;</p>
+<h2 id="&#x62A5;&#x544A;&#x6A21;&#x677F;">&#x62A5;&#x544A;&#x6A21;&#x677F;</h2>
+<h4 id="&#x4F7F;&#x7528;pycharm&#x81EA;&#x5E26;&#x6A21;&#x677F;">&#x4F7F;&#x7528;pycharm&#x81EA;&#x5E26;&#x6A21;&#x677F;</h4>
+<h4 id="&#x4F7F;&#x7528;beautifulreport&#x6A21;&#x677F;">&#x4F7F;&#x7528;BeautifulReport&#x6A21;&#x677F;</h4>
+<p>&#x5B89;&#x88C5;BeautifulReport, &#x4F7F;&#x7528;BeautifulReport&#x7C7B;&#xFF0C;&#x4F20;&#x5165;&#x6D4B;&#x8BD5;&#x5957;&#x5BF9;&#x8C61;&#xFF0C;&#x8FD4;&#x56DE;BeautifulReport&#x5BF9;&#x8C61;&#xFF0C;&#x4F7F;&#x7528;&#x4ED6;&#x7684;report&#x65B9;&#x6CD5;&#x751F;&#x6210;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> BeautifulReport <span class="hljs-keyword">import</span> BeautifulReport <span class="hljs-keyword">as</span> bf
+
+run = bf(tss)
+
+run.report(filename, description)
+</code></pre>
+<h1 id="pytest">pytest</h1>
+<p>&#x5B89;&#x88C5;pytest</p>
+<p>&#x540C;&#x6837;&#x9700;&#x8981;&#x7528;&#x4F8B;&#x540D;&#x4EE5;test&#x5F00;&#x5934;&#xFF0C;&#x7ED3;&#x5408;assert &#x65AD;&#x8A00;</p>
+<h2 id="&#x8FD0;&#x884C;&#x65B9;&#x5F0F;">&#x8FD0;&#x884C;&#x65B9;&#x5F0F;</h2>
+<p>1&#x3001;python py&#x6587;&#x4EF6;</p>
+<p>&#x9700;&#x8981;pytest.main([py&#x6587;&#x4EF6;&#x540D;])</p>
+<p>2&#x3001;pytest py&#x6587;&#x4EF6;</p>
+<p>&#x4E0D;&#x9700;&#x8981;pytest.main([py&#x6587;&#x4EF6;&#x540D;])</p>
+<h2 id="&#x7528;&#x4F8B;&#x7F16;&#x5199;">&#x7528;&#x4F8B;&#x7F16;&#x5199;</h2>
+<p>&#x53EF;&#x4EE5;&#x4EE5;&#x5355;&#x4E2A;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x7528;&#x4F8B;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x4EE5;&#x7C7B;&#x4E2D;&#x7684;&#x51FD;&#x6570;&#x4F5C;&#x4E3A;&#x7528;&#x4F8B;&#xFF08;&#x4E0D;&#x9700;&#x8981;&#x7EE7;&#x627F;&#x4EFB;&#x4F55;&#x7C7B;&#xFF0C;&#x4F46;&#x662F;&#x7C7B;&#x540D;&#x9ED8;&#x8BA4;&#x8981;&#x4EE5;Test&#x5F00;&#x5934;&#xFF09;</p>
+<h2 id="setup&#x548C;teardown&#x51FD;&#x6570;&#x652F;&#x6301;&#x51FD;&#x6570;&#x7EA7;&#x522B;&#x548C;&#x7C7B;&#x7EA7;&#x522B;">setup&#x548C;teardown&#x51FD;&#x6570;&#x652F;&#x6301;&#x51FD;&#x6570;&#x7EA7;&#x522B;&#x548C;&#x7C7B;&#x7EA7;&#x522B;</h2>
+<h3 id="&#x51FD;&#x6570;&#x7EA7;&#x522B;">&#x51FD;&#x6570;&#x7EA7;&#x522B;</h3>
+<p>setup_module&#x548C;teardown_module</p>
+<p>setup_function&#x548C;teardown_function</p>
+<h3 id="&#x7C7B;&#x7EA7;&#x522B;">&#x7C7B;&#x7EA7;&#x522B;</h3>
+<p>setup_class&#x548C;teardown_class</p>
+<p>setup_method&#x548C;teardown_method</p>
+<h2 id="pytest&#x914D;&#x7F6E;&#x6587;&#x4EF6;">pytest&#x914D;&#x7F6E;&#x6587;&#x4EF6;</h2>
+<p>pytest&#x7684;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x540D;&#x79F0;&#x4E3A;pytest.ini</p>
+<p>[pytest] </p>
+<p>addopts = -s ... # &#x914D;&#x7F6E;pytest&#x547D;&#x4EE4;&#x884C;&#x8FD0;&#x884C;&#x53C2;&#x6570;</p>
+<p>testpaths = ./scripts # &#x914D;&#x7F6E;&#x6D4B;&#x8BD5;&#x641C;&#x7D22;&#x7684;&#x8DEF;&#x5F84;</p>
+<p>python<em>files = test</em>*.py # &#x914D;&#x7F6E;&#x6D4B;&#x8BD5;&#x641C;&#x7D22;&#x7684;&#x6587;&#x4EF6;&#x540D;</p>
+<p>python<em>classes = Test</em>* # &#x914D;&#x7F6E;&#x6D4B;&#x8BD5;&#x641C;&#x7D22;&#x7684;&#x6D4B;&#x8BD5;&#x7C7B;&#x540D;</p>
+<p>python<em>functions = test</em>* # &#x914D;&#x7F6E;&#x6D4B;&#x8BD5;&#x641C;&#x7D22;&#x7684;&#x6D4B;&#x8BD5;&#x51FD;&#x6570;&#x540D;</p>
+<h2 id="&#x5E38;&#x7528;&#x63D2;&#x4EF6;">&#x5E38;&#x7528;&#x63D2;&#x4EF6;</h2>
+<p>pytest-html &#x751F;&#x6210;html xml&#x6D4B;&#x8BD5;&#x62A5;&#x544A;</p>
+<p>pytest-ordering &#x63A7;&#x5236;&#x51FD;&#x6570;&#x6267;&#x884C;&#x987A;&#x5E8F;</p>
+<p>&#x6807;&#x8BB0;&#x4E8E;&#x88AB;&#x6D4B;&#x51FD;&#x6570;, @pytest.mark.run(order=x)</p>
+<p>0 &gt; &#x8F83;&#x5C0F;&#x6574;&#x6570;&gt; &#x8F83;&#x5927;&#x7684;&#x6574;&#x6570; &gt; &#x65E0;&#x6807;&#x8BB0; &gt; &#x8F83;&#x5C0F;&#x7684;&#x8D1F;&#x6570; &gt; &#x8F83;&#x5927;&#x7684;&#x8D1F;&#x6570;</p>
+<p>pytest-rerunfailures &#x914D;&#x7F6E;&#x5931;&#x8D25;&#x51FD;&#x6570;&#x7684;&#x91CD;&#x8BD5;&#x6B21;&#x6570;</p>
+<h2 id="pytest&#x5E38;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;&#xFF08;&#x53EF;&#x914D;&#x7F6E;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF09;">pytest&#x5E38;&#x7528;&#x547D;&#x4EE4;&#x884C;&#x53C2;&#x6570;&#xFF08;&#x53EF;&#x914D;&#x7F6E;&#x5728;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF09;</h2>
+<p>-s&#xFF1A;&#x8F93;&#x51FA;&#x8C03;&#x8BD5;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;print&#x6253;&#x5370;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<p>-s&#x662F;&#x8F93;&#x51FA;&#x7A0B;&#x5E8F;&#x8FD0;&#x884C;&#x4FE1;&#x606F;</p>
+<p>&#x2014;html=./report.html&#x5728;&#x5F53;&#x524D;&#x76EE;&#x5F55;&#x4E0B;&#x751F;&#x6210;report.html&#x6587;&#x4EF6;&#xFF08;&#x9700;&#x8981;&#x5B89;&#x88C5;pytest-html&#xFF09;</p>
+<p>&#x2014;reruns 2 : &#x5931;&#x8D25;&#x91CD;&#x8BD5;2&#x6B21;&#xFF08;&#x9700;&#x8981;&#x5B89;&#x88C5;pytest-rerunfailures&#xFF09;</p>
+<p>-v &#x663E;&#x793A;&#x66F4;&#x8BE6;&#x7EC6;&#x7684;&#x4FE1;&#x606F;&#x3002;</p>
+<h2 id="pytest-fixtures&#x4F7F;&#x7528;">pytest fixtures&#x4F7F;&#x7528;</h2>
+<pre><code class="lang-python"><span class="hljs-meta">@pytest.fixture(scope=&apos;function&apos;, params=None, autouse=False, ids=None, name=None) </span>
+
+ - scope: &#x88AB;&#x6807;&#x8BB0;&#x65B9;&#x6CD5;&#x7684;&#x4F5C;&#x7528;&#x57DF;; 
+
+  <span class="hljs-string">&quot;function&quot;</span>: &#x9ED8;&#x8BA4;&#x503C;,&#x8868;&#x793A;&#x6BCF;&#x4E2A;&#x6D4B;&#x8BD5;&#x65B9;&#x6CD5;&#x90FD;&#x8981;&#x6267;&#x884C;&#x4E00;&#x6B21; 
+
+  <span class="hljs-string">&quot;class&quot;</span>: &#x4F5C;&#x7528;&#x4E8E;&#x6574;&#x4E2A;&#x7C7B;, &#x8868;&#x793A;&#x6BCF;&#x4E2A;&#x7C7B;&#x7684;&#x6240;&#x6709;&#x6D4B;&#x8BD5;&#x65B9;&#x6CD5;&#x53EA;&#x8FD0;&#x884C;&#x4E00;&#x6B21;
+
+   <span class="hljs-string">&quot;module&quot;</span>: &#x4F5C;&#x7528;&#x4E8E;&#x6574;&#x4E2A;&#x6A21;&#x5757;, &#x6BCF;&#x4E2A;module&#x7684;&#x6240;&#x6709;&#x6D4B;&#x8BD5;&#x65B9;&#x6CD5;&#x53EA;&#x8FD0;&#x884C;&#x4E00;&#x6B21;. 
+
+   <span class="hljs-string">&quot;session&quot;</span>: &#x4F5C;&#x7528;&#x4E8E;&#x6574;&#x4E2A;session, &#x6BCF;&#x6B21;session&#x53EA;&#x8FD0;&#x884C;&#x4E00;&#x6B21;. 
+
+- params: list&#x7C7B;&#x578B;,&#x9ED8;&#x8BA4;<span class="hljs-keyword">None</span>, &#x63A5;&#x6536;&#x53C2;&#x6570;&#x503C;,&#x5BF9;&#x4E8E;param&#x91CC;&#x9762;&#x7684;&#x6BCF;&#x4E2A;&#x503C;&#xFF0C;fixture&#x90FD;&#x4F1A;&#x53BB;&#x904D;&#x5386;&#x6267;&#x884C;&#x4E00;&#x6B21;.
+
+- autouse: &#x662F;&#x5426;&#x81EA;&#x52A8;&#x8FD0;&#x884C;,&#x9ED8;&#x8BA4;&#x4E3A;false,
+
+&#x4EE5;&#x4E0A;&#x7684;&#x6240;&#x6709;&#x53C2;&#x6570;&#x4E5F;&#x53EF;&#x4EE5;&#x4E0D;&#x4F20;
+</code></pre>
+<p>&#x57FA;&#x672C;&#x4F7F;&#x7528;</p>
+<h3 id="&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x5E94;&#x7528;">&#x4F5C;&#x4E3A;&#x53C2;&#x6570;&#x5E94;&#x7528;</h3>
+<h3 id="&#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x5E94;&#x7528;">&#x4F5C;&#x4E3A;&#x51FD;&#x6570;&#x5E94;&#x7528;</h3>
+<p>@pytest.mark.usefixtures(&quot;before&quot;)</p>
+<h3 id="&#x5E26;&#x53C2;&#x6570;&#x548C;&#x8FD4;&#x56DE;&#x503C;">&#x5E26;&#x53C2;&#x6570;&#x548C;&#x8FD4;&#x56DE;&#x503C;</h3>
+<pre><code class="lang-python"><span class="hljs-meta">@pytest.fixture(params=[1, 2, 3]) </span>
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">need_data</span><span class="hljs-params">(request)</span>:</span> <span class="hljs-comment"># &#x4F20;&#x5165;&#x53C2;&#x6570;request &#x7CFB;&#x7EDF;&#x5C01;&#x88C5;&#x53C2;&#x6570; </span>
+
+  <span class="hljs-keyword">return</span> request.param <span class="hljs-comment"># &#x53D6;&#x5217;&#x8868;&#x4E2D;&#x5355;&#x4E2A;&#x503C;&#xFF0C;&#x9ED8;&#x8BA4;&#x7684;&#x53D6;&#x503C;&#x65B9;&#x5F0F; </span>
+
+&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<span class="hljs-keyword">yield</span>&#x5B9E;&#x73B0;setup&#x548C;teardown&#x7684;&#x6548;&#x679C;
+</code></pre>
+<h2 id="pytest&#x5176;&#x4ED6;&#x51FD;&#x6570;&#x65B9;&#x6CD5;">pytest&#x5176;&#x4ED6;&#x51FD;&#x6570;&#x65B9;&#x6CD5;</h2>
+<p>@pytest.mark.skipif(condition, reason=&apos;xxx&apos;) &#x8DF3;&#x8FC7;&#x6D4B;&#x8BD5;&#x51FD;&#x6570;</p>
+<p>@pytest.mark.xfail(condition, reason=&quot;xxx&quot;) &#x6807;&#x8BB0;&#x4E3A;&#x9884;&#x671F;&#x5931;&#x8D25;&#x51FD;&#x6570;</p>
+<p>@pytest.mark.parametrize(&quot;a&quot;, [3,6]) def test_b(self, a): </p>
+<p>  print(&quot;test data:a=%d&quot; % a) </p>
+<p>  assert a%3 == 0</p>
+<p>&#x51FD;&#x6570;&#x6570;&#x636E;&#x53C2;&#x6570;&#x5316;&#xFF0C;&#x53C2;&#x6570;&#x503C;&#x4E3A;N&#x4E2A;&#xFF0C;&#x6D4B;&#x8BD5;&#x65B9;&#x6CD5;&#x5C31;&#x4F1A;&#x8FD0;&#x884C;N&#x6B21;</p>
+<h2 id="pytest&#x4F7F;&#x7528;allure">pytest&#x4F7F;&#x7528;allure</h2>
+<p>&#x5B89;&#x88C5;allure-pytest&#x63D2;&#x4EF6;</p>
+<p>pytest&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x53C2;&#x6570;&#x52A0;&#x4E0A;--alluredir=path &#x6307;&#x5B9A;&#x751F;&#x6210;&#x7ED3;&#x679C;&#x4FDD;&#x5B58;&#x7684;&#x76EE;&#x5F55;&#x540D;</p>
+<p>&#x5B89;&#x88C5;allure github</p>
+<p>allure serve path &#x751F;&#x6210;&#x4E34;&#x65F6;&#x76EE;&#x5F55;&#x6253;&#x5F00;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;</p>
+<p>allure generate path -o path1 &#x6839;&#x636E;path&#x4E0B;&#x7ED3;&#x679C;&#x751F;path1&#x76EE;&#x5F55;&#x5305;&#x542B;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;</p>
+<p>allure open path1 &#x6253;&#x5F00;&#x6D4B;&#x8BD5;&#x62A5;&#x544A;</p>
+<h2 id="allure&#x7279;&#x6027;">allure&#x7279;&#x6027;</h2>
+<p>@allure.feature&#xFF08;&#x529F;&#x80FD;&#x540D;&#x79F0;&#xFF09;</p>
+<p>@allure.story&#xFF08;&#x5B50;&#x529F;&#x80FD;&#x540D;&#x79F0; &#xFF09;</p>
+<p>@allure.title&#xFF08;&#x6D4B;&#x8BD5;&#x6807;&#x9898;&#xFF09;</p>
+<p>@allure.description&#xFF08;&#x7528;&#x4F8B;&#x63CF;&#x8FF0;&#xFF09;</p>
+<p>@allure.step(&#x2018;&#x6B65;&#x9AA4;&#x2019;)</p>
+<p>@allure.attach(&#x2018;&#x9644;&#x4EF6;&#x2019;)</p>
+<p>@allure.severity&#xFF08;&#x7528;&#x4F8B;&#x7B49;&#x7EA7;&#xFF09;</p>
+<p>allure.severity_level.*</p>
+<p>@allure.issue(&apos;140&apos;, &apos;&#x7F3A;&#x9677;&#x63CF;&#x8FF0;&apos;)</p>
+<p>--allure-link-pattern=issue:<a href="http://www.mytesttracker.com/issue/{}" target="_blank">http://www.mytesttracker.com/issue/{}</a></p>
+<p>@allure.testcase(&quot;&#x7528;&#x4F8B;&#x8FDE;&#x63A5;&quot;, &apos;&#x6D4B;&#x8BD5;&#x7528;&#x4F8B;&#x6807;&#x9898;&apos;)</p>
+<p>@allure.link(&quot;&#x7F51;&#x5740;&quot;, name=&apos;Click me&apos;)</p>
+<h1 id="yaml&#x89E3;&#x6790;&#x548C;&#x66F4;&#x6539;">yaml&#x89E3;&#x6790;&#x548C;&#x66F4;&#x6539;</h1>
+<p>&#x5B89;&#x88C5;pyyaml</p>
+<p>yaml.safe_load(f)</p>
+<p>yaml.safe_dump(data, f)</p>
+<h1 id="adb&#x5E38;&#x7528;&#x547D;&#x4EE4;">ADB&#x5E38;&#x7528;&#x547D;&#x4EE4;</h1>
+<pre><code class="lang-python">adb --help
+
+adb start-server
+
+adb kill-server
+
+adb devices
+
+&#x83B7;&#x53D6;&#x7CFB;&#x7EDF;&#x7248;&#x672C;
+adb shell getprop ro.build.version.release
+
+adb push &#x7535;&#x8111;&#x7AEF;&#x2F42;&#x4EF6;&#x8DEF;&#x5F84;/&#x9700;&#x8981;&#x53D1;&#x9001;&#x7684;&#x6587;&#x4EF6;,&#x624B;&#x673A;&#x7AEF;&#x5B58;&#x50A8;&#x7684;&#x8DEF;&#x5F84;
+adb push C:\Users\win\Desktop\xx.png /sdcard
+
+adb pull &#x624B;&#x673A;&#x7AEF;&#x7684;&#x8DEF;&#x5F84;/&#x62C9;&#x53D6;&#x6587;&#x4EF6;&#x540D; &#x7535;&#x8111;&#x7AEF;&#x5B58;&#x50A8;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;
+adb pull /sdcard/xx.png C:\Users\win\Desktop
+
+&#x67E5;&#x770B;&#x624B;&#x673A;&#x8FD0;&#x884C;&#x65E5;&#x5FD7;
+adb logcat
+
+&#x8FDB;&#x5165;&#x5230;&#x624B;&#x673A;&#x7EC8;&#x7AEF;
+adb shell
+
+&#x83B7;&#x53D6;app&#x542F;&#x52A8;&#x5305;&#x540D;&#x548C;&#x542F;&#x52A8;&#x540D;*******
+adb shell dumpsys window windows | findstr mFocusedApp
+
+adb install &#x8DEF;&#x5F84;/xxx.apk
+
+adb uninstall app
+
+&#x83B7;&#x53D6;app&#x542F;&#x52A8;&#x65F6;&#x95F4;
+adb shell am start -W &#x5305;&#x540D;/.&#x542F;&#x52A8;&#x540D;
+</code></pre>
+<h1 id="appium">Appium</h1>
+<h2 id="&#x73AF;&#x5883;&#x642D;&#x5EFA;">&#x73AF;&#x5883;&#x642D;&#x5EFA;</h2>
+<h3 id="bluestacks&#x6A21;&#x62DF;&#x5668;&#x5B89;&#x88C5;">bluestacks&#x6A21;&#x62DF;&#x5668;&#x5B89;&#x88C5;</h3>
+<pre><code class="lang-python"><span class="hljs-number">127.0</span><span class="hljs-number">.0</span><span class="hljs-number">.1</span>:<span class="hljs-number">5555</span>
+</code></pre>
+<h3 id="appuim-desktop&#x5B89;&#x88C5;">appuim Desktop&#x5B89;&#x88C5;</h3>
+<p> <a href="https://github.com/appium/appium-desktop" target="_blank">https://github.com/appium/appium-desktop</a></p>
+<p>&#x5B89;&#x88C5;&#x540E;&#x542F;&#x52A8;&#x670D;&#x52A1;&#x5668;&#x5373;&#x53EF;</p>
+<h3 id="appuim-inspect&#x5B89;&#x88C5;">appuim inspect&#x5B89;&#x88C5;</h3>
+<p><a href="https://github.com/appium/appium-inspector" target="_blank">https://github.com/appium/appium-inspector</a></p>
+<p>&#x8FDC;&#x7A0B;&#x4E3B;&#x673A; 127.0.0.1</p>
+<p>&#x8FDC;&#x7A0B;&#x7AEF;&#x53E3; 4723</p>
+<p>&#x8FDC;&#x7A0B;&#x8DEF;&#x5F84; /wd/hub</p>
+<p>&#x6DFB;&#x52A0;capability, &#x7136;&#x540E;&#x542F;&#x52A8;&#x4F1A;&#x8BDD;</p>
+<pre><code class="lang-python">{
+  <span class="hljs-string">&quot;platformName&quot;</span>: <span class="hljs-string">&quot;Android&quot;</span>,
+  <span class="hljs-string">&quot;platformVersion&quot;</span>: <span class="hljs-string">&quot;9&quot;</span>,
+  <span class="hljs-string">&quot;deviceName&quot;</span>: <span class="hljs-string">&quot;127.0.0.1:5555&quot;</span>,
+  <span class="hljs-string">&quot;automationName&quot;</span>: <span class="hljs-string">&quot;UiAutomator2&quot;</span>
+}
+</code></pre>
+<h3 id="&#x5B89;&#x88C5;appium&#x7684;python">&#x5B89;&#x88C5;appium&#x7684;python</h3>
+<p>peotry add  Appium-Python-Client</p>
+<h2 id="helloworld">HelloWorld</h2>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x4ECE;appium&#x5E93;&#x91CC;&#x9762;&#x5BFC;&#x5165;driver&#x5BF9;&#x8C61;,&#x5E2E;&#x52A9;&#x6211;&#x4EEC;&#x8FDB;&#x884C;&#x811A;&#x672C;&#x548C;&#x624B;&#x673A;&#x95F4;&#x4EA4;&#x4E92;</span>
+<span class="hljs-keyword">from</span> appium <span class="hljs-keyword">import</span> webdriver
+<span class="hljs-comment"># &#x5BFC;&#x5165;time</span>
+<span class="hljs-keyword">import</span> time
+<span class="hljs-keyword">from</span> appium.options.android <span class="hljs-keyword">import</span> UiAutomator2Options
+<span class="hljs-comment"># server &#x542F;&#x52A8;&#x53C2;&#x6570;</span>
+capabilities = {
+        <span class="hljs-string">&apos;platformName&apos;</span>: <span class="hljs-string">&apos;Android&apos;</span>,
+        <span class="hljs-string">&apos;platformVersion&apos;</span>: <span class="hljs-string">&apos;9&apos;</span>,
+        <span class="hljs-string">&apos;deviceName&apos;</span>: <span class="hljs-string">&apos;127.0.0.1:5555&apos;</span>,
+        <span class="hljs-string">&apos;appPackage&apos;</span>: <span class="hljs-string">&apos;com.android.settings&apos;</span>,
+        <span class="hljs-string">&apos;appActivity&apos;</span>: <span class="hljs-string">&apos;.Settings&apos;</span>,
+        <span class="hljs-string">&quot;automationName&quot;</span>: <span class="hljs-string">&quot;UiAutomator2&quot;</span>
+    }
+desired_caps = {}
+options = UiAutomator2Options().load_capabilities(capabilities)
+driver = webdriver.Remote(<span class="hljs-string">&apos;http://localhost:4723/wd/hub&apos;</span>, options=options) <span class="hljs-comment">#&#x58F0;&#x660E;driver&#x5BF9;&#x8C61;,&#x8BA9;&#x624B;&#x673A;&#x5B8C;&#x6210;&#x811A;&#x672C;&#x64CD;&#x4F5C;</span>
+time.sleep(<span class="hljs-number">5</span>)
+<span class="hljs-comment">#&#x5173;&#x95ED;&#x9A71;&#x52A8;&#x5BF9;&#x8C61;</span>
+driver.quit()
+</code></pre>
+<h2 id="appium-api">Appium API</h2>
+<h3 id="&#x57FA;&#x7840;&#x64CD;&#x4F5C;">&#x57FA;&#x7840;&#x64CD;&#x4F5C;</h3>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x5224;&#x65AD;app&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x5B89;&#x88C5;</span>
+<span class="hljs-keyword">if</span> <span class="hljs-keyword">not</span> driver.is_app_installed(<span class="hljs-string">&apos;org.qtproject.example.appHelloAndroid&apos;</span>):
+    <span class="hljs-comment"># &#x5B89;&#x88C5;apk</span>
+    driver.install_app(os.path.abspath(<span class="hljs-string">&apos;1.apk&apos;</span>))
+<span class="hljs-comment"># &#x5378;&#x8F7D;app</span>
+driver.remove_app(<span class="hljs-string">&apos;org.qtproject.example.appHelloAndroid&apos;</span>)
+
+<span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;1.apk&apos;</span>, <span class="hljs-string">&apos;rb&apos;</span>) <span class="hljs-keyword">as</span> f:
+    data = f.read()
+    b64_data = base64.b64encode(data)
+    <span class="hljs-comment"># &#x53D1;&#x9001;&#x6587;&#x4EF6;&#x5230;&#x624B;&#x673A;, &#x53D1;&#x9001;base64&#x7F16;&#x7801;&#x7684;&#x5B57;&#x7B26;&#x4E32;</span>
+    driver.push_file(<span class="hljs-string">&apos;/sdcard/Download/1.apk&apos;</span>, str(b64_data, <span class="hljs-string">&apos;utf-8&apos;</span>))
+
+<span class="hljs-comment"># &#x4ECE;&#x624B;&#x673A;&#x91CC;&#x9762;&#x62C9;&#x53D6;&#x6587;&#x4EF6;&#xFF0C; &#x8FD4;&#x56DE;base64&#x7F16;&#x7801;&#x7684;&#x5B57;&#x7B26;&#x4E32;</span>
+content = driver.pull_file(<span class="hljs-string">&apos;/sdcard/Download/1.apk&apos;</span>)
+<span class="hljs-keyword">with</span> open(<span class="hljs-string">&apos;2.apk&apos;</span>, <span class="hljs-string">&apos;wb&apos;</span>) <span class="hljs-keyword">as</span> f:
+    f.write(base64.b64decode(content))
+
+<span class="hljs-comment"># &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x5C4F;&#x5E55;&#x5185;&#x7684;&#x5143;&#x7D20;&#x7ED3;&#x6784;</span>
+page_data = driver.page_source
+print(page_data)
+</code></pre>
+<h3 id="&#x5143;&#x7D20;&#x5B9A;&#x4F4D;">&#x5143;&#x7D20;&#x5B9A;&#x4F4D;</h3>
+<h4 id="id">id</h4>
+<p>elements &#x5373;&#x53EF;&#x5B9A;&#x4F4D;&#x4E00;&#x7EC4;&#x5143;&#x7D20;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> appium.webdriver.common.appiumby <span class="hljs-keyword">import</span> AppiumBy
+driver.find_element(AppiumBy.ID, <span class="hljs-string">&apos;com.bluestacks.gamecenter:id/main_et_search&apos;</span>)
+</code></pre>
+<h4 id="class">class</h4>
+<p>elements &#x5373;&#x53EF;&#x5B9A;&#x4F4D;&#x4E00;&#x7EC4;&#x5143;&#x7D20;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> appium.webdriver.common.appiumby <span class="hljs-keyword">import</span> AppiumBy
+driver.find_element(AppiumBy.CLASS_NAME, <span class="hljs-string">&apos;android.widget.ImageView&apos;</span>)
+</code></pre>
+<h4 id="xpath">xpath</h4>
+<p>elements &#x5373;&#x53EF;&#x5B9A;&#x4F4D;&#x4E00;&#x7EC4;&#x5143;&#x7D20;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> appium.webdriver.common.appiumby <span class="hljs-keyword">import</span> AppiumBy
+driver.find_element(AppiumBy.XPATH, <span class="hljs-string">&apos;//android.widget.TextView[@text=&quot;&#x8FD4;&#x56DE;&quot;]&apos;</span>)
+</code></pre>
+<h4 id="&#x663E;&#x793A;&#x7B49;&#x5F85;">&#x663E;&#x793A;&#x7B49;&#x5F85;</h4>
+<p>&#x4E00;&#x4E2A;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x8303;&#x56F4;&#x5185;&#xFF0C;&#x6BCF;&#x9694;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x53BB;&#x641C;&#x7D22;&#x4E00;&#x6B21;&#x5143;&#x7D20;&#x662F;&#x5426;&#x5B58;&#x5728;&#xFF0C;
+&#x5982;&#x679C;&#x5B58;&#x5728;&#x8FD4;&#x56DE;&#x5B9A;&#x4F4D;&#x5BF9;&#x8C61;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x5B58;&#x5728;&#x76F4;&#x5230;&#x8D85;&#x65F6;&#x65F6;&#x95F4;&#x5230;&#x8FBE;&#xFF0C;&#x62A5;&#x8D85;&#x65F6;&#x5F02;&#x5143;&#x7D20;&#x4FE1;&#x606F;&#x64CD;&#x4F5C;&#x5143;&#x7D20;&#x4E8B;&#x4EF6;&#x64CD;&#x4F5C;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium.webdriver.support.ui <span class="hljs-keyword">import</span> WebDriverWait
+<span class="hljs-keyword">try</span>:
+    <span class="hljs-comment"># &#x67E5;&#x627E;&#x5143;&#x7D20;&#x524D;&#x65F6;&#x95F4;</span>
+    print(time.strftime(<span class="hljs-string">&quot;%H:%M:%S&quot;</span>,time.localtime()))
+    <span class="hljs-comment"># &#x663E;&#x793A;&#x7B49;&#x5F85;</span>
+    WebDriverWait(driver,<span class="hljs-number">15</span>,<span class="hljs-number">1</span>).until(lambdax:x.find_element_by_id(<span class="hljs-string">&quot;com.android.settings:id/search&quot;</span>)).click()
+<span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:
+    <span class="hljs-comment"># &#x67E5;&#x627E;&#x5143;&#x7D20;&#x540E;&#x65F6;&#x95F4;</span>
+    print(time.strftime(<span class="hljs-string">&quot;%H:%M:%S&quot;</span>,time.localtime()))
+</code></pre>
+<h4 id="&#x9690;&#x5F0F;&#x7B49;&#x5F85;">&#x9690;&#x5F0F;&#x7B49;&#x5F85;</h4>
+<p>&#x5B9A;&#x4F4D;&#x67D0;&#x4E00;&#x5143;&#x7D20;&#x5931;&#x8D25;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x89E6;&#x53D1;&#x9690;&#x5F0F;&#x7B49;&#x5F85;&#x6709;&#x6548;&#x65F6;&#x957F;&#xFF0C;&#x5728;&#x6307;&#x5B9A;&#x65F6;&#x957F;&#x5185;&#x52A0;&#x8F7D;&#x5B8C;&#x6BD5;&#xFF0C;&#x5219;&#x7EE7;&#x7EED;&#x6267;&#x884C;&#xFF0C;&#x5426;&#x5219;&#x629B;&#x51FA;&#x5F02;&#x5E38;&#xFF0C;&#x5982;&#x679C;&#x5143;&#x7D20;&#x5728;&#x7B2C;&#x4E00;&#x6B21;&#x5C31;&#x5B9A;&#x4F4D;&#x5230;&#x5219;&#x4E0D;&#x4F1A;&#x89E6;&#x53D1;&#x9690;&#x5F0F;&#x7B49;&#x5F85;&#x65F6;&#x957F;</p>
+<pre><code class="lang-python">driver.implicitly_wait(<span class="hljs-number">10</span>)
+</code></pre>
+<h4 id="staleelementreferenceexception">StaleElementReferenceException</h4>
+<p>&#x5F53;&#x83B7;&#x53D6;&#x7684;&#x5143;&#x7D20;&#x56E0;&#x4E3A;&#x67D0;&#x79CD;&#x539F;&#x56E0;&#x4E0D;&#x53EF;&#x7528;&#x65F6;&#x8FDB;&#x884C;&#x4F7F;&#x7528;&#x4F1A;&#x629B;&#x51FA;StaleElementReferenceException&#x5F02;&#x5E38;</p>
+<p>&#x89E3;&#x51B3;&#x529E;&#x6CD5;&#xFF1A;&#x91CD;&#x65B0;&#x83B7;&#x53D6;&#x5143;&#x7D20;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium.common.exceptions <span class="hljs-keyword">import</span> StaleElementReferenceException
+
+<span class="hljs-keyword">try</span>:
+        phb = driver.find_element(AppiumBy.XPATH, <span class="hljs-string">&apos;//android.widget.TextView[@text=&quot;&#x6392;&#x884C;&#x699C;&quot;]&apos;</span>)
+        phb.click()
+<span class="hljs-keyword">except</span> StaleElementReferenceException <span class="hljs-keyword">as</span> e:
+        print(e)
+        phb = driver.find_element(AppiumBy.XPATH, <span class="hljs-string">&apos;//android.widget.TextView[@text=&quot;&#x6392;&#x884C;&#x699C;&quot;]&apos;</span>)
+        phb.click()
+</code></pre>
+<h3 id="&#x5143;&#x7D20;&#x4FE1;&#x606F;&#x64CD;&#x4F5C;">&#x5143;&#x7D20;&#x4FE1;&#x606F;&#x64CD;&#x4F5C;</h3>
+<pre><code class="lang-python">search = driver.find_element(AppiumBy.ID, <span class="hljs-string">&apos;com.bluestacks.gamecenter:id/main_et_search&apos;</span>)
+<span class="hljs-comment"># &#x53D1;&#x9001;&#x6570;&#x636E;&#x5230;&#x8F93;&#x5165;&#x6846;</span>
+search.send_keys(<span class="hljs-string">&apos;&#x738B;&#x8005;&apos;</span>)
+<span class="hljs-comment"># &#x6E05;&#x7A7A;&#x8F93;&#x5165;&#x6846;&#x5185;&#x5BB9;</span>
+search.clear()
+search.send_keys(<span class="hljs-string">&apos;&#x738B;&#x8005;&#x8363;&#x8000;&apos;</span>)
+
+<span class="hljs-comment"># &#x83B7;&#x53D6;&#x5143;&#x7D20;&#x7684;&#x6587;&#x672C;&#x5185;&#x5BB9;</span>
+print(search.text)
+
+<span class="hljs-comment"># &#x83B7;&#x53D6;&#x5143;&#x7D20;&#x7684;&#x5C5E;&#x6027;&#x503C;</span>
+print(search.get_attribute(<span class="hljs-string">&apos;resource-id&apos;</span>))
+
+<span class="hljs-comment"># &#x83B7;&#x53D6;&#x5143;&#x7D20;&#x5728;&#x5C4F;&#x5E55;&#x4E0A;&#x7684;&#x5750;&#x6807;</span>
+print(search.location)
+
+<span class="hljs-comment"># &#x83B7;&#x53D6;app&#x5305;&#x540D;&#x548C;&#x542F;&#x52A8;&#x540D;</span>
+print(driver.current_package)
+print(driver.current_activity)
+</code></pre>
+<h3 id="&#x5143;&#x7D20;&#x4E8B;&#x4EF6;&#x64CD;&#x4F5C;">&#x5143;&#x7D20;&#x4E8B;&#x4EF6;&#x64CD;&#x4F5C;</h3>
+<pre><code class="lang-python">end = driver.find_element(AppiumBy.XPATH, <span class="hljs-string">&apos;//android.widget.TextView[@text=&quot;&#x7CBE;&#x54C1;&#x6E38;&#x620F;&quot;]&apos;</span>)
+begin = driver.find_element(AppiumBy.XPATH, <span class="hljs-string">&apos;//android.view.View[@content-desc=&quot;&#x9996;&#x9875;&quot;]&apos;</span>)
+endlocation = end.location
+beginlocation = begin.location
+<span class="hljs-comment"># swipe&#x6ED1;&#x52A8;&#x4E8B;&#x4EF6; &#x4ECE;&#x4E00;&#x4E2A;&#x5750;&#x6807;&#x4F4D;&#x7F6E;&#x6ED1;&#x52A8;&#x5230;&#x53E6;&#x2F00;&#x4E2A;&#x5750;&#x6807;&#x4F4D;&#x7F6E;,&#x662F;&#x4E24;&#x4E2A;&#x70B9;&#x4E4B;&#x95F4;&#x7684;&#x6ED1;&#x52A8;.</span>
+driver.swipe(endlocation[<span class="hljs-string">&apos;x&apos;</span>], endlocation[<span class="hljs-string">&apos;y&apos;</span>], beginlocation[<span class="hljs-string">&apos;x&apos;</span>], beginlocation[<span class="hljs-string">&apos;y&apos;</span>], <span class="hljs-number">2000</span>)
+
+<span class="hljs-comment"># scroll&#x6EDA;&#x52A8;&#x4E8B;&#x4EF6; &#x4ECE;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x6EDA;&#x52A8;&#x5230;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5143;&#x7D20;,&#x76F4;&#x5230;&#x9875;&#x9762;&#x81EA;&#x52A8;&#x505C;&#x6B62;</span>
+driver.scroll(end, begin, <span class="hljs-number">2000</span>)
+
+<span class="hljs-comment"># drag&#x62D6;&#x62FD;&#x4E8B;&#x4EF6; &#x4ECE;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x6ED1;&#x52A8;&#x5230;&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x5143;&#x7D20;,&#x7B2C;&#x4E8C;&#x4E2A;&#x5143;&#x7D20;&#x66FF;&#x4EE3;&#x7B2C;&#x4E00;&#x4E2A;&#x5143;&#x7D20;&#x539F;&#x672C;&#x5C4F;&#x5E55;&#x4E0A;&#x7684;&#x4F4D;&#x7F6E;</span>
+driver.drag_and_drop(end, begin)
+
+<span class="hljs-comment"># &#x5C06;&#x5E94;&#x7528;&#x653E;&#x7F6E;&#x5230;&#x540E;&#x53F0;,&#x6A21;&#x62DF;&#x70ED;&#x542F;&#x52A8;</span>
+driver.background_app(<span class="hljs-number">5</span>)
+</code></pre>
+<h3 id="&#x6A21;&#x62DF;&#x624B;&#x52BF;&#x64CD;&#x4F5C;">&#x6A21;&#x62DF;&#x624B;&#x52BF;&#x64CD;&#x4F5C;</h3>
+<pre><code class="lang-python">end = driver.find_element(AppiumBy.XPATH, <span class="hljs-string">&apos;//android.widget.TextView[@text=&quot;&#x7CBE;&#x54C1;&#x6E38;&#x620F;&quot;]&apos;</span>)
+begin = driver.find_element(AppiumBy.XPATH, <span class="hljs-string">&apos;//android.view.View[@content-desc=&quot;&#x9996;&#x9875;&quot;]&apos;</span>)
+endlocation = end.location
+beginlocation = begin.location
+<span class="hljs-keyword">from</span> selenium.webdriver.common.action_chains <span class="hljs-keyword">import</span> ActionChains
+<span class="hljs-keyword">from</span> selenium.webdriver.common.actions <span class="hljs-keyword">import</span> interaction
+<span class="hljs-keyword">from</span> selenium.webdriver.common.actions.action_builder <span class="hljs-keyword">import</span> ActionBuilder
+<span class="hljs-keyword">from</span> selenium.webdriver.common.actions.pointer_input <span class="hljs-keyword">import</span> PointerInput
+
+actions = ActionChains(driver)
+<span class="hljs-comment"># &#x628A;actions.w3c_actions&#x5BF9;&#x5E94;&#x7684;ActionBuilder&#x7684;&#x9F20;&#x6807;&#x64CD;&#x4F5C;&#x6539;&#x4E3A;touch</span>
+actions.w3c_actions = ActionBuilder(driver, mouse=PointerInput(interaction.POINTER_TOUCH, <span class="hljs-string">&quot;touch&quot;</span>))
+<span class="hljs-comment"># &#x70B9;&#x51FB;</span>
+actions.w3c_actions.pointer_action.click(el)
+actions.perform()
+<span class="hljs-comment"># &#x957F;&#x6309;&#x6307;&#x5B9A;&#x65F6;&#x95F4;</span>
+actions.w3c_actions.pointer_action.click_and_hold(el).pause(<span class="hljs-number">20</span>).release()
+actions.perform()
+
+<span class="hljs-comment"># &#x6A21;&#x62DF;&#x4ECE;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#x6ED1;&#x52A8;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E; 1</span>
+actions.w3c_actions.pointer_action.move_to(end)
+actions.w3c_actions.pointer_action.pointer_down()
+actions.w3c_actions.pointer_action.pause(<span class="hljs-number">2</span>)
+actions.w3c_actions.pointer_action.move_to(begin)
+actions.w3c_actions.pointer_action.release()
+actions.perform()
+
+<span class="hljs-comment"># &#x6A21;&#x62DF;&#x4ECE;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E;&#x6ED1;&#x52A8;&#x5230;&#x53E6;&#x4E00;&#x4E2A;&#x4F4D;&#x7F6E; 2</span>
+actions.w3c_actions.pointer_action.click_and_hold(end)
+actions.w3c_actions.pointer_action.pause(<span class="hljs-number">2</span>)
+actions.w3c_actions.pointer_action.move_to(begin)
+actions.w3c_actions.pointer_action.release()
+actions.perform()
+</code></pre>
+<h3 id="&#x624B;&#x673A;&#x64CD;&#x4F5C;">&#x624B;&#x673A;&#x64CD;&#x4F5C;</h3>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x83B7;&#x53D6;&#x624B;&#x673A;&#x65F6;&#x95F4;</span>
+print(driver.device_time)
+
+<span class="hljs-comment"># &#x83B7;&#x53D6;&#x624B;&#x673A;&#x5BBD;&#x9AD8;</span>
+print(driver.get_window_size())
+<span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> range(<span class="hljs-number">3</span>):
+        driver.keyevent(<span class="hljs-number">24</span>)
+
+<span class="hljs-comment"># &#x6253;&#x5F00;&#x624B;&#x673A;&#x901A;&#x77E5;&#x680F; &#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x901A;&#x77E5;&#x680F;&#x7684;&#x76F8;&#x5173;&#x4FE1;&#x606F;&#x548C;&#x5143;&#x7D20;&#x64CD;&#x4F5C;</span>
+driver.open_notifications()
+
+<span class="hljs-comment"># &#x83B7;&#x53D6;&#x5F53;&#x524D;&#x624B;&#x673A;&#x7F51;&#x7EDC;</span>
+print(driver.network_connection)
+
+<span class="hljs-comment"># &#x8BBE;&#x7F6E;&#x624B;&#x673A;&#x7F51;&#x7EDC; 0 (None) 1 (Airplane Mode) 2 (Wifi only) 4 (Data only) 6 (All network on)</span>
+driver.set_network_connection(<span class="hljs-number">1</span>)
+
+<span class="hljs-comment"># &#x624B;&#x673A;&#x622A;&#x56FE;</span>
+driver.get_screenshot_as_file(os.path.dirname(<span class="hljs-string">&apos;.&apos;</span>) + <span class="hljs-string">&apos;./test.png&apos;</span>)
+</code></pre>
+<h1 id="po&#x6A21;&#x578B;">PO&#x6A21;&#x578B;</h1>
+<p>PO&#x6A21;&#x578B;&#x662F;Page Object Model&#x7684;&#x7B80;&#x5199;,&#x9875;&#x9762;&#x5BF9;&#x8C61;&#x6A21;&#x578B;.</p>
+<p>&#x4F5C;&#x7528;, &#x628A;&#x6D4B;&#x8BD5;&#x9875;&#x9762;&#x548C;&#x6D4B;&#x8BD5;&#x811A;&#x672C;&#x8FDB;&#x884C;&#x5206;&#x79BB;,&#x5373;&#x628A;&#x9875;&#x9762;&#x5C01;&#x88C5;&#x6210;&#x7C7B;,&#x4F9B;&#x6D4B;&#x8BD5;&#x811A;&#x672C;&#x8FDB;&#x884C;&#x8C03;&#x7528;.</p>
+<p>&#x6848;&#x4F8B;&#xFF1A;</p>
+<pre><code>&#x9879;&#x76EE;&#x76EE;&#x5F55;&#x7ED3;&#x6784;  
+- base
+- - __init__.py    # &#x5B58;&#x653E;&#x4E3B;&#x8981;&#x7684;&#x53D8;&#x91CF;&#x5982;app_package&#xFF0C;app_activity
+- - base_action.py  # &#x5C01;&#x88C5;click &#x548C; input &#x548C; &#x67E5;&#x627E;&#x5143;&#x7D20;&#xFF0C;&#x4EE5;&#x53CA;&#x5904;&#x7406;&#x67E5;&#x627E;&#x5143;&#x7D20;&#x7684;&#x5F02;&#x5E38;
+- - base_driver.py # &#x5C01;&#x88C5;driver&#x7684;&#x521D;&#x59CB;&#x5316;
+- page
+- - __init__.py
+- - index.py # &#x5C01;&#x88C5;&#x9875;&#x9762;&#x4E0A;&#x7684;&#x64CD;&#x4F5C;&#x548C;&#x4FDD;&#x5B58;&#x5143;&#x7D20;&#x83B7;&#x53D6;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x8C03;&#x7528;base
+- script
+- - __init__.py
+- - test_index.py # &#x8C03;&#x7528;page&#x9762;&#x4E0A;&#x7684;&#x64CD;&#x4F5C;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;
+- pytest.ini
+</code></pre><h2 id="base">base</h2>
+<p><strong>init</strong>.py</p>
+<pre><code class="lang-python">app_package = <span class="hljs-string">&apos;com.bluestacks.gamecenter&apos;</span>
+app_activity = <span class="hljs-string">&quot;.AppCenterActivity&quot;</span>
+</code></pre>
+<p>base_action.py</p>
+<p>&#x88C5;&#x9970;&#x5668;&#x4E0D;&#x53EF;&#x8C03;&#x7528;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x88C5;&#x9970;&#x5668;&#x4E0D;&#x7ED9;&#x53C2;&#x6570;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium.common.exceptions <span class="hljs-keyword">import</span> StaleElementReferenceException
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">decorator</span><span class="hljs-params">(func)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">wrapper</span><span class="hljs-params">(*args, **kwargs)</span>:</span>
+        <span class="hljs-keyword">try</span>:
+            <span class="hljs-keyword">return</span> func(*args, **kwargs)
+        <span class="hljs-keyword">except</span> StaleElementReferenceException <span class="hljs-keyword">as</span> e:
+            print(e)
+            <span class="hljs-keyword">return</span> func(*args, **kwargs)
+    <span class="hljs-keyword">return</span> wrapper
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BaseAction</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, driver)</span>:</span>
+        self.driver = driver
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">input_ele</span><span class="hljs-params">(self, ele, content)</span>:</span>
+        self.find_element(ele).clear()
+        self.find_element(ele).send_keys(content)
+
+<span class="hljs-meta">    @pro_StaleElementReferenceException</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">click_ele</span><span class="hljs-params">(self, ele)</span>:</span>
+        self.find_element(ele).click()
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find_element</span><span class="hljs-params">(self, ele)</span>:</span>
+        <span class="hljs-keyword">return</span> self.driver.find_element(ele[<span class="hljs-number">0</span>], ele[<span class="hljs-number">1</span>])
+</code></pre>
+<p>&#x88C5;&#x9970;&#x5668;&#x53EF;&#x8C03;&#x7528;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x88C5;&#x9970;&#x5668;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x53C2;&#x6570;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x9700;&#x8981;&#x5728;&#x5D4C;&#x5957;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x7528;&#x6237;&#x63A5;&#x53D7;&#x88C5;&#x9970;&#x5668;&#x7684;&#x53C2;&#x6570;</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> selenium.common.exceptions <span class="hljs-keyword">import</span> StaleElementReferenceException
+
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">pro_StaleElementReferenceException</span><span class="hljs-params">()</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">decorator</span><span class="hljs-params">(func)</span>:</span>
+        <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">wrapper</span><span class="hljs-params">(*args, **kwargs)</span>:</span>
+            <span class="hljs-keyword">try</span>:
+                <span class="hljs-keyword">return</span> func(*args, **kwargs)
+            <span class="hljs-keyword">except</span> StaleElementReferenceException <span class="hljs-keyword">as</span> e:
+                print(e)
+                <span class="hljs-keyword">return</span> func(*args, **kwargs)
+        <span class="hljs-keyword">return</span> wrapper
+    <span class="hljs-keyword">return</span> decorator
+
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">BaseAction</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, driver)</span>:</span>
+        self.driver = driver
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">input_ele</span><span class="hljs-params">(self, ele, content)</span>:</span>
+        self.find_element(ele).clear()
+        self.find_element(ele).send_keys(content)
+
+<span class="hljs-meta">    @pro_StaleElementReferenceException()</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">click_ele</span><span class="hljs-params">(self, ele)</span>:</span>
+        self.find_element(ele).click()
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">find_element</span><span class="hljs-params">(self, ele)</span>:</span>
+        <span class="hljs-keyword">return</span> self.driver.find_element(ele[<span class="hljs-number">0</span>], ele[<span class="hljs-number">1</span>])
+</code></pre>
+<p>base_driver.py</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> appium <span class="hljs-keyword">import</span> webdriver
+<span class="hljs-keyword">from</span> appium.options.android <span class="hljs-keyword">import</span> UiAutomator2Options
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">init_driver</span><span class="hljs-params">(appPackage, appActivity)</span>:</span>
+    capabilities = {
+        <span class="hljs-string">&apos;platformName&apos;</span>: <span class="hljs-string">&apos;Android&apos;</span>,
+        <span class="hljs-string">&apos;platformVersion&apos;</span>: <span class="hljs-string">&apos;9&apos;</span>,
+        <span class="hljs-string">&apos;deviceName&apos;</span>: <span class="hljs-string">&apos;127.0.0.1:5555&apos;</span>,
+        <span class="hljs-string">&quot;automationName&quot;</span>: <span class="hljs-string">&quot;UiAutomator2&quot;</span>,
+        <span class="hljs-string">&apos;appPackage&apos;</span>: <span class="hljs-string">&apos;com.bluestacks.gamecenter&apos;</span>,
+        <span class="hljs-string">&apos;appActivity&apos;</span>: <span class="hljs-string">&apos;.AppCenterActivity&apos;</span>,
+    }
+    options = UiAutomator2Options().load_capabilities(capabilities)
+    <span class="hljs-keyword">return</span> webdriver.Remote(<span class="hljs-string">&apos;http://localhost:4723/wd/hub&apos;</span>, options=options)  <span class="hljs-comment"># &#x58F0;&#x660E;driver&#x5BF9;&#x8C61;,&#x8BA9;&#x624B;&#x673A;&#x5B8C;&#x6210;&#x811A;&#x672C;&#x64CD;&#x4F5C;</span>
+</code></pre>
+<h2 id="page">page</h2>
+<p>index.py</p>
+<pre><code class="lang-python"><span class="hljs-keyword">from</span> base <span class="hljs-keyword">import</span> app_package, app_activity
+<span class="hljs-keyword">from</span> base.base_driver <span class="hljs-keyword">import</span> init_driver
+<span class="hljs-keyword">from</span> base.base_action <span class="hljs-keyword">import</span> BaseAction
+<span class="hljs-keyword">from</span> appium.webdriver.common.appiumby <span class="hljs-keyword">import</span> AppiumBy
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PageIndex</span><span class="hljs-params">(BaseAction)</span>:</span>
+    search_input = (AppiumBy.ID, <span class="hljs-string">&apos;com.bluestacks.gamecenter:id/main_et_search&apos;</span>)
+    searchbtn = (AppiumBy.ID, <span class="hljs-string">&apos;com.bluestacks.gamecenter:id/main_iv_search&apos;</span>)
+    returnbtn = (AppiumBy.XPATH, <span class="hljs-string">&apos;//android.widget.TextView[@text=&quot;&#x8FD4;&#x56DE;&quot;]&apos;</span>)
+    phb = (AppiumBy.XPATH, <span class="hljs-string">&apos;//android.widget.TextView[@text=&quot;&#x6392;&#x884C;&#x699C;&quot;]&apos;</span>)
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">__init__</span><span class="hljs-params">(self, driver)</span>:</span>
+        BaseAction.__init__(self, driver)
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">input_search</span><span class="hljs-params">(self)</span>:</span>
+        self.input_ele(self.search_input, <span class="hljs-string">&apos;&#x738B;&#x8005;&apos;</span>)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">click_search</span><span class="hljs-params">(self)</span>:</span>
+        self.click_ele(self.searchbtn)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">click_return</span><span class="hljs-params">(self)</span>:</span>
+        self.click_ele(self.returnbtn)
+
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">click_paihang</span><span class="hljs-params">(self)</span>:</span>
+        self.click_ele(self.phb)
+</code></pre>
+<h2 id="script">script</h2>
+<p>test_index.py</p>
+<pre><code class="lang-python"><span class="hljs-keyword">import</span> time
+
+<span class="hljs-keyword">import</span> pytest
+
+<span class="hljs-keyword">from</span> base <span class="hljs-keyword">import</span> app_package, app_activity
+<span class="hljs-keyword">from</span> base.base_driver <span class="hljs-keyword">import</span> init_driver
+<span class="hljs-keyword">from</span> page.index <span class="hljs-keyword">import</span> PageIndex
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">TestIndex</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">setup_method</span><span class="hljs-params">(self)</span>:</span>
+        self.driver = init_driver(app_package, app_activity)
+        self.page_index = PageIndex(self.driver)
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">teardown_method</span><span class="hljs-params">(self)</span>:</span>
+        self.driver.quit()
+
+<span class="hljs-meta">    @pytest.mark.parametrize(&quot;count&quot;, [1,2,3,4,5])</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test_index</span><span class="hljs-params">(self, count)</span>:</span>
+        self.page_index.input_search()
+        self.page_index.click_search()
+        self.page_index.click_return()
+        self.page_index.click_paihang()
+        time.sleep(<span class="hljs-number">5</span>)
+</code></pre>
+<h2 id="pytestini">pytest.ini</h2>
+<pre><code class="lang-python">[pytest]
+addopts = -s --alluredir=result
+testpaths = ./script
+python_files = test_*.py
+python_classes = Test*
+python_functions = test_*
+</code></pre>
+<h2 id="&#x88C5;&#x9970;&#x5668;">&#x88C5;&#x9970;&#x5668;</h2>
+<pre><code class="lang-python"><span class="hljs-comment"># &#x88C5;&#x9970;&#x5668;&#x4E0D;&#x53EF;&#x8C03;&#x7528;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x88C5;&#x9970;&#x5668;&#x4E0D;&#x7ED9;&#x53C2;&#x6570;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">dec1</span><span class="hljs-params">(*args, **kwargs)</span>:</span>
+    print(args)
+    print(kwargs)
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">decorator</span><span class="hljs-params">(func)</span>:</span>
+        <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">wrapper</span><span class="hljs-params">(*args, **kwargs)</span>:</span>
+                func(*args, **kwargs)
+        <span class="hljs-keyword">return</span> wrapper
+    <span class="hljs-keyword">return</span> decorator
+<span class="hljs-comment"># &#x88C5;&#x9970;&#x5668;&#x53EF;&#x8C03;&#x7528;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x88C5;&#x9970;&#x5668;&#x53EF;&#x4EE5;&#x6307;&#x5B9A;&#x53C2;&#x6570;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x9700;&#x8981;&#x5728;&#x5D4C;&#x5957;&#x4E00;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#x7528;&#x6237;&#x63A5;&#x53D7;&#x88C5;&#x9970;&#x5668;&#x7684;&#x53C2;&#x6570;</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">dec2</span><span class="hljs-params">(func)</span>:</span>
+    <span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">wrapper</span><span class="hljs-params">(*args, **kwargs)</span>:</span>
+            func(*args, **kwargs)
+    <span class="hljs-keyword">return</span> wrapper
+<span class="hljs-comment"># @dec2</span>
+<span class="hljs-meta">@dec1(id, 1, 2, 3, name=123)</span>
+<span class="hljs-function"><span class="hljs-keyword">def</span> <span class="hljs-title">test</span><span class="hljs-params">(a)</span>:</span>
+    print(a)
+test(<span class="hljs-number">123</span>)
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="性能测试.html" class="navigation navigation-prev " aria-label="Previous page: 性能测试">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../python人工智能/深度学习.html" class="navigation navigation-next " aria-label="Next page: 深度学习">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"移动测试","level":"1.5","depth":1,"next":{"title":"深度学习","level":"1.6","depth":1,"path":"python人工智能/深度学习.md","ref":"python人工智能/深度学习.md","articles":[]},"previous":{"title":"性能测试","level":"1.4","depth":1,"path":"python测试笔记/性能测试.md","ref":"python测试笔记/性能测试.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"python测试笔记/移动测试.md","mtime":"2025-02-18T09:33:52.469Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-02-21T16:48:54.649Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

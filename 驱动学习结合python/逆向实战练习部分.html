@@ -1,0 +1,593 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>逆向实战练习部分 · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="x64dbg.html" />
+    
+    
+    <link rel="prev" href="win32汇编与反汇编.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../python测试笔记/web自动化.html">
+            
+                <a href="../python测试笔记/web自动化.html">
+            
+                    
+                    web自动化
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../python测试笔记/接口测试.html">
+            
+                <a href="../python测试笔记/接口测试.html">
+            
+                    
+                    接口测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../python测试笔记/性能测试.html">
+            
+                <a href="../python测试笔记/性能测试.html">
+            
+                    
+                    性能测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../python测试笔记/移动测试.html">
+            
+                <a href="../python测试笔记/移动测试.html">
+            
+                    
+                    移动测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../python人工智能/深度学习.html">
+            
+                <a href="../python人工智能/深度学习.html">
+            
+                    
+                    深度学习
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../虚拟化与云平台/Docker.html">
+            
+                <a href="../虚拟化与云平台/Docker.html">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../虚拟化与云平台/Jenkins.html">
+            
+                <a href="../虚拟化与云平台/Jenkins.html">
+            
+                    
+                    Jenkins
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../虚拟化与云平台/Kubernetes.html">
+            
+                <a href="../虚拟化与云平台/Kubernetes.html">
+            
+                    
+                    Kubernetes
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../虚拟化与云平台/shell.html">
+            
+                <a href="../虚拟化与云平台/shell.html">
+            
+                    
+                    shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="逆向工程得概念介绍和准备工具.html">
+            
+                <a href="逆向工程得概念介绍和准备工具.html">
+            
+                    
+                    逆向工程得概念介绍和准备工具
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="汇编基础知识和计算机组织.html">
+            
+                <a href="汇编基础知识和计算机组织.html">
+            
+                    
+                    汇编基础知识和计算机组织
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="win32汇编与反汇编.html">
+            
+                <a href="win32汇编与反汇编.html">
+            
+                    
+                    win32汇编与反汇编
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.14" data-path="逆向实战练习部分.html">
+            
+                <a href="逆向实战练习部分.html">
+            
+                    
+                    逆向实战练习部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="x64dbg.html">
+            
+                <a href="x64dbg.html">
+            
+                    
+                    x64dbg
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="驱动.html">
+            
+                <a href="驱动.html">
+            
+                    
+                    驱动
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="驱动r3.html">
+            
+                <a href="驱动r3.html">
+            
+                    
+                    驱动r3
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="pyside6.html">
+            
+                <a href="pyside6.html">
+            
+                    
+                    pyside6
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="定制自己的ce过游戏检测.html">
+            
+                <a href="定制自己的ce过游戏检测.html">
+            
+                    
+                    定制自己的ce过游戏检测
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >逆向实战练习部分</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <p>&#x4E00;&#x3001;&#x6E38;&#x620F;&#x7684;CALL
+1&#xFF0E;&#x8C03;&#x7528;MessgeBoxA&#x51FD;&#x6570;call&#x793A;&#x4F8B;
+&#xFF08;1&#xFF09;&#x627E;&#x5230;MessageBoxA call&#x5730;&#x5740;
+&#xFF08;2&#xFF09;&#x5206;&#x6790;MessageBoxA call&#x7684;&#x53C2;&#x6570;
+&#xFF08;3&#xFF09;&#x6CE8;&#x5165;&#x4EE3;&#x7801;&#x6D4B;&#x8BD5;&#x8C03;&#x7528;MessageBoxA call
+push 0x11
+push 75AEBB1F
+push  75AEBB1F
+push 0
+call 75ACAB20
+&#x3000;&#x3000;</p>
+<ol>
+<li>&#x7A97;&#x53E3;&#x83DC;&#x5355;&#x7C7B;CALL&#x5206;&#x6790;
+1) .windows&#x83DC;&#x5355;&#x57FA;&#x672C;&#x77E5;&#x8BC6;:
+&#x83DC;&#x5355;&#x88AB;&#x70B9;&#x51FB;&#x7684;&#x65F6;&#x5019;&#x53D1;&#x9001;&#x7684;&#x662F;WM_COMMAND&#x6D88;&#x606F;
+&#x7A97;&#x53E3;&#x5904;&#x7406;&#x51FD;&#x6570;
+LRESULT  CALLBACKwindowProc (
+&#x3000;&#x3000;_in HWND hwnd,
+&#x3000;&#x3000;<strong>in UINT uMsg,
+&#x3000;&#x3000;</strong>in wPARAM wParam
+&#x3000;&#x3000;__in LPARAM lParam
+) ;
+&#x5F53;&#x70B9;&#x51FB;&#x83DC;&#x5355;&#x7684;&#x65F6;&#x5019;&#xFF0C;windowProc&#x4F1A;&#x88AB;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;:
+uMsg&#x3000;&#x3000;&#x8D4B;&#x503C;&#x4E3A;: wM_COMMAND
+wParam&#x3000;&#x3000;&#x8D4B;&#x503C;&#x4E3A;:&#x5BF9;&#x5E94;&#x7684;&#x83DC;&#x5355;&#x7684;ID&#x3008;&#x6211;&#x4EEC;&#x8981;&#x5206;&#x6790;&#x7684;&#x6570;&#x636E;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;)
+2) &#x7528;OD&#x6253;&#x5F00;&#x626B;&#x96F7;&#x6E38;&#x620F;&#x7A0B;&#x5E8F;,&#x5B9A;&#x4F4D;&#x7A97;&#x53E3;&#x5904;&#x7406;&#x51FD;&#x6570;&#x7684;&#x5730;&#x5740;
+&#x7A97;&#x53E3;&#x5904;&#x7406;&#x51FD;&#x6570;&#x5730;&#x5740;:01001BC9
+3) &#x5728;&#x626B;&#x96F7;&#x6E38;&#x620F;windowProc&#x51FD;&#x6570;&#x5904;&#x4E0B;&#x6761;&#x4EF6;&#x65AD;&#x70B9;
+&#x6761;&#x4EF6;&#x662F;:uMsg == WM_COMMAND
+&#x3000;&#x3000;&#x5982;&#xFF1A; edx == WM_COMMAND&#x7684;&#x6761;&#x4EF6;&#x65AD;&#x70B9;</li>
+</ol>
+<p>01001BC9  /.  55            PUSH EBP                                 ASCII &quot;&#x914E;
+&quot;
+01001BCA  |.  8BEC          MOV EBP,ESP
+01001BCC  |.  83EC 40       SUB ESP,40
+01001BCF  |.  8B55 0C       MOV EDX,DWORD PTR SS:[ARG.2]
+01001BD2  |.  8B4D 14       MOV ECX,DWORD PTR SS:[ARG.4]  &#x5728;&#x8FD9;&#x91CC;&#x4E0B;&#x65AD;&#x70B9;
+01001BD5  |.  53            PUSH EBX
+01001BD6  |.  56            PUSH ESI</p>
+<p>4)&#x5206;&#x6790;&#x51FA;&#x5404;&#x9879;&#x83DC;&#x5355;&#x88AB;&#x70B9;&#x51FB;&#x65F6;&#xFF0C; windowProc&#x7684;4&#x4E2A;&#x53C2;&#x6570;&#x7684;&#x503C;
+EBP+8     /000F117E  ; UNICODE &quot;tls_hotkey32&quot;    &#x53C2;&#x6570;hwnd
+EBP+C     |00000111&#x3000;&#x3000;&#x53C2;&#x6570;uMsg
+EBP+10    |00000209&#x3000;&#x3000;&#x53C2;&#x6570;wParam
+EBP+14    |00000000&#x3000;&#x3000;&#x53C2;&#x6570;lParam</p>
+<p>&#x5982;:
+wParam
+&#x521D;&#x7EA7;&#x83DC;&#x5355;ID:   0x209
+&#x4E2D;&#x7EA7;&#x83DC;&#x5355;ID:&#x3000;0x20A
+&#x9AD8;&#x7EA7;&#x83DC;&#x5355;ID:&#x3000;0x20B
+5&#xFF09;&#x6CE8;&#x5165;&#x4EE3;&#x7801;&#x8C03;&#x8BD5;
+&#x3000;&#x3000;push 0
+&#x3000;&#x3000;push 0x209
+&#x3000;&#x3000;push 0x111
+&#x3000;&#x3000;push 0x000F117E
+&#x3000;&#x3000;call 0x01001BC9
+&#x3000;&#x3000;
+&#x4E8C;&#x3001;&#x5206;&#x6790;&#x6E38;&#x620F;&#x57FA;&#x5730;&#x5740;
+1.&#x57FA;&#x5730;&#x5740;&#x7684;&#x6982;&#x5FF5;
+&#x5168;&#x5C40;&#x53D8;&#x91CF;  &#x5B57;&#x7B26;&#x5E38;&#x91CF;&#x7B49;&#x7684;&#x5730;&#x5740;
+2.&#x67E5;&#x627E;&#x548C;&#x9A8C;&#x8BC1;&#x57FA;&#x5730;&#x5740;
+1)&#x4F7F;&#x7528;CE&#x5185;&#x5B58;&#x67E5;&#x627E;&#x5DE5;&#x5177;&#x67E5;&#x627E;&#x6570;&#x636E;&#x5730;&#x5740;
+1.&#x9996;&#x6B21;&#x5148;&#x8BA9;&#x8981;&#x67E5;&#x627E;&#x7684;&#x6570;&#x636E;&#x7A33;&#x5B9A;&#x5728;&#x67D0;&#x4E2A;&#x8303;&#x56F4;&#xFF08;&#x6216;&#x8005;&#x67D0;&#x4E2A;&#x7CBE;&#x786E;&#x7684;&#x503C;)
+&#x4F7F;&#x7528;CE&#x7684;&#x9996;&#x6B21;&#x626B;&#x63CF;&#x529F;&#x80FD;
+2.&#x6539;&#x53D8;&#x8981;&#x67E5;&#x627E;&#x7684;&#x6570;&#x636E;,&#x6839;&#x636E;&#x53D8;&#x5316;&#x7B5B;&#x9009;&#x51FA;&#x6570;&#x636E;&#x5730;&#x5740;
+2)OD&#x4E2D;&#x9A8C;&#x8BC1;&#x662F;&#x5426;&#x5C31;&#x662F;&#x57FA;&#x5730;&#x5740;
+&#x901A;&#x8FC7;&#x4E0B;&#x5185;&#x5B58;&#x65AD;&#x70B9;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x9A8C;&#x8BC1;
+add&#x3000;&#x3000;dword ptr [ 1005194],eax ;&#x8FD9;&#x79CD;&#x7ACB;&#x5373;&#x6570;&#x5BFB;&#x5740;&#x7684;&#x57FA;&#x672C;&#x90FD;&#x662F;&#x57FA;&#x5730;&#x5740;</p>
+<p>&#x4E09;&#x3001;&#x6E38;&#x620F;&#x83DC;&#x5355;&#x70B9;&#x51FB;&#x548C;&#x8BFB;&#x53D6;&#x57FA;&#x5730;&#x5740;
+&#x3000;&#x3000;
+&#x56DB;&#x3001;&#x626B;&#x96F7;&#x6E38;&#x620F;&#x7684;&#x8F85;&#x52A9;&#x7F16;&#x5199;
+1.&#x96F7;&#x533A;&#x6570;&#x636E;&#x5206;&#x6790;
+&#x96F7;&#x533A;&#x6570;&#x636E;&#x57FA;&#x5730;&#x5740;&#x3000;&#x3000;0x01005361&#x3000;&#x3000;
+&#x5BBD;&#x3000;&#x3000;&#x57FA;&#x5730;&#x5740;0x01005334
+&#x9AD8;&#x3000;&#x3000;&#x57FA;&#x5730;&#x5740;0x01005338
+char a [ 24][ 32]&#x3000;&#x3000;//ReadProcessMemory</p>
+<ol>
+<li>&#x5206;&#x6790;&#x6570;&#x636E;&#x610F;&#x4E49;
+0x8F&#x3000;&#x3000;&#x7FFB;&#x5F00;&#x662F;&#x96F7;
+0x10&#x3000;&#x3000;&#x7ED3;&#x675F;&#x6807;&#x793A;</li>
+</ol>
+<p>&#x4E94;&#x3001;&#x690D;&#x7269;&#x5927;&#x6218;&#x50F5;&#x5C38;&#x6E38;&#x620F;</p>
+<ol>
+<li>&#x5206;&#x6790;&#x9633;&#x5173;&#x57FA;&#x5730;&#x5740;&#x3000;&#x3000;006A9EC0</li>
+</ol>
+<p>2.&#x5206;&#x6790;&#x91D1;&#x5E01;&#x57FA;&#x5730;&#x5740;
+&#x901A;&#x8FC7;CE&#x5DE5;&#x5177;&#x6536;&#x7D22;&#x6E38;&#x620F;&#x672C;&#x6B21;&#x8FD0;&#x884C;&#x7684;&#x91D1;&#x5E01;&#x57FA;&#x5730;&#x5740;
+&#x731C;&#x60F3;
+&#x91D1;&#x5E01;&#x548C;&#x6570;&#x5B57;&#x5BF9;&#x5E94;&#x6BD4;&#x4F8B;,&#x53EF;&#x80FD;&#x662F;1:1,&#x4E5F;&#x53EF;&#x80FD;&#x662F;&#x5176;&#x4ED6;&#x6BD4;&#x4F8B;
+&#x5206;&#x6790;:&#x91D1;&#x5E01;&#x663E;&#x793A;&#x7684;&#x503C;&#x4E0D;&#x662F;&#x6570;&#x5B57;1:1&#x5173;&#x7CFB;,&#x6211;&#x4EEC;&#x53EA;&#x80FD;&#x901A;&#x8FC7;&#x8303;&#x56F4;&#x641C;&#x7D22;&#x7684;&#x65B9;&#x5F0F;&#x5B9A;&#x4F4D;&#x91D1;&#x5E01;&#x7684;&#x5730;&#x5740;&#x4E86;
+&#x690D;&#x7269;&#x5927;&#x6218;&#x50F5;&#x5C38;:&#x663E;&#x793A;&#x91D1;&#x5E01;&#x548C;&#x6570;&#x5B57;&#x4E4B;&#x95F4;&#x7684;&#x6BD4;&#x4F8B;10:1
+&#x91D1;&#x5E01;&#x7684;&#x5730;&#x5740;&#x4E0D;&#x662F;&#x7EFF;&#x8272;&#x57FA;&#x5730;&#x5740;,&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x627E;&#x5230;[&#x57FA;&#x5730;&#x5740;+&#x504F;&#x79FB;&#x5730;&#x5740;]&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x8868;&#x793A;&#x5B83;
+&#x91D1;&#x5E01;&#x57FA;&#x5730;&#x5740;&#x3000;&#x3000;006A9EC0
+&#x3000;&#x3000;
+3.&#x5206;&#x6790;&#x690D;&#x7269;&#x5B89;&#x653E;&#x7684;&#x51B7;&#x5374;&#x65F6;&#x95F4;
+&#x731C;&#x60F3;
+&#x51B7;&#x5374;&#x65F6;&#x95F4;&#x662F;&#x4E00;&#x4E2A;&#x8BA1;&#x6570;&#x5668;&#x53D8;&#x91CF;,&#x6BCF;&#x9694;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x589E;&#x52A0;&#x4E00;&#x5B9A;&#x7684;&#x6570;&#x91CF;
+&#x9012;&#x51CF;:10 9 8 7 6 5 4 3 2 1 0
+&#x9012;&#x589E;:0 1 2 3 4 5 6 7 8 9 10
+&#x901A;&#x8FC7;CE&#x5DE5;&#x5177;&#x6536;&#x7D22;&#x6E38;&#x620F;&#x672C;&#x6B21;&#x8FD0;&#x884C;&#x7684;&#x8BA1;&#x6570;&#x5668;&#x53D8;&#x91CF;&#x5730;&#x5740;</p>
+<p>if(&#x8BA1;&#x6570;&#x5668;&#x7684;&#x503C;&gt;&#x4E0A;&#x9650;&#x503C;) {
+&#x3000;&#x3000;&#x690D;&#x7269;&#x5C31;&#x5224;&#x5B9A;&#x4E3A;&#x53EF;&#x5B89;&#x653E;&#x72B6;&#x6001;
+}
+&#x690D;&#x7269;&#x5C31;&#x5224;&#x5B9A;&#x4E3A;&#x4E0D;&#x80FD;&#x5B89;&#x653E;&#x72B6;&#x6001;
+&#x3000;&#x3000;
+&#x601D;&#x8DEF;&#x4E00;:&#x6539;&#x6389;&#x8BA1;&#x6570;&#x5668;&#x4E0A;&#x9650;&#x7684;&#x503C;,&#x53EF;&#x4EE5;&#x7F29;&#x77ED;&#x51B7;&#x5374;&#x65F6;&#x95F4;
+&#x601D;&#x8DEF;&#x4E8C;:&#x76F4;&#x63A5;&#x4FEE;&#x6539;&#x4EE3;&#x7801;&#x6BB5;,&#x6539;&#x53D8;&#x7A0B;&#x5E8F;&#x7684;&#x6267;&#x884C;&#x6D41;&#x7A0B;
+&#x3000;&#x3000;</p>
+<ol>
+<li><p>&#x5206;&#x6790;&#x690D;&#x7269;&#x5927;&#x5634;&#x82B1;&#x541E;&#x566C;&#x7684;&#x51B7;&#x5374;&#x65F6;&#x95F4;
+&#x601D;&#x8DEF;:&#x627E;&#x51FA;&#x5224;&#x65AD;&#x5927;&#x5634;&#x82B1;&#x541E;&#x566C;&#x65F6;&#x95F4;&#x7684;&#x4EE3;&#x7801;,&#x5E76;&#x6539;&#x53D8;&#x6267;&#x884C;&#x903B;&#x8F91;
+1.&#x5148;&#x5B9A;&#x4F4D;&#x5927;&#x5634;&#x82B1;&#x541E;&#x566C;&#x65F6;&#x95F4;&#x8BA1;&#x6570;&#x5668;&#x53D8;&#x91CF;&#x7684;&#x5730;&#x5740;
+2.&#x901A;&#x8FC7;CE&#x6216;&#x8005;OD&#x5DE5;&#x5177;&#x5B9A;&#x4F4D;&#x8C01;&#x8BBF;&#x95EE;&#x4E86;&#x8FD9;&#x4E2A;&#x5730;&#x5740;,&#x4ECE;&#x800C;&#x5B9A;&#x4F4D;&#x5230;&#x5224;&#x65AD;&#x5927;&#x5634;&#x82B1;&#x541E;&#x566C;&#x51B7;&#x5374;&#x65F6;&#x95F4;&#x7684;&#x4EE3;&#x7801;
+3.&#x5206;&#x6790;&#x5224;&#x65AD;&#x5927;&#x5634;&#x82B1;&#x541E;&#x566C;&#x51B7;&#x5374;&#x65F6;&#x95F4;&#x7684;&#x4EE3;&#x7801;</p>
+</li>
+<li><p>&#x5206;&#x6790;&#x6309;&#x653E;&#x690D;&#x7269;ca11
+&#x601D;&#x8DEF;:&#x627E;&#x51FA;&#x6309;&#x653E;&#x690D;&#x7269;&#x7684;ca11&#x4EE3;&#x7801;
+1.&#x5148;&#x5B9A;&#x4F4D;&#x4EE3;&#x8868;&#x9F20;&#x6807;&#x53F3;&#x952E;&#x9009;&#x4E2D;&#x690D;&#x7269;&#x7C7B;&#x578B;&#x7684;&#x5730;&#x5740;
+2.&#x5206;&#x6790;ca11&#x4EE3;&#x7801;&#x7684;&#x53C2;&#x6570;&#x53CA;&#x5806;&#x6808;
+3,&#x5C06;&#x81EA;&#x5DF1;&#x7684;&#x5199;&#x7684;&#x690D;&#x7269;&#x6309;&#x653E;&#x7684;&#x6C47;&#x7F16;&#x4EE3;&#x7801;&#x6CE8;&#x5165;&#x5230;&#x6E38;&#x620F;&#x8FDB;&#x7A0B;&#x7A7A;&#x95F4;&#x4E2D;</p>
+</li>
+</ol>
+<p>5.&#x8FDC;&#x7A0B;&#x7EBF;&#x7A0B;&#x6CE8;&#x5165;&#x4EE3;&#x7801;
+&#x6B65;&#x9AA4;:
+1)&#x6253;&#x5F00;&#x76EE;&#x6807;&#x8FDB;&#x7A0B; OpenProcess,&#x83B7;&#x53D6;&#x5230;&#x76EE;&#x6807;&#x8FDB;&#x7A0B;&#x53E5;&#x67C4;
+2)&#x5728;&#x76EE;&#x6807;&#x8FDB;&#x7A0B;&#x5206;&#x914D;&#x5185;&#x5B58;&#x7A7A;&#x95F4; VirtualAllocEx
+3)&#x5F80;&#x5206;&#x914D;&#x7684;&#x5185;&#x5B58;&#x7A7A;&#x95F4;&#x4E2D;&#x5199;&#x5165;&#x4EE3;&#x7801;
+4)&#x8FDC;&#x7A0B;&#x8C03;&#x7528; CreateRemoteThread&#x6267;&#x884C;&#x76EE;&#x6807;&#x8FDB;&#x7A0B;&#x6307;&#x5B9A;&#x5730;&#x5740;&#x7684;&#x4EE3;&#x7801;
+5)&#x7B49;&#x5F85;&#x8FDC;&#x7A0B;&#x7EBF;&#x7A0B;&#x6267;&#x884C;&#x5B8C;&#x6210; WaitForSingleObject
+6)&#x91CA;&#x653E;&#x76EE;&#x6807;&#x8FDB;&#x7A0B;&#x7A7A;&#x95F4; VirtualFreeEx
+7)&#x5173;&#x95ED;&#x76EE;&#x6807;&#x8FDB;&#x7A0B;&#x53E5;&#x67C4;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="win32汇编与反汇编.html" class="navigation navigation-prev " aria-label="Previous page: win32汇编与反汇编">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="x64dbg.html" class="navigation navigation-next " aria-label="Next page: x64dbg">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"逆向实战练习部分","level":"1.14","depth":1,"next":{"title":"x64dbg","level":"1.15","depth":1,"path":"驱动学习结合python/x64dbg.md","ref":"驱动学习结合python/x64dbg.md","articles":[]},"previous":{"title":"win32汇编与反汇编","level":"1.13","depth":1,"path":"驱动学习结合python/win32汇编与反汇编.md","ref":"驱动学习结合python/win32汇编与反汇编.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"驱动学习结合python/逆向实战练习部分.md","mtime":"2024-07-10T11:08:00.514Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-02-21T16:48:54.649Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
